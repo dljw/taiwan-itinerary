@@ -1,0 +1,28 @@
+/* Offline-first type. Prefer installed system faces; optional local files
+   in assets/fonts/ override when present (drop .woff2 files with these names). */
+@font-face {
+  font-family: "Trip Mono";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: local("SF Mono"), local("Menlo"), local("Consolas"),
+       url("../fonts/TripMono.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Trip Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: local("PingFang TC"), local("PingFang SC"), local("Noto Sans TC"),
+       local("Hiragino Sans GB"), local("Microsoft JhengHei"),
+       url("../fonts/TripSans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Trip Serif";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Songti TC"), local("Songti SC"), local("Noto Serif TC"),
+       local("Hiragino Mincho ProN"),
+       url("../fonts/TripSerif.woff2") format("woff2");
+}

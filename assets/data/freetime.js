@@ -20,8 +20,8 @@ window.TRIP.freetime = {
 
   /* The two numbers everything else hangs off. */
   rule: {
-    en: "<b>Lights out between 22:00 and 23:00.</b> Monday night is 22:00 — Tuesday's Xiao Wulai start will not wait. Every other night has a little more give.",
-    zh: "<b>熄灯时间落在22:00到23:00之间。</b>周一晚上必须22:00——周二小乌来不等人。其余几晚则宽松一些。"
+    en: "<b>Lights out between 22:00 and 23:00.</b> Monday night is 22:00 — Tuesday is the longest day. Wednesday's Xiao Wulai start will not wait either. Every other night has a little more give.",
+    zh: "<b>熄灯时间落在22:00到23:00之间。</b>周一晚上必须22:00——周二是全程最长的一天。周三小乌来也不等人。其余几晚则宽松一些。"
   },
 
   days: [
@@ -83,47 +83,49 @@ window.TRIP.freetime = {
                    zh: "衣服上还带着蒸汽、冷气、什么都不用决定。周一傍晚钻隧道，比周末客气。" } },
         { from: "18:15", to: "22:00", dur: { en: "3 hr 45", zh: "3小时45分" }, kind: "evening",
           what: { en: "Home in time to shower and eat nearby", zh: "赶得及洗澡，就近吃" },
-          ideas: { en: "Shower, nearest food, bed — Tuesday is Xiao Wulai. Breakfast at 07:00, bus at 08:00.",
-                   zh: "洗澡、就近吃、睡觉——明天小乌来。7:00早餐，8:00中巴。" } }
+          ideas: { en: "Shower, nearest food, bed — Tuesday is the lantern day. Breakfast at 08:00, bus at 09:15.",
+                   zh: "洗澡、就近吃、睡觉——明天放天灯。8:00早餐，9:15中巴。" } }
       ],
-      tomorrow: { time: "07:00", sleep: { en: "9 hours", zh: "9小时" }, alarm: true,
-                  why: { en: "Breakfast at 07:00, mid-bus at 08:00 for Xiao Wulai and Daxi.",
-                         zh: "7:00早餐，8:00中巴去小乌来、大溪。" } }
+      tomorrow: { time: "07:15", sleep: { en: "9 hr 15", zh: "9小时15分" }, alarm: true,
+                  why: { en: "Breakfast at 08:00, mid-bus at 09:15 for Shifen, lanterns and Jiufen.",
+                         zh: "8:00早餐，9:15中巴去十分、放天灯、九份。" } }
     },
 
     {
       n: 4, date: { en: "Tue 8 Sep", zh: "9月8日 · 周二" },
-      wake: { time: { en: "07:00", zh: "07:00" }, alarm: true,
-              why: { en: "Breakfast at 07:00, mid-bus at 08:00 for Xiao Wulai. Tablets for the Fuxing road.",
-                     zh: "7:00早餐，8:00中巴去小乌来。复兴山路要晕车药。" } },
-      home: "17:15",
-      bed: "22:00",
-      blocks: [
-        { from: "17:15", to: "22:00", dur: { en: "4 hr 45", zh: "4小时45分" }, kind: "evening",
-          what: { en: "Home early — quiet dinner, not the farewell hotpot", zh: "早回 —— 随便吃，不是告别火锅" },
-          ideas: { en: "The farewell hotpot is Thursday. Tonight is Huashan, a noodle shop, or a 7-Eleven run. Lights out by 22:00 — Wednesday is the lantern day, and Jiufen still has steps.",
-                   zh: "告别火锅在周四。今晚华山、麵店、或便利商店。22:00熄灯——明天放天灯，九份仍有阶梯。" } }
-      ],
-      tomorrow: { time: "07:15", sleep: { en: "9 hr 15", zh: "9小时15分" },
-                  why: { en: "The longest sleep of the trip. Breakfast at 08:00, mid-bus at 09:15 for the lantern day.", zh: "全程睡得最长的一晚。8:00早餐，9:15中巴，前往放天灯的一天。" } }
-    },
-
-    {
-      n: 5, date: { en: "Wed 9 Sep", zh: "9月9日 · 周三" },
       wake: { time: { en: "07:15", zh: "07:15" },
               why: { en: "Breakfast at 08:00, mid-bus at 09:15. Longest day of the trip — the waterfall drop is at the gate, but Jiufen is still stairs.",
                      zh: "8:00早餐，9:15中巴。全程最长的一天——瀑布停在门口，但九份仍是阶梯。" } },
       home: "21:00",
-      bed: "22:30",
+      bed: "22:00",
+      hard: true,
       blocks: [
         { from: "14:15", to: "15:30", dur: { en: "1 hr 15", zh: "1小时15分" }, kind: "rest",
           what: { en: "The deliberate slow block at Shifen", zh: "十分刻意留下的慢时段" },
           ideas: { en: "Built into the day on purpose, so the lantern goes up at golden hour instead of in flat daylight. Sit in a teahouse, watch other people's lanterns rise, let the kids wander the tracks. Resist the urge to fill it — these ninety minutes are why the evening works.",
                    zh: "这段时间是刻意排进去的，为了让天灯在黄昏时分升空，而不是大白天。找间茶馆坐下，看别人的天灯升起，让小孩在铁道上走走。别急着把它填满——晚上之所以精彩，正是因为这九十分钟。" } },
-        { from: "21:00", to: "22:30", dur: { en: "1 hr 30", zh: "1小时30分" }, kind: "evening",
+        { from: "21:00", to: "22:00", dur: { en: "1 hour", zh: "1小时" }, kind: "evening",
           what: { en: "Back from Jiufen", zh: "从九份回来" } ,
-          ideas: { en: "The best night of the trip is behind you, and a fairly early start lies ahead. Back up the lantern photos before anyone's phone fills up — this is the one day nobody can afford to lose pictures from.",
-                   zh: "全程最精彩的一晚已经结束，明天又要相对早起。趁现在把天灯照片备份好，别等手机存满——这是最不能弄丢照片的一天。" } }
+          ideas: { en: "The best night of the trip is behind you, and Wednesday's Xiao Wulai start will not wait. Back up the lantern photos before anyone's phone fills up — this is the one day nobody can afford to lose pictures from.",
+                   zh: "全程最精彩的一晚已经结束，周三小乌来不等人。趁现在把天灯照片备份好，别等手机存满——这是最不能弄丢照片的一天。" } }
+      ],
+      tomorrow: { time: "07:00", sleep: { en: "9 hours", zh: "9小时" }, alarm: true,
+                  why: { en: "Breakfast at 07:00, mid-bus at 08:00 for Xiao Wulai and Daxi. Tablets for the Fuxing road.",
+                         zh: "7:00早餐，8:00中巴去小乌来、大溪。复兴山路要晕车药。" } }
+    },
+
+    {
+      n: 5, date: { en: "Wed 9 Sep", zh: "9月9日 · 周三" },
+      wake: { time: { en: "07:00", zh: "07:00" }, alarm: true,
+              why: { en: "Breakfast at 07:00, mid-bus at 08:00 for Xiao Wulai. Tablets for the Fuxing road.",
+                     zh: "7:00早餐，8:00中巴去小乌来。复兴山路要晕车药。" } },
+      home: "17:15",
+      bed: "22:30",
+      blocks: [
+        { from: "17:15", to: "22:30", dur: { en: "5 hr 15", zh: "5小时15分" }, kind: "evening",
+          what: { en: "Home early — quiet dinner, not the farewell hotpot", zh: "早回 —— 随便吃，不是告别火锅" },
+          ideas: { en: "The farewell hotpot is Thursday. Tonight is Huashan, a noodle shop, or a 7-Eleven run. A civilised evening after two long days — lights out by 22:30 is enough.",
+                   zh: "告别火锅在周四。今晚华山、麵店、或便利商店。连着两天长行程之后，今晚从容一点——22:30熄灯就够。" } }
       ],
       tomorrow: { time: "07:15", sleep: { en: "8 hr 45", zh: "8小时45分" },
                   why: { en: "Breakfast at 07:30, mid-bus at 08:15 for Hsu's in Shiding. Tablets in the bag. Hotpot is 18:30.", zh: "7:30早餐，8:15中巴去石碇许家。晕车药放进包。火锅18:30。" } }
@@ -209,8 +211,8 @@ window.TRIP.freetime = {
   tips: [
     { en: "<b>The free block on Day 1 is the load-bearing wall of this trip.</b> Six hours, the longest of the week, opening once breakfast and the family visit are done — treat it as a real jet-lag buffer, not just shopping time. Anyone who needs to sleep should actually go and do it.",
       zh: "<b>第1天的自由活动是整趟行程的承重墙。</b>早餐和家族拜访结束后，接着就是六小时、整周最长的一段空档——请把它当成真正的时差缓冲，不只是逛街时间，想睡的人就该真的回去躺下。" },
-    { en: "<b>Two alarms really matter: 06:45 on Monday and 06:30 on Tuesday.</b> Set them the night before, on more than one phone, and tell the whole group at dinner rather than by message at midnight.",
-      zh: "<b>只有两个闹钟真正重要：周一6:45、周二6:30。</b>前一晚就设好，而且不只一支手机设定，并在晚餐时当面告诉大家，别等到半夜才发讯息。" },
+    { en: "<b>Two alarms really matter: 06:45 on Monday and 06:30 on Wednesday.</b> Set them the night before, on more than one phone, and tell the whole group at dinner rather than by message at midnight.",
+      zh: "<b>只有两个闹钟真正重要：周一6:45、周三6:30。</b>前一晚就设好，而且不只一支手机设定，并在晚餐时当面告诉大家，别等到半夜才发讯息。" },
     { en: "<b>Free time belongs to the person, not the group.</b> Every free window here can be split — some go out, some stay in. Nobody should feel they have to tag along at 21:00 just because everyone else is.",
       zh: "<b>自由时间是每个人的，不是全团的。</b>这里的每一段空档都可以拆开——有人出门，有人留下。没有人该因为「大家都去」而觉得晚上九点非跟不可。" },
     { en: "<b>If a day is running late, cut from the plan, not from the rest.</b> Losing a stop costs you one thing. Losing the nap costs you the next two days.",

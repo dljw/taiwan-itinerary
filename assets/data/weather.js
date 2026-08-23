@@ -20,8 +20,8 @@ window.TRIP.weather = {
     { title: { en: "Just heavy rain", zh: "只是大雨" },
       what: { en: "Nothing shuts down and the city carries on as normal — it's just that day's outdoor plan that turns miserable. <b>This is by far the more common scenario</b> — most 'bad weather' on a September trip looks like this, not a full typhoon.",
               zh: "不会停班停课，一切照常运作，只是当天的户外行程会变得很难受。<b>这才是更常见的情况</b>——九月出游遇到的“坏天气”，多半是这一种，而不是真正的台风。" },
-      action: { en: "Simply swap that day's outdoor activity for one of the indoor options below — either way, the day is easy to save. Thursday can still absorb lanterns if Wednesday washes out.",
-                zh: "把当天的户外活动换成下面清单里的室内选项即可——不管哪种方式，这天都很容易补救回来。若周三被雨打掉，周四仍可承接天灯。" } }
+      action: { en: "Simply swap that day's outdoor activity for one of the indoor options below — either way, the day is easy to save. Thursday can still absorb lanterns if Tuesday washes out.",
+                zh: "把当天的户外活动换成下面清单里的室内选项即可——不管哪种方式，这天都很容易补救回来。若周二被雨打掉，周四仍可承接天灯。" } }
   ],
 
   swaps: [
@@ -41,19 +41,19 @@ window.TRIP.weather = {
               zh: "小雨：照去——农场有室内角落，清水的井和足汤有顶。<b>预报台风就整天宜兰取消</b>，改用台北室内清单。不要改把十二人送去南部。若只是太热或园区关了，农场和午餐留下，三星之后回家。" } },
 
     { day: 4, date: { en: "Tue 8 Sep", zh: "9/8 周二" }, level: "HIGH",
-      risk: { en: "A mountain road and a glass skywalk — miserable in a storm", zh: "山路加玻璃步道——风雨天很难受" },
-      swap: { en: "Light rain: keep Daxi's arcades, skip the glass. <b>A named typhoon cancels the mountain road</b> — stay in Taipei, indoor list. Do not move Xiao Wulai to Thursday (that morning is Hsu's). The farewell hotpot stays Thursday regardless.",
-              zh: "小雨：留下大溪骑楼，跳过玻璃。<b>有命名的台风就取消山路</b>——留台北走室内清单。别把小乌来改到周四（那天上午是许家）。告别火锅仍在周四。" } },
+      risk: { en: "Sky lanterns simply won't fly in heavy rain", zh: "大雨天天灯飞不起来" },
+      swap: { en: "<b>The day most likely to need a reshuffle — and that's perfectly fine.</b> Push the lantern outing to Thursday; skip Hsu's that morning and keep the 18:30 hotpot. Do not steal Wednesday for it — that morning is Xiao Wulai, which is closed on Tuesdays and has nowhere else to go. Failing a Thursday swap, use a museum or the Science Education Center, followed by a covered night market.",
+              zh: "<b>这是最可能需要调整的一天——完全没关系。</b>把放天灯挪到周四；那天上午的许家跳过，18:30火锅留下。别占用周三——那天上午是小乌来，周二公休、没有别的日子可去。真的不行，就改成博物馆或科教馆，再加上一个有遮蔽的夜市。" } },
 
     { day: 5, date: { en: "Wed 9 Sep", zh: "9/9 周三" }, level: "HIGH",
-      risk: { en: "Sky lanterns simply won't fly in heavy rain", zh: "大雨天天灯飞不起来" },
-      swap: { en: "<b>The day most likely to need a reshuffle — and that's perfectly fine.</b> Push the lantern outing to Thursday; skip Hsu's that morning and keep the 18:30 hotpot. Failing that, swap in a museum or the Science Education Center, followed by a covered night market — a lovely evening either way.",
-              zh: "<b>这是最可能需要调整的一天——完全没关系。</b>把放天灯挪到周四；那天上午的许家跳过，18:30火锅留下。真的不行，就改成博物馆或科教馆，再加上一个有遮蔽的夜市——不论哪一种，晚上都一样精彩。" } },
+      risk: { en: "A mountain road and a glass skywalk — miserable in a storm", zh: "山路加玻璃步道——风雨天很难受" },
+      swap: { en: "Light rain: keep Daxi's arcades, skip the glass. <b>A named typhoon cancels the mountain road</b> — stay in Taipei, indoor list. Do not move Xiao Wulai to Thursday (that morning is Hsu's) and do not move it to Tuesday — the skywalk is closed then. The farewell hotpot stays Thursday regardless.",
+              zh: "小雨：留下大溪骑楼，跳过玻璃。<b>有命名的台风就取消山路</b>——留台北走室内清单。别把小乌来改到周四（那天上午是许家），也别改到周二——天空步道那天公休。告别火锅仍在周四。" } },
 
     { day: 6, date: { en: "Thu 10 Sep", zh: "9/10 周四" }, level: "BUFFER",
       risk: { en: "Hsu's workshop is partly outdoor; the Shiding road is miserable in a storm; hotpot is indoors", zh: "许家工坊有户外；石碇山路遇风雨很难受；火锅在室内" },
-      swap: { en: "<b>This is still the swap day behind the lanterns.</b> If Wednesday washes out, skip Hsu's, do lanterns Thursday, and keep the 18:30 hotpot. Xiao Wulai already ran on Tuesday — do not restack it. If Thursday itself is a typhoon, skip Shiding, stay in Ximending indoors, and protect the hotpot.",
-              zh: "<b>这仍是天灯后面的备案日。</b>若周三被雨打掉，许家跳过，周四放天灯，18:30火锅留下。小乌来周二已经走完——不要再叠回去。若周四本身是台风，不去石碇，西门町走室内，守住火锅。" } },
+      swap: { en: "<b>This is still the swap day behind the lanterns.</b> If Tuesday washes out, skip Hsu's, do lanterns Thursday, and keep the 18:30 hotpot. Xiao Wulai already ran on Wednesday — do not restack it. If Thursday itself is a typhoon, skip Shiding, stay in Ximending indoors, and protect the hotpot.",
+              zh: "<b>这仍是天灯后面的备案日。</b>若周二被雨打掉，许家跳过，周四放天灯，18:30火锅留下。小乌来周三已经走完——不要再叠回去。若周四本身是台风，不去石碇，西门町走室内，守住火锅。" } },
 
     { day: 7, date: { en: "Fri 11 Sep", zh: "9/11 周五" }, level: "LOW",
       risk: { en: "Dihua Street's arcades offer natural cover already", zh: "迪化街本来就有骑楼，天然可遮蔽" },
@@ -106,8 +106,8 @@ window.TRIP.weather = {
       zh: "<b>了解停班停课规则。</b>地方政府宣布停班停课时，捷运可能暂停营运、景点当天关闭。每天早上留意新闻，陆上警报日就安心待着别出门。" },
     { en: "<b>The mid-bus days cancel as a block.</b> Days 1, 3, 4, 5, 6 and 7 all have a vehicle booked. A named typhoon means calling the operator once — do not send twelve people onto a mountain road. Ask about weather cancellation when you book all six.",
       zh: "<b>中巴那几天整段取消。</b>第1、3、4、5、6、7天都有车。有命名的台风就打一通电话给业者——不要把十二人送上山路。六段一起订的时候问天气取消。" },
-    { en: "<b>Day 5 and Day 7 are no longer 'nothing prepaid'.</b> The lantern package and the airport send-off both need a cancellation conversation, same as Yilan and Xiao Wulai. A washed-out lantern morning can still move to Thursday — tell the driver as well as Hsu's.",
-      zh: "<b>第5天和第7天不再是“没有预付”。</b>天灯套装和送机都要谈取消，跟宜兰、小乌来一样。天灯上午被雨打掉仍可挪到周四——司机和许家都要说一声。" },
+    { en: "<b>Day 4 and Day 7 are no longer 'nothing prepaid'.</b> The lantern package and the airport send-off both need a cancellation conversation, same as Yilan and Xiao Wulai. A washed-out lantern morning can still move to Thursday — tell the driver as well as Hsu's.",
+      zh: "<b>第4天和第7天不再是“没有预付”。</b>天灯套装和送机都要谈取消，跟宜兰、小乌来一样。天灯上午被雨打掉仍可挪到周四——司机和许家都要说一声。" },
     { en: "<b>Rain is kinder with a bus waiting.</b> Between stops you stay dry. Jiufen stairs and Shifen tracks are still wet-weather work — pack ponchos as well as umbrellas, and the stroller rain cover if it's coming.",
       zh: "<b>有车在等，下雨客气得多。</b>站与站之间不用淋。九份阶梯和十分铁道仍会湿——请带轻便雨衣，不要只带伞；推车出门就带防雨罩。" },
     { en: "<b>Travel insurance.</b> Double-check the policy covers weather delays and cancellations, and keep receipts for any rebooking, just in case.",

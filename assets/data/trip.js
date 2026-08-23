@@ -10,8 +10,8 @@ window.TRIP.meta = {
               zh: "七天六夜 · 2026年9月5–11日 · 一行十二人" },
 
   lede: {
-    en: "Nine adults, two kids and a toddler — 13, 11 and 3 — and one Taipei base. Mornings out while it's cool: a Sanxing farm and Qingshui geothermal on Monday, glass over a waterfall on Tuesday, lanterns on Wednesday, handmade noodles and the farewell hotpot on Thursday.",
-    zh: "九位大人、两个孩子加一个小小孩——13岁、11岁、3岁，一个台北据点。趁凉爽的早晨出门：周一三星农场和清水地热，周二玻璃步道，周三放天灯，周四手作麵线和告别火锅。"
+    en: "Nine adults, two kids and a toddler — 13, 11 and 3 — and one Taipei base. Mornings out while it's cool: a Sanxing farm and Qingshui geothermal on Monday, lanterns on Tuesday, glass over a waterfall on Wednesday, handmade noodles and the farewell hotpot on Thursday.",
+              zh: "九位大人、两个孩子加一个小小孩——13岁、11岁、3岁，一个台北据点。趁凉爽的早晨出门：周一三星农场和清水地热，周二放天灯，周三玻璃步道，周四手作麵线和告别火锅。"
   },
 
   footer: { en: "Family itinerary · photos are reference images, not our own",
@@ -40,17 +40,17 @@ window.TRIP.meta = {
       transport: { en: "中巴", zh: "中巴" } },
 
     { n: 4, date: { en: "Tue 8 Sep", zh: "9月8日 · 周二" },
-      title: { en: "Standing on glass above a waterfall", zh: "站在瀑布上方的玻璃步道" },
-      blurb: { en: "Xiao Wulai's skywalk juts straight out over the falls. Then a full afternoon graze through Daxi Old Street. Quiet dinner — the farewell hotpot is Thursday.",
-               zh: "小乌来天空步道悬挑在瀑布正上方。接着一整个下午在大溪老街边走边吃。晚饭随便——告别火锅在周四。" },
-      hero: "xiaowulai/xiaowulai-skywalk-glass.jpg",
-      transport: { en: "中巴", zh: "中巴" } },
-
-    { n: 5, date: { en: "Wed 9 Sep", zh: "9月9日 · 周三" },
       title: { en: "Sky lanterns, then Jiufen at dusk", zh: "放天灯，黄昏上九份" },
       blurb: { en: "The big one. Waterfall in the morning, your lantern rising at golden hour, and Jiufen's red lanterns lighting as you arrive.",
                zh: "全程最精彩的一天。上午看瀑布，黄昏时分放飞天灯，抵达九份时红灯笼正好亮起。" },
       hero: "sky-lantern/sky-lantern-daytime-release-wishes.jpg",
+      transport: { en: "中巴", zh: "中巴" } },
+
+    { n: 5, date: { en: "Wed 9 Sep", zh: "9月9日 · 周三" },
+      title: { en: "Standing on glass above a waterfall", zh: "站在瀑布上方的玻璃步道" },
+      blurb: { en: "Xiao Wulai's skywalk juts straight out over the falls. Then a full afternoon graze through Daxi Old Street. Quiet dinner — the farewell hotpot is Thursday.",
+               zh: "小乌来天空步道悬挑在瀑布正上方。接着一整个下午在大溪老街边走边吃。晚饭随便——告别火锅在周四。" },
+      hero: "xiaowulai/xiaowulai-skywalk-glass.jpg",
       transport: { en: "中巴", zh: "中巴" } },
 
     { n: 6, date: { en: "Thu 10 Sep", zh: "9月10日 · 周四" },
@@ -73,8 +73,8 @@ window.TRIP.meta = {
       v: { en: "Zhongzheng District — 5 min walk to Shandao Temple MRT, 6 min to Zhongxiao Xinsheng, next to Huashan 1914 Creative Park.",
            zh: "中正区——步行5分钟到善导寺站，6分钟到忠孝新生站，紧邻华山1914文创园区。" } },
     { k: { en: "Getting around", zh: "交通方式" },
-      v: { en: "<b>A 中巴 on the days twelve people will not fit anything smaller</b> — Day 1 as an airport transfer with two Linkou stops, Day 3 through the Xueshan Tunnel to Yilan, Day 4 to Xiao Wulai and Daxi, Day 5 for Shifen, Golden Waterfall and Jiufen, Day 6 a half-day to Shiding, and Day 7 back to the airport. Sunday is still the gondola and the MRT. See the <b>Transport page</b>.",
-           zh: "<b>十二人塞不进去的日子包中巴</b>——第1天机场接机加林口两站、第3天钻雪山隧道去宜兰、第4天小乌来加大溪、第5天十分、黄金瀑布和九份、第6天石碇半天、第7天送机。周日仍是缆车和捷运。见<b>交通页</b>。" } },
+      v: { en: "<b>A 中巴 on the days twelve people will not fit anything smaller</b> — Day 1 as an airport transfer with two Linkou stops, Day 3 through the Xueshan Tunnel to Yilan, Day 4 for Shifen, Golden Waterfall and Jiufen, Day 5 to Xiao Wulai and Daxi, Day 6 a half-day to Shiding, and Day 7 back to the airport. Sunday is still the gondola and the MRT. See the <b>Transport page</b>.",
+           zh: "<b>十二人塞不进去的日子包中巴</b>——第1天机场接机加林口两站、第3天钻雪山隧道去宜兰、第4天十分、黄金瀑布和九份、第5天小乌来加大溪、第6天石碇半天、第7天送机。周日仍是缆车和捷运。见<b>交通页</b>。" } },
     { k: { en: "Weather", zh: "天气" },
       v: { en: "Hot and humid, 30–34°C, and the tail of typhoon season. Day 6 doubles as the weather buffer.",
            zh: "闷热潮湿，30–34°C，正值台风季尾声。第6天同时是天气备案日。" } },
@@ -82,7 +82,7 @@ window.TRIP.meta = {
       v: { en: "An EasyCard, a folding umbrella (for sun as much as rain), and shoes you can walk all day in.",
            zh: "悠游卡、折叠伞（遮阳跟挡雨一样重要），以及一双能走一整天的鞋。" } },
     { k: { en: "Book before you fly", zh: "出发前先订" },
-      v: { en: "<b>Six mid-bus bookings</b> with one Taipei operator if you can — Days 1 and 7 as airport transfers, Day 6 a 4–5 hour half-day, Days 3–5 as full days. Also Hsu's Thursday 09:30, Zhang Mei Ama DIY, a Sanxing lunch table, the Tuesday skywalk, the Thursday hotpot, and the Day 7 farewell lunch.",
-           zh: "<b>六段中巴</b>，能同一家台北业者最好——第1、7天机场接送，第6天4至5小时半天，第3至5天全日。另外还有许家周四09:30、张美阿嬷手作、三星午餐桌、周二天空步道、周四火锅、第7天告别午餐。" } }
+      v: { en: "<b>Six mid-bus bookings</b> with one Taipei operator if you can — Days 1 and 7 as airport transfers, Day 6 a 4–5 hour half-day, Days 3–5 as full days. Also Hsu's Thursday 09:30, Zhang Mei Ama DIY, a Sanxing lunch table, the Wednesday skywalk, the Thursday hotpot, and the Day 7 farewell lunch.",
+           zh: "<b>六段中巴</b>，能同一家台北业者最好——第1、7天机场接送，第6天4至5小时半天，第3至5天全日。另外还有许家周四09:30、张美阿嬷手作、三星午餐桌、周三天空步道、周四火锅、第7天告别午餐。" } }
   ]
 };

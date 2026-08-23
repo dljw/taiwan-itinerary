@@ -29,15 +29,15 @@ window.TRIP.practical = {
       note: { en: "Hotel → Zhang Mei Ama (Sanxing) → lunch → Qingshui Geothermal Park (Datong) → hotel. Driver waits. A 10-hour 中巴, not Kamalan plus taxis. Ask whether the vehicle can enter 501巷; if not, wait at 長埤湖. Same operator as the other mid-bus days.",
               zh: "饭店 → 张美阿嬷（三星）→ 午餐 → 清水地热公园（大同）→ 饭店。司机等候。10小时中巴，不是葛玛兰再加计程车。问501巷进不进得去；进不去就停長埤湖。可与其他中巴同一家。" } },
 
-    { what: { en: "Mid-bus — Day 4, Xiao Wulai + Daxi", zh: "包中巴 · 第4天小乌来加大溪" },
-      when: { en: "Tue 8 Sep, 08:00–17:15", zh: "9/8 周二，08:00–17:15" },
-      note: { en: "Hotel → Xiao Wulai skywalk → Daxi Old Street → hotel. 8–10 hours. Ask for <b>小乌来 in Fuxing, Taoyuan</b> — not 乌来. Same operator as the other mid-bus days.",
-              zh: "饭店 → 小乌来天空步道 → 大溪老街 → 饭店。8至10小时。请订<b>桃园复兴小乌来</b>——不是乌来。可与其他中巴同一家。" } },
+    { what: { en: "Mid-bus — Day 4, Shifen + Jiufen package", zh: "包中巴 · 第4天十分九份套装" },
+      when: { en: "Tue 8 Sep, 09:15–21:00", zh: "9/8 周二，09:15–21:00" },
+      note: { en: "Hotel → Shifen Waterfall gate → old street and lanterns → Golden Waterfall → Jiufen dusk → hotel. Ask for the published package, about NT$8,500–10,000, not a generic 10-hour clock. Confirm overtime past ten hours.",
+              zh: "饭店 → 十分瀑布门口 → 老街与天灯 → 黄金瀑布 → 黄昏九份 → 饭店。请问套装价，约NT$8,500–10,000，不要开通用10小时。超过十小时请确认超时。" } },
 
     { what: { en: "Xiao Wulai skywalk slots ×12", zh: "小乌来天空步道 ×12" },
-      when: { en: "Tue 8 Sep, around 10:00", zh: "9/8 周二，约10:00" },
-      note: { en: "The glass walkway limits numbers and normally requires an <b>online timed booking</b>. You are arriving by private bus on a Tuesday, so plan to book online, and double-check the current rule before you fly.",
-              zh: "玻璃步道限制人数，通常需要<b>线上预约时段</b>。你们是周二包车到，请当作一定要线上预约，出发前再确认最新规定。" } },
+      when: { en: "Wed 9 Sep, around 10:00", zh: "9/9 周三，约10:00" },
+      note: { en: "The glass walkway limits numbers and normally requires an <b>online timed booking</b>. Closed Tuesdays — Wednesday is the open day. You are arriving by private bus, so plan to book online, and double-check the current rule before you fly.",
+              zh: "玻璃步道限制人数，通常需要<b>线上预约时段</b>。周二公休——周三才开门。你们是包车到，请当作一定要线上预约，出发前再确认最新规定。" } },
 
     { what: { en: "Maokong tea house", zh: "猫空茶馆" },
       when: { en: "Sun 6 Sep, 12:30 ×12", zh: "9/6 周日 12:30 ×12" },
@@ -49,10 +49,10 @@ window.TRIP.practical = {
       note: { en: "DIY + 流水麵, about NT$550. <b>handmadenoodlesbyhsu.com.tw</b>, LINE <b>@a26633004</b>, phone <b>02-2663-3004</b>. Closed Tuesdays — Monday is Yilan, so this is Thursday. Under-sixes free.",
               zh: "DIY＋流水麵，约 NT$550。<b>handmadenoodlesbyhsu.com.tw</b>、LINE <b>@a26633004</b>、电话 <b>02-2663-3004</b>。周二公休——周一是宜兰，所以排周四。六岁以下免费。" } },
 
-    { what: { en: "Mid-bus — Day 5, Shifen + Jiufen package", zh: "包中巴 · 第5天十分九份套装" },
-      when: { en: "Wed 9 Sep, 09:15–21:00", zh: "9/9 周三，09:15–21:00" },
-      note: { en: "Hotel → Shifen Waterfall gate → old street and lanterns → Golden Waterfall → Jiufen dusk → hotel. Ask for the published package, about NT$8,500–10,000, not a generic 10-hour clock. Confirm overtime past ten hours.",
-              zh: "饭店 → 十分瀑布门口 → 老街与天灯 → 黄金瀑布 → 黄昏九份 → 饭店。请问套装价，约NT$8,500–10,000，不要开通用10小时。超过十小时请确认超时。" } },
+    { what: { en: "Mid-bus — Day 5, Xiao Wulai + Daxi", zh: "包中巴 · 第5天小乌来加大溪" },
+      when: { en: "Wed 9 Sep, 08:00–17:15", zh: "9/9 周三，08:00–17:15" },
+      note: { en: "Hotel → Xiao Wulai skywalk → Daxi Old Street → hotel. 8–10 hours. Ask for <b>小乌来 in Fuxing, Taoyuan</b> — not 乌来. Same operator as the other mid-bus days.",
+              zh: "饭店 → 小乌来天空步道 → 大溪老街 → 饭店。8至10小时。请订<b>桃园复兴小乌来</b>——不是乌来。可与其他中巴同一家。" } },
 
     { what: { en: "Mid-bus — Day 6, Shiding half-day", zh: "包中巴 · 第6天石碇半天" },
       when: { en: "Thu 10 Sep, 08:15–12:15", zh: "9/10 周四，08:15–12:15" },
@@ -75,7 +75,7 @@ window.TRIP.practical = {
               zh: "免费入园。现场买蛋、玉米和竹篓。最后501巷中巴可能进不去——进不去就停長埤湖。泡脚带毛巾。三岁别靠95°C的井。有人还想整身泡，才加木造汤屋。" } },
 
     { what: { en: "Jiufen Teahouse", zh: "九份茶坊" },
-      when: { en: "Wed 9 Sep, 18:15 ×12", zh: "9/9 周三 18:15 ×12" },
+      when: { en: "Tue 8 Sep, 18:15 ×12", zh: "9/8 周二 18:15 ×12" },
       note: { en: "Rated 4.8. Balcony tables go first, and the balcony is the whole point of coming.",
               zh: "评价4.8。阳台桌最抢手，而阳台正是这里最迷人之处。" } },
 
@@ -163,10 +163,10 @@ window.TRIP.practical = {
     { day: 3, tw: "張美阿嬤農場 三星鄉行健溪一路二段161號", say: "Zhang Mei Ama's Farm, Sanxing" },
     { day: 3, tw: "田媽媽蔥蒜美食館 三星鄉中山路31號", say: "Tian Mama scallion kitchen, Sanxing" },
     { day: 3, tw: "清水地熱公園 大同鄉三星路八段501巷150號", say: "Qingshui Geothermal Park, Datong" },
-    { day: 5, tw: "十分老街", say: "Shifen Old Street, Pingxi District" },
-    { day: 5, tw: "九份老街", say: "Jiufen Old Street, Ruifang District" },
-    { day: 4, tw: "小烏來天空步道", say: "Xiao Wulai Skywalk, Fuxing, Taoyuan" },
-    { day: 4, tw: "大溪老街", say: "Daxi Old Street, Taoyuan" },
+    { day: 4, tw: "十分老街", say: "Shifen Old Street, Pingxi District" },
+    { day: 4, tw: "九份老街", say: "Jiufen Old Street, Ruifang District" },
+    { day: 5, tw: "小烏來天空步道", say: "Xiao Wulai Skywalk, Fuxing, Taoyuan" },
+    { day: 5, tw: "大溪老街", say: "Daxi Old Street, Taoyuan" },
     { day: 7, tw: "迪化街 · 永樂市場", say: "Dihua Street — Yongle Market end" },
     { day: 7, tw: "桃園國際機場", say: "Taoyuan International Airport" }
   ],
@@ -200,8 +200,8 @@ window.TRIP.practical = {
       items: [
         { en: "September runs 30–34°C and humid. The scheduled afternoon rests aren't optional for the over-sixties — treat them as fixed.",
           zh: "九月气温约30至34°C且潮湿。行程中的下午休息对长辈来说不是可有可无的选项——请当作固定安排。" },
-        { en: "Pack motion-sickness tablets for Days 4, 5 and 6 — Xiao Wulai, Jiufen and Shiding are winding roads. Day 3 is a highway tunnel; tablets still help anyone who hates enclosed space.",
-          zh: "第4、5、6天请带上晕车药——小乌来、九份、石碇都是山路。第3天是高速公路隧道；怕密闭的人还是带。" },
+        { en: "Pack motion-sickness tablets for Days 4, 5 and 6 — Jiufen, Xiao Wulai and Shiding are winding roads. Day 3 is a highway tunnel; tablets still help anyone who hates enclosed space.",
+          zh: "第4、5、6天请带上晕车药——九份、小乌来、石碇都是山路。第3天是高速公路隧道；怕密闭的人还是带。" },
         { en: "Convenience stores stock cold drinks, umbrellas and basic medicine around the clock.",
           zh: "超商全天候都有冷饮、雨伞和常备药品。" },
         { en: "Share all eleven phone numbers in one group chat before Day 6, when people may split in Ximending.",

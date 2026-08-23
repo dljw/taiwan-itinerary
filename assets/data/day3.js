@@ -8,8 +8,8 @@ window.TRIP.days[3] = {
   date:  { en: "Monday 7 September", zh: "9月7日 · 周一" },
   title: { en: "Sanxing farm, then Qingshui geothermal", zh: "三星农场，再清水地热" },
   intro: {
-    en: "A mid-bus through the Xueshan Tunnel — about an hour. Morning with the animals and a scallion pancake you make yourselves; a round-table lunch of Sanxing greens; then Qingshui Geothermal Park — the place English maps call Water Geothermal Square — to boil eggs and corn in the wells and soak your feet while they cook. Home around 18:15. Tuesday is Xiao Wulai, so tonight is a real bedtime.",
-    zh: "中巴钻雪山隧道——大约一小时。早上跟小动物玩、自己做一张葱油饼；圆桌吃三星青葱合菜；下午到清水地热公园——英文地图上的 Water Geothermal Square——用井水煮蛋煮玉米，等的时候泡脚。大约18:15回饭店。明天小乌来，今晚认真睡。"
+    en: "A mid-bus through the Xueshan Tunnel — about an hour. Morning with the animals and a scallion pancake you make yourselves; a round-table lunch of Sanxing greens; then Qingshui Geothermal Park — the place English maps call Water Geothermal Square — to boil eggs and corn in the wells and soak your feet while they cook. Home around 18:15. Tuesday is the lantern day, so tonight is a real bedtime.",
+    zh: "中巴钻雪山隧道——大约一小时。早上跟小动物玩、自己做一张葱油饼；圆桌吃三星青葱合菜；下午到清水地热公园——英文地图上的 Water Geothermal Square——用井水煮蛋煮玉米，等的时候泡脚。大约18:15回饭店。明天放天灯，今晚认真睡。"
   },
   hero: "sanxing/sanxing-scallion-fields.jpg",
   chips: [
@@ -112,8 +112,8 @@ window.TRIP.days[3] = {
 
     { time: "18:15", type: "rest",
       title: { en: "Back to the hotel", zh: "回饭店" },
-      note:  { en: "Home at a civilised hour, on purpose. Nearest food, lights out by 22:00 — Xiao Wulai starts early.",
-               zh: "早回来，是刻意的。就近吃一点，22:00熄灯——明天小乌来，出发早。" } }
+      note:  { en: "Home at a civilised hour, on purpose. Nearest food, lights out by 22:00 — lanterns tomorrow, and it's the longest day.",
+               zh: "早回来，是刻意的。就近吃一点，22:00熄灯——明天放天灯，全程最长的一天。" } }
   ],
 
   places: [
@@ -269,8 +269,8 @@ window.TRIP.days[3] = {
         zh: "只带一个随身小包。泡脚毛巾、晕车药；有人要进汤屋再带换洗衣。其他留饭店。" },
       { en: "The bus meets you at the hotel, not at Taipei Bus Station. You do not need Kamalan tickets.",
         zh: "车子在饭店接，不是台北转运站。不必买葛玛兰票。" },
-      { en: "Do not add Luodong Night Market. Raohe was Sunday. Tuesday is Xiao Wulai.",
-        zh: "不要再加罗东夜市。饶河是周日。周二是小乌来。" },
+      { en: "Do not add Luodong Night Market. Raohe was Sunday. Tuesday is the lantern day.",
+        zh: "不要再加罗东夜市。饶河是周日。周二放天灯。" },
       { en: "Dinner tonight is whatever is nearest. Lights out by 22:00.",
         zh: "今晚就近吃。22:00熄灯。" }
     ]

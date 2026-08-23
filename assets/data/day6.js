@@ -272,9 +272,9 @@ window.TRIP.days[6] = {
     { title: { en: "Book the hotpot for twelve — this is the one dinner that must not fall through", zh: "火锅务必订十二人位——这顿不能出差错" },
       body: { en: "Group hotpot tables are the first thing to go on a weekday evening in Zhongshan. Reserve well ahead, confirm it fits all twelve at one table rather than splitting across two, and ask whether they do a split pot for the kids — and a high chair for the littlest.",
               zh: "中山区平日晚上的火锅大桌是最早被订走的。请提早预订，并确认十二人能同坐一桌而不是拆成两桌，也问清楚有没有鸳鸯锅给小朋友，顺便问问能不能借一张儿童高脚椅给最小的孩子。" } },
-    { title: { en: "If Wednesday's lanterns wash out, this morning can give way", zh: "若周三天灯被雨打掉，这个上午可以让" },
-      body: { en: "Thursday is the buffer behind the lantern day. If you push lanterns here, skip Hsu's (or take the 13:00 session if you are back in time — you will not be) and keep the 18:30 hotpot. Xiao Wulai already happened on Tuesday; do not try to restack it.",
-              zh: "周四是天灯后面的备案。若把天灯挪到这天，许家就跳过（或赶得及再订13:00——赶不及），18:30火锅留下。小乌来周二已经走完，不要再叠回去。" } }
+    { title: { en: "If Tuesday's lanterns wash out, this morning can give way", zh: "若周二天灯被雨打掉，这个上午可以让" },
+      body: { en: "Thursday is the buffer behind the lantern day. If you push lanterns here, skip Hsu's (or take the 13:00 session if you are back in time — you will not be) and keep the 18:30 hotpot. Xiao Wulai already happened on Wednesday; do not try to restack it.",
+              zh: "周四是天灯后面的备案。若把天灯挪到这天，许家就跳过（或赶得及再订13:00——赶不及），18:30火锅留下。小乌来周三已经走完，不要再叠回去。" } }
   ],
 
   logistics: {

@@ -40,7 +40,8 @@ window.TRIP.days[5] = {
       note:  { en: "Tell the driver <b>小烏來天空步道，桃園市復興區</b> — not 乌来 in New Taipei. About ninety minutes, freeway then the mountain road. Tablets before you board.",
                zh: "跟司机说<b>小烏來天空步道，桃園市復興區</b>——不是新北乌来。大约九十分钟，先高速公路再上山。上车前吃晕车药。" } },
 
-    { time: "09:30", dur: "2 hr", type: "sight", img: "xiaowulai/xiaowulai-waterfall-tourists.jpg", cost: 50,
+    { time: "09:30", dur: "2 hr", type: "sight", img: "xiaowulai/xiaowulai-waterfall-tourists.jpg", cost: 50, pay: "mixed",
+      payNote: { en: "Book the skywalk online and this is prepaid. Walk-up is usually cash.", zh: "线上预约天空步道就已预付。现场买票多半要现金。" },
       title: { en: "Xiao Wulai Skywalk and waterfall", zh: "小乌来天空步道与瀑布" },
       placeRef: "Xiao Wulai Skywalk",
       maps: "https://www.google.com/maps/search/?api=1&query=小烏來天空步道",
@@ -62,7 +63,7 @@ window.TRIP.days[5] = {
       note:  { en: "Same bus, same driver. Ask to be dropped on Heping Old Street, right where lunch is waiting.",
                zh: "同一台车、同一个司机。请停在和平老街，午餐就在那里等着你们。" } },
 
-    { time: "12:00", dur: "1.5 hr", type: "meal", img: "food-hakka/food-hakka-stir-fry.jpg", cost: 300,
+    { time: "12:00", dur: "1.5 hr", type: "meal", img: "food-hakka/food-hakka-stir-fry.jpg", cost: 300, pay: "card",
       title: { en: "Lunch — Hakka food on Daxi Old Street", zh: "午餐 —— 大溪老街的客家菜" },
       placeRef: "Daxi Old Street",
       maps: "https://www.google.com/maps/search/?api=1&query=大溪老街",

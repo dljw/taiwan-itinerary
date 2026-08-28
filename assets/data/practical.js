@@ -26,8 +26,8 @@ window.TRIP.practical = {
 
     { what: { en: "Mid-bus — Day 3, Taipei ↔ Yilan", zh: "包中巴 · 第3天台北↔宜兰" },
       when: { en: "Mon 7 Sep, 08:30–18:15", zh: "9/7 周一，08:30–18:15" },
-      note: { en: "Hotel → Zhang Mei Ama (Sanxing) → lunch → Qingshui Geothermal Park (Datong) → hotel. Driver waits. A 10-hour 中巴, not Kamalan plus taxis. Ask whether the vehicle can enter 501巷; if not, wait at 長埤湖. Same operator as the other mid-bus days.",
-              zh: "饭店 → 张美阿嬷（三星）→ 午餐 → 清水地热公园（大同）→ 饭店。司机等候。10小时中巴，不是葛玛兰再加计程车。问501巷进不进得去；进不去就停長埤湖。可与其他中巴同一家。" } },
+      note: { en: "Hotel → Lanyang Kingdom (Zhuangwei) → jar chicken or seafood lunch → Qingshui Geothermal Park (Datong) → hotel. Driver waits. A 10-hour 中巴, not Kamalan plus taxis. Ask whether the vehicle can enter 501巷; if not, wait at 長埤湖. Same operator as the other mid-bus days.",
+              zh: "饭店 → 兰阳动植物王国（壮围）→ 甕缸鸡或海鲜午餐 → 清水地热公园（大同）→ 饭店。司机等候。10小时中巴，不是葛玛兰再加计程车。问501巷进不进得去；进不去就停長埤湖。可与其他中巴同一家。" } },
 
     { what: { en: "Mid-bus — Day 4, Shifen + Jiufen package", zh: "包中巴 · 第4天十分九份套装" },
       when: { en: "Tue 8 Sep, 09:15–21:00", zh: "9/8 周二，09:15–21:00" },
@@ -59,18 +59,18 @@ window.TRIP.practical = {
       note: { en: "Hotel → Hsu's → <b>drop at Ximending</b>, driver waiting. A 4–5 hour half-day, not a 10-hour clock, not three taxis. Same operator as the other mid-bus days.",
               zh: "饭店 → 许家 → <b>西门町下车</b>，司机等候。4至5小时半天，不是10小时，也不是三台计程车。可与其他中巴同一家。" } },
 
-    { what: { en: "Zhang Mei Ama DIY ×12", zh: "张美阿嬷手作 ×12" },
+    { what: { en: "Lanyang Kingdom tickets ×12", zh: "兰阳动植物王国门票 ×12" },
       when: { en: "Mon 7 Sep, 10:00", zh: "9/7 周一，10:00" },
-      note: { en: "<b>0935-514-462</b>. DIY ticket ~NT$350. Confirm <b>行健溪一路二段161号</b> — not 树懒餐厅 on 万富七路.",
-              zh: "<b>0935-514-462</b>。体验套票约 NT$350。确认<b>行健溪一路二段161号</b>——不是万富七路的树懒餐厅。" } },
+      note: { en: "Walk-up or Klook. Adult ~NT$280, 12 and under ~NT$180, under 90 cm free. <b>0958-507-905</b>. Weekdays open 10:00. Address: 紅葉路62-13號.",
+              zh: "现场或 Klook。全票约 NT$280，12岁以下约 NT$180，未满90公分免费。<b>0958-507-905</b>。平日10:00开门。地址：红叶路62-13号。" } },
 
-    { what: { en: "Sanxing lunch table ×12", zh: "三星十二人午餐桌" },
-      when: { en: "Mon 7 Sep, 12:10", zh: "9/7 周一，12:10" },
-      note: { en: "田妈妈葱蒜美食馆, <b>03-989-5179</b>, 中山路31号. One table, not two. Fallback: 福美田园.",
-              zh: "田妈妈葱蒜美食馆，<b>03-989-5179</b>，中山路31号。一桌，不要拆两桌。备案：福美田园。" } },
+    { what: { en: "Phone two jar chickens at Da Qancheng", zh: "大嵌城两只甕缸鸡 · 打电话" },
+      when: { en: "Mon 7 Sep, call ~11:00 from the park", zh: "9/7 周一，约11:00在园区打" },
+      note: { en: "大嵌城甕缸鸡, <b>03-938-7700</b>, 新南路102-6号. Walk-in. The call is so two birds are out of the kiln at 12:15, not a table booking. Cash. Seafood instead: 壮围海之味, 03-938-8616, 中央路二段288号.",
+              zh: "大嵌城甕缸鸡，<b>03-938-7700</b>，新南路102-6号。走进去。打电话是为了12:15鸡出窑，不是订桌。现金。改吃海鲜：壮围海之味，03-938-8616，中央路二段288号。" } },
 
     { what: { en: "Qingshui Geothermal Park — no ticket, tell the driver", zh: "清水地热公园 · 不用订票，跟司机说" },
-      when: { en: "Mon 7 Sep, from 13:55", zh: "9/7 周一，13:55 起" },
+      when: { en: "Mon 7 Sep, from 14:10", zh: "9/7 周一，14:10 起" },
       note: { en: "Free entry. Buy eggs, corn and baskets on site. Last lane (501巷) may not take a 中巴 — wait at 長埤湖 if needed. Towel for feet. Keep the 3-year-old off the 95°C wells. Optional wooden bathhouse only if someone still wants a full soak.",
               zh: "免费入园。现场买蛋、玉米和竹篓。最后501巷中巴可能进不去——进不去就停長埤湖。泡脚带毛巾。三岁别靠95°C的井。有人还想整身泡，才加木造汤屋。" } },
 
@@ -160,8 +160,9 @@ window.TRIP.practical = {
     { day: 6, tw: "西門紅樓", say: "The Red House, Ximending" },
     { day: 6, tw: "西門町", say: "Ximending, Wanhua District" },
     { day: 6, tw: "艋舺龍山寺", say: "Longshan Temple, Wanhua District" },
-    { day: 3, tw: "張美阿嬤農場 三星鄉行健溪一路二段161號", say: "Zhang Mei Ama's Farm, Sanxing" },
-    { day: 3, tw: "田媽媽蔥蒜美食館 三星鄉中山路31號", say: "Tian Mama scallion kitchen, Sanxing" },
+    { day: 3, tw: "蘭陽動植物王國 壯圍鄉紅葉路62-13號", say: "Lanyang Flora & Fauna Kingdom, Zhuangwei" },
+    { day: 3, tw: "大嵌城甕缸雞 壯圍鄉新南路102-6號", say: "Da Qancheng jar chicken, Zhuangwei" },
+    { day: 3, tw: "壯圍海之味 壯圍鄉中央路二段288號", say: "Hai Zhi Wei seafood, Zhuangwei" },
     { day: 3, tw: "清水地熱公園 大同鄉三星路八段501巷150號", say: "Qingshui Geothermal Park, Datong" },
     { day: 4, tw: "十分老街", say: "Shifen Old Street, Pingxi District" },
     { day: 4, tw: "九份老街", say: "Jiufen Old Street, Ruifang District" },
@@ -186,8 +187,8 @@ window.TRIP.practical = {
 
     { group: { en: "Money", zh: "金钱" },
       items: [
-        { en: "Carry <b>NT$400–600 each in small notes</b> for night market and old street days — many stalls are cash only.",
-          zh: "逛夜市和老街的日子，建议每人带<b>NT$400至600的小钞</b>——许多摊位只收现金。" },
+        { en: "Carry about <b>NT$2,500 each in small notes</b> — night markets, old streets, lanterns and the Yilan jar-chicken lunch are cash only. That is about <b>S$100 per person</b> to change in Singapore before you fly. See the budget page.",
+          zh: "建议每人带约<b>NT$2,500小钞</b>——夜市、老街、天灯和宜兰甕缸鸡只收现金。出发前在新加坡大约换<b>每人 S$100</b>。详见费用页。" },
         { en: "Convenience-store ATMs accept foreign cards and are everywhere — 7-Eleven and FamilyMart sit on nearly every block.",
           zh: "超商ATM可刷外国卡，而且随处可见——7-11和全家几乎每个街区都有。" },
         { en: "Tipping isn't expected anywhere. Some restaurants add a 10% service charge, and that's all.",

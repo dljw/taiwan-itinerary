@@ -44,7 +44,7 @@ window.TRIP.days[1] = {
       note:  { en: "A short detour off the highway for a proper breakfast before the family visit — luggage stays snug in the van the whole time.",
                zh: "下高速公路绕一小段路，先吃顿像样的早餐再去拜访家人——行李全程安稳地留在车上。" } },
 
-    { time: "08:30", dur: "45 min", type: "meal", img: "linkou-old-street/linkou-old-street-market.jpg", cost: 150,
+    { time: "08:30", dur: "45 min", type: "meal", img: "linkou-old-street/linkou-old-street-market.jpg", cost: 150, pay: "card",
       title: { en: "Breakfast — Naka Brunch (拿靠早午餐)", zh: "早餐 —— 拿靠早午餐" },
       maps: "https://www.google.com/maps/search/?api=1&query=%E6%8B%BF%E9%9D%A0%E6%97%A9%E5%8D%88%E9%A4%90%20%E5%BF%A0%E5%AD%9D%E4%B8%80%E8%B7%AF9%E8%99%9F%E6%9E%97%E5%8F%A3",
       note:  { en: "\"拿靠\" is Linkou's own old nickname, and this local chain — the Zhongxiao branch, 忠孝一路9號, about five minutes from Minzu Road — is where the town actually eats, not a stop built for tourists. The crispy egg crepe is the one to order; radish cake with a fried egg is the heartier backup for anyone who wants more than a crepe. Casual counter-and-table seating. <b>Call ahead for a table of twelve</b> (≈02-2600-8995) — see the reviews below for why that matters. If it can't fit the whole family, Linkou Market's grab-and-go stalls (政宗包子, 蒸宴小籠包) are two minutes from Minzu Road and open before 5am.",
@@ -111,7 +111,8 @@ window.TRIP.days[1] = {
       note:  { en: "Three taxis for the twelve of us, four to a car. Ten to fifteen minutes from Zhongzheng.",
                zh: "十二个人叫三台车，一台坐四人。从中正区出发约10至15分钟。" } },
 
-    { time: "19:00", dur: "1.5 hr", type: "meal", img: "ningxia-night-market/ningxia-night-market-signage.jpg", cost: 250,
+    { time: "19:00", dur: "1.5 hr", type: "meal", img: "ningxia-night-market/ningxia-night-market-signage.jpg", cost: 250, pay: "cash",
+      payNote: { en: "Most stalls still take notes only.", zh: "多数摊位仍只收现金。" },
       title: { en: "Dinner — Ningxia Night Market", zh: "晚餐 —— 宁夏夜市" },
       placeRef: "Ningxia Night Market",
       maps: "https://www.google.com/maps/search/?api=1&query=寧夏夜市",

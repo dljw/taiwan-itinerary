@@ -36,9 +36,9 @@ window.TRIP.weather = {
               zh: "改成<b>台菜烹饪课</b>（室内，约三小时，其实颇有乐趣），晚上照常去饶河街——摊位有顶棚遮蔽，下雨照常营业。别把猫空改到周一——那天缆车公休。" } },
 
     { day: 3, date: { en: "Mon 7 Sep", zh: "9/7 周一" }, level: "MED",
-      risk: { en: "A highway tunnel, a partly outdoor farm, and an outdoor geothermal park with shelters", zh: "高速公路隧道、半户外农场，再加有遮棚的户外地热公园" },
-      swap: { en: "Light rain: still go — the farm has indoor corners, and Qingshui has roofs over the wells and foot pools. <b>If a typhoon is forecast, call off the whole Yilan day</b> and use the indoor list in Taipei. Do not send twelve people south instead. If only Qingshui is out (heat, a closed park), keep the farm and lunch and come home after Sanxing.",
-              zh: "小雨：照去——农场有室内角落，清水的井和足汤有顶。<b>预报台风就整天宜兰取消</b>，改用台北室内清单。不要改把十二人送去南部。若只是太热或园区关了，农场和午餐留下，三星之后回家。" } },
+      risk: { en: "A highway tunnel, a mostly indoor animal park, and an outdoor geothermal park with shelters", zh: "高速公路隧道、多半室内的动物园，再加有遮棚的户外地热公园" },
+      swap: { en: "Light rain: still go — the kingdom is a greenhouse, and Qingshui has roofs over the wells and foot pools. <b>If a typhoon is forecast, call off the whole Yilan day</b> and use the indoor list in Taipei. Do not send twelve people south instead. If only Qingshui is out (heat, a closed park), keep the kingdom and lunch and come home after Zhuangwei.",
+              zh: "小雨：照去——王国是温室，清水的井和足汤有顶。<b>预报台风就整天宜兰取消</b>，改用台北室内清单。不要改把十二人送去南部。若只是太热或园区关了，王国和午餐留下，壮围之后回家。" } },
 
     { day: 4, date: { en: "Tue 8 Sep", zh: "9/8 周二" }, level: "HIGH",
       risk: { en: "Sky lanterns simply won't fly in heavy rain", zh: "大雨天天灯飞不起来" },

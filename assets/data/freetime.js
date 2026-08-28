@@ -64,15 +64,15 @@ window.TRIP.freetime = {
                    zh: "刚吃过胡椒饼，谁都不饿。今晚早点收工——明天08:30中巴去宜兰。" } }
       ],
       tomorrow: { time: "07:15", sleep: { en: "8 hr 45", zh: "8小时45分" }, alarm: true,
-                  why: { en: "Breakfast at 07:30, mid-bus at 08:30 for Sanxing. A towel for wet feet at Qingshui.",
-                         zh: "7:30早餐，8:30中巴去三星。清水地热泡脚带一条毛巾。" } }
+                  why: { en: "Breakfast at 07:30, mid-bus at 08:30 for Zhuangwei. A towel for wet feet at Qingshui.",
+                         zh: "7:30早餐，8:30中巴去壮围。清水地热泡脚带一条毛巾。" } }
     },
 
     {
       n: 3, date: { en: "Mon 7 Sep", zh: "9月7日 · 周一" },
       wake: { time: { en: "07:15", zh: "07:15" }, alarm: true,
-              why: { en: "Breakfast at 07:30, mid-bus at 08:30. The tunnel is a highway; the farm opens at 09:00, and you will arrive around 10:00.",
-                     zh: "7:30早餐，8:30中巴。隧道是高速公路；农场09:00开门，大约10:00到。" } },
+              why: { en: "Breakfast at 07:30, mid-bus at 08:30. The tunnel is a highway; the kingdom opens at 10:00 on weekdays, and you will arrive around then.",
+                     zh: "7:30早餐，8:30中巴。隧道是高速公路；王国平日10:00开门，大约那时到。" } },
       home: "18:15",
       bed: "22:00",
       hard: true,

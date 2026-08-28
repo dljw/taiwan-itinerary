@@ -55,25 +55,25 @@ window.TRIP.foodDirectory = [
              zh: "许家之后中巴停在这里。还有肚子再吃阿宗、老天禄；告别火锅18:30，别把这里当第二顿午餐。" } },
 
   { day: 3, date: { en: "Mon 7 Sep", zh: "9/7 周一" }, meal: "Lunch",
-    name: { en: "Tian Mama scallion kitchen, Sanxing 田媽媽", zh: "田妈妈葱蒜美食馆（三星）" },
-    rating: "4.2", cost: 350,
-    maps: "https://www.google.com/maps/search/?api=1&query=田媽媽蔥蒜美食館+三星鄉中山路31號",
-    known: { en: "A round table of Sanxing scallion and garlic dishes — book twelve at 03-989-5179. Eat this before Qingshui. Fallback: 福美田园.",
-             zh: "圆桌三星葱蒜合菜——打 03-989-5179 订十二人。去清水地热前吃。备案：福美田园。" } },
+    name: { en: "Da Qancheng jar chicken, Zhuangwei 大嵌城", zh: "大嵌城甕缸鸡（壮围）" },
+    rating: "4.3", cost: 380,
+    maps: "https://www.google.com/maps/search/?api=1&query=大嵌城甕缸雞+壯圍鄉新南路102-6號",
+    known: { en: "Walk-in countryside dining room — jar-roast chicken plus stir-fries you pick. Phone two birds at 11:00 so the kiln is ready, 03-938-7700. Cash. Eat this before Qingshui.",
+             zh: "走进去的乡间餐厅——甕缸鸡加自己点的热炒。11:00打两只鸡，窑才赶得上，03-938-7700。现金。去清水地热前吃。" } },
 
-  { day: 3, date: { en: "Mon 7 Sep", zh: "9/7 周一" }, meal: "Snack",
-    name: { en: "Scallion pancake DIY, Zhang Mei Ama", zh: "张美阿嬷葱油饼手作" },
-    rating: "4.4", cost: 60,
-    maps: "https://www.google.com/maps/search/?api=1&query=張美阿嬤農場+三星鄉行健溪一路二段161號",
-    known: { en: "The farm DIY ticket includes the pancake. One each is enough — lunch is the round table afterwards.",
-             zh: "农场体验套票已含葱油饼。一人一张就够——午餐是后面的圆桌。" } },
+  { day: 3, date: { en: "Mon 7 Sep", zh: "9/7 周一" }, meal: "Alt lunch — seafood",
+    name: { en: "Zhuangwei Hai Zhi Wei 壯圍海之味", zh: "壮围海之味" },
+    rating: "≈4.0", cost: 450,
+    maps: "https://www.google.com/maps/search/?api=1&query=壯圍海之味+中央路二段288號",
+    known: { en: "Walk-in seafood and stir-fries on the main road, about ten minutes from the park. Sashimi, clams, greens. Lunch until ~14:00; closed Wednesday. 03-938-8616. Weekday is kinder than a weekend queue.",
+             zh: "主路上走进去的海鲜热炒，离园区大约十分钟。生鱼片、蛤蜊、青菜。午餐约到14:00；周三公休。03-938-8616。平日比周末好进。" } },
 
   { day: 3, date: { en: "Mon 7 Sep", zh: "9/7 周一" }, meal: "Snack",
     name: { en: "Geothermal eggs and corn, Qingshui", zh: "清水地热蛋和玉米" },
     rating: "4.4", cost: 80,
     maps: "https://www.google.com/maps/search/?api=1&query=清水地熱公園+宜蘭縣大同鄉三星路八段501巷150號",
-    known: { en: "Buy at the visitor centre, cook in a bamboo basket. Eggs eight minutes, corn twenty. Foot soak while you wait. Not a meal — lunch was in Sanxing.",
-             zh: "游客中心买，竹篓下井。蛋八分钟，玉米二十。等的时候泡脚。不是正餐——午餐在三星。" } },
+    known: { en: "Buy at the visitor centre, cook in a bamboo basket. Eggs eight minutes, corn twenty. Foot soak while you wait. Not a meal — lunch was in Zhuangwei.",
+             zh: "游客中心买，竹篓下井。蛋八分钟，玉米二十。等的时候泡脚。不是正餐——午餐在壮围。" } },
 
   { day: 3, date: { en: "Mon 7 Sep", zh: "9/7 周一" }, meal: "Alt — if the tunnel is out",
     name: { en: "Stay in Taipei — indoor list", zh: "留台北 —— 室内清单" },
@@ -147,36 +147,82 @@ window.TRIP.foodDirectory = [
 ];
 
 window.TRIP.foodNote = {
-  en: "Prices are rough per-person estimates, not quotes, and ratings are <b>static snapshots</b> for offline use (not live Google). <b>Reserve ahead for the whole family</b> at Hsu's, the Maokong tea house, the Sanxing lunch table, Jiufen Teahouse, the hotpot and Rice & Shine. Many night market stalls are <b>cash only</b>. Tap <b>Maps</b> to open Google Maps / reviews on your phone.",
-  zh: "价格是每人粗估，并非正式报价；评价为<b>离线用的静态快照</b>（非即时 Google）。<b>请为全家提前订位</b>：许家、猫空茶馆、三星午餐桌、九份茶坊、火锅与稻舍。夜市摊位多为<b>现金交易</b>。点<b>地图</b>可在手机打开 Google 地图／评价。"
+  en: "Prices are rough per-person estimates, not quotes, and ratings are <b>static snapshots</b> for offline use (not live Google). <b>Reserve ahead for the whole family</b> at Hsu's, the Maokong tea house, Jiufen Teahouse, the hotpot and Rice & Shine. Many night market stalls are <b>cash only</b>. Tap <b>Maps</b> to open Google Maps / reviews on your phone.",
+  zh: "价格是每人粗估，并非正式报价；评价为<b>离线用的静态快照</b>（非即时 Google）。<b>请为全家提前订位</b>：许家、猫空茶馆、九份茶坊、火锅与稻舍。夜市摊位多为<b>现金交易</b>。点<b>地图</b>可在手机打开 Google 地图／评价。"
 };
 
 /* ---- budget page copy ------------------------------------- */
 window.TRIP.budgetNotes = {
   warning: {
-    en: "These figures cover <b>food, activities and the day's small fares</b>, totalled automatically from each day's timeline. EasyCard hops in the timelines fold in here. They still leave out flights, the hotel, and the six mid-bus bookings — and being estimates rather than quotes, they'll drift a little as plans shift.",
-    zh: "这些数字涵盖<b>餐饮、活动与当日小额车资</b>，由每日行程自动加总而成。写在行程里的悠游卡车程直接并入。但仍不含机票、住宿，以及六段中巴——这些是估算而非正式报价，也会随行程调整而略有变动。"
+    en: "The headline number is <b>food and activities only</b> — no flights, no hotel, no mid-bus, no EasyCard. Cash figures are the stalls, old streets and countryside kitchens that still will not take a card. Everything is a rough per-person estimate in NT$, then converted to Singapore dollars at the foot of the page so you can change money before you fly.",
+    zh: "标题上的数字<b>只含餐饮与活动</b>——不含机票、住宿、中巴、悠游卡。现金数字是夜市、老街和乡下餐厅里刷不了卡的那些。全部以新台币每人粗估，页尾再换成新币，方便出发前兑换。"
   },
   included: [
     { en: "Meals as listed in each day's timeline, at rough per-person estimates",
       zh: "各日行程列出的餐食，按每人粗估价格计算" },
-    { en: "Entry tickets and activities with a stated price — the gondola day pass, Hsu's session, Zhang Mei Ama DIY, Qingshui cooking baskets, Xiao Wulai, the sky lantern",
-      zh: "有标价的门票与活动——缆车一日票、许家体验、张美阿嬷手作、清水地热煮食、小乌来、天灯" },
-    { en: "<b>City hops on EasyCard</b> — the MRT, city buses, and any short taxi seats still written into a day's timeline. Mid-bus hire is not in this table",
-      zh: "<b>悠游卡市区车程</b>——捷运、市区公车，以及行程里仍写着的短程计程车。中巴包车不在这张表里" }
+    { en: "Tickets and activities with a stated price — Hsu's session, Lanyang Kingdom, Qingshui baskets, Xiao Wulai, the sky lantern",
+      zh: "有标价的门票与活动——许家体验、兰阳动植物王国、清水地热煮食、小乌来、天灯" },
+    { en: "Likely extra meals that the hourly plan does not price — Zhongshan lunch on Day 1, a quiet dinner after Yilan, Daxi stall grazing, and the Wednesday night near the hotel",
+      zh: "行程表没有标价、但几乎一定会吃的几餐——第1天中山午餐、宜兰回来后的晚饭、大溪摊位、周三晚上饭店附近" }
   ],
   excluded: [
     { en: "<b>Flights</b> — not part of this cost breakdown",
       zh: "<b>机票</b>——不计入本表" },
     { en: "<b>Hotel</b> — six nights for twelve people, and the single largest line item",
       zh: "<b>住宿</b>——十二人六晚，是最大的一笔" },
-    { en: "<b>The six mid-bus bookings</b> — Day 1 morning transfer, Day 3 Yilan, Day 4 Jiufen–Shifen package, Day 5 Xiao Wulai + Daxi, Day 6 Shiding half-day, Day 7 airport send-off. Charged per vehicle, so they sit outside this table. About NT$45,000–55,000 for the week. See the <b>Transport page</b>",
-      zh: "<b>六段中巴</b>——第1天上午接机、第3天宜兰、第4天九份十分套装、第5天小乌来加大溪、第6天石碇半天、第7天送机。以车计费，所以不列在这张表里。全周约NT$45,000–55,000。详见<b>交通页</b>" },
+    { en: "<b>All transport</b> — the six mid-bus bookings (about NT$45,000–55,000 for the week), EasyCard top-ups, the Maokong gondola day pass, and short city taxis. See the <b>Transport page</b>",
+      zh: "<b>全部交通</b>——六段中巴（全周约NT$45,000–55,000）、悠游卡储值、猫空缆车一日票、市区短程计程车。详见<b>交通页</b>" },
     { en: "<b>Shopping</b> — Daxi tofu and woodwork on Day 5, Ximending on Day 6, and the Dihua Street gift run on the last day",
       zh: "<b>购物</b>——第5天大溪的豆干与木工艺品、第6天的西门町，以及最后一天迪化街的伴手礼" },
     { en: "<b>Travel insurance</b>, which matters more than usual in typhoon season",
       zh: "<b>旅游保险</b>——台风季尤其重要" },
-    { en: "Taxis within Taipei itself, tips, and the inevitable extra round of drinks",
-      zh: "台北市区内的计程车、小费，以及一定会多点的那几杯饮料" }
-  ]
+    { en: "Tips (almost never expected) and the extra round of drinks",
+      zh: "小费（台湾几乎不给）以及一定会多点的那几杯饮料" }
+  ],
+
+  /* Round number on purpose so a family can do the sum in their head.
+     Late-August 2026 money changers in Singapore were giving about
+     NT$24.8 per Singapore dollar; NT$25 = S$1 is the planning rate. */
+  fx: {
+    ntdPerSgd: 25,
+    changer: 24.8,
+    asOf: { en: "late August 2026", zh: "2026年8月下旬" },
+    note: {
+      en: "Planning rate <b>NT$25 = S$1</b>. Singapore money changers were closer to NT$24.8, so S$100 yields about NT$2,480 — change a little extra rather than a little less.",
+      zh: "换算用<b>NT$25 = S$1</b>。新加坡兑换店大约是 NT$24.8，所以 S$100 大约换到 NT$2,480——宁可多换一点，不要少换。"
+    }
+  },
+
+  /* Meals the hourly plan does not price, but a family of twelve will eat. */
+  extras: [
+    { day: 1, cost: 250, pay: "card",
+      name: { en: "Zhongshan lunch (free & easy afternoon)", zh: "中山午餐（自由下午）" },
+      why: { en: "The timeline leaves lunch open. A sit-down café will take a card; a stall will not.",
+             zh: "行程没写午餐。坐下来的咖啡馆可以刷卡；摊位不行。" } },
+    { day: 3, cost: 200, pay: "card",
+      name: { en: "Evening near the hotel after Yilan", zh: "宜兰回来后，饭店附近晚饭" },
+      why: { en: "Qingshui eggs are a snack, not dinner. Convenience stores and nearby restaurants take cards.",
+             zh: "清水的蛋只是点心，不是晚饭。超商和附近餐厅可刷卡。" } },
+    { day: 5, cost: 150, pay: "cash",
+      name: { en: "Daxi stall grazing — tofu, douhua, peanut roll", zh: "大溪摊位——豆干、豆花、花生卷" },
+      why: { en: "Old-street stalls after the Hakka lunch. Notes only.",
+             zh: "客家菜之后的老街摊。只收现金。" } },
+    { day: 5, cost: 200, pay: "card",
+      name: { en: "Quiet dinner near the hotel", zh: "饭店附近随便吃的晚饭" },
+      why: { en: "The farewell hotpot is Thursday. Wednesday night is a noodle shop or Huashan.",
+             zh: "告别火锅在周四。周三晚上是麵店或华山。" } }
+  ],
+
+  buffer: {
+    perPerson: 300,
+    note: {
+      en: "A small-notes float for drinks, a second lantern, a taxi that will not take EasyCard, and the usual 'go on then' at a stall.",
+      zh: "小钞预备金：多一杯饮料、多一盏天灯、碰到不收悠游卡的计程车，以及摊位上那句「那就再来一个」。"
+    }
+  },
+
+  cashAdvice: {
+    en: "Ask the changer for <b>NT$100 and NT$200 notes</b>. A NT$1,000 note is painful at a night-market stall. Split the bundle across two or three people, not one wallet.",
+    zh: "兑换时请要<b>NT$100 和 NT$200 的小钞</b>。夜市摊碰到千元钞很为难。现金请分给两三个人带着，不要全放一个钱包。"
+  }
 };

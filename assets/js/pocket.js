@@ -37,8 +37,12 @@
     page:       { en: "Page ",                   zh: "第" },
     pageAfter:  { en: "",                        zh: "页" },
     budgetH1:   { en: "What the week costs",     zh: "这一周的花费" },
-    tripTotal:  { en: "Trip total — food, activities and fares",
-                  zh: "全程合计 —— 餐饮、活动与车资" },
+    tripTotal:  { en: "Trip total — food and activities, no transport",
+                  zh: "全程合计 —— 餐饮与活动，不含交通" },
+    cashLine:   { en: "Cash a card will not cover, per person",
+                  zh: "刷不了卡的现金，每人" },
+    sgdLine:    { en: "Change in Singapore before you fly",
+                  zh: "出发前在新加坡兑换" },
     included:   { en: "Counted above",           zh: "已包含" },
     excluded:   { en: "Budget separately",       zh: "需另行估算" },
 
@@ -61,8 +65,8 @@
       zh: "折叠伞，遮阳跟挡雨一样重要；九份、十分还要带轻便雨衣" },
     { en: "Shoes you can walk all day in — Jiufen is stairs, Shifen is train tracks",
       zh: "能走一整天的鞋——九份全是阶梯，十分走的是铁道" },
-    { en: "NT$400–600 each in small notes; many night market stalls are cash only",
-      zh: "每人 NT$400–600 的小钞；夜市摊位多半只收现金" },
+    { en: "About NT$2,500 / S$100 each in small notes; night markets, old streets and lanterns are cash only",
+      zh: "每人约 NT$2,500／S$100 小钞；夜市、老街和天灯只收现金" },
     { en: "Power bank, charging cable, and a Type-A plug (110V, same as home for some)",
       zh: "行动电源、充电线，以及扁头插座转接（台湾是110V）" },
     { en: "Sunscreen, a hat, a refillable water bottle — it is 30–34°C and humid",
@@ -116,15 +120,30 @@
     return min === max ? nt(min) : nt(min) + "–" + nt(max);
   }
 
-  /* Same summing rule as the full booklet's budget page, so the two
-     can never disagree: altGroup rows are alternatives, not extras. */
-  function dayCost(d) {
-    var base = 0;
+  /* Food/activities only, plus cash that will not take a card —
+     same rules as the full budget page. */
+  function daySpend(d) {
+    var food = 0, cash = 0, transit = 0, mixed = 0;
     (d.timeline || []).forEach(function (r) {
-      if (typeof r.cost === "number" && !r.altGroup) base += r.cost;
+      if (typeof r.cost !== "number" || r.altGroup) return;
+      if (r.type === "travel") transit += r.cost;
+      else food += r.cost;
+      if (r.pay === "cash") cash += r.cost;
+      if (r.pay === "mixed") mixed += r.cost;
     });
+    return { food: food, cash: cash, transit: transit, mixed: mixed };
+  }
+
+  function dayCost(d) {
+    var s = daySpend(d);
     if (d.budget) return { min: d.budget.min, max: d.budget.max, note: d.budget.note };
-    return { min: base, max: base };
+    var total = s.food + s.transit;
+    return { min: total, max: total };
+  }
+
+  function sgd(ntd) {
+    var rate = (T.budgetNotes && T.budgetNotes.fx && T.budgetNotes.fx.ntdPerSgd) || 25;
+    return "S$" + Math.round(ntd / rate).toLocaleString("en-US");
   }
 
   /* Matched on the English date labels ("Sat 5 Sep"), which are the only
@@ -232,20 +251,30 @@
   /* ---------- page 9 · budget -------------------------------- */
 
   function budget() {
-    var o = "", tmin = 0, tmax = 0, rows = "";
+    var o = "", food = 0, cash = 0, mixed = 0, rows = "";
+    var extras = (T.budgetNotes && T.budgetNotes.extras) || [];
+    var buffer = (T.budgetNotes && T.budgetNotes.buffer && T.budgetNotes.buffer.perPerson) || 300;
 
     T.meta.days.forEach(function (info) {
       var d = T.days[info.n];
       if (!d) return;
-      var c = dayCost(d);
-      tmin += c.min; tmax += c.max;
+      var s = daySpend(d);
+      var extraSum = 0;
+      extras.forEach(function (e) { if (e.day === info.n) extraSum += e.cost; });
+      food += s.food + extraSum;
+      cash += s.cash;
+      mixed += s.mixed;
+      extras.forEach(function (e) {
+        if (e.day === info.n && e.pay === "cash") cash += e.cost;
+      });
       rows += "<tr><td class='n'>" + info.n + "</td>" +
               "<td class='nowrap'>" + esc(strip(info.date)) + "</td>" +
-              "<td>" + esc(strip(info.title)) +
-              (c.note ? "<span class='note'>" + esc(gist(c.note, 110)) + "</span>" : "") + "</td>" +
-              "<td class='num'>" + money(c.min, c.max) + "</td>" +
-              "<td class='num'>" + money(c.min * GROUP, c.max * GROUP) + "</td></tr>";
+              "<td>" + esc(strip(info.title)) + "</td>" +
+              "<td class='num'>" + nt(s.food + extraSum) + "</td>" +
+              "<td class='num'>" + nt((s.food + extraSum) * GROUP) + "</td></tr>";
     });
+
+    var changePp = Math.ceil((cash + mixed + buffer) / 100) * 100;
 
     o += '<header class="pagehead"><div class="kicker">' + esc(L("page")) + "9" + esc(L("pageAfter")) +
          "</div><h1>" + esc(L("budgetH1")) + "</h1>" +
@@ -255,9 +284,17 @@
          esc(L("thDay")) + "</th>" +
          "<th class='num'>" + esc(L("thPP")) + "</th><th class='num'>" + esc(L("thTwelve")) +
          "</th></tr></thead><tbody>" +
-         rows + "</tbody><tfoot><tr><td colspan='3'>" + esc(L("tripTotal")) + "</td>" +
-         "<td class='num'>" + money(tmin, tmax) + "</td>" +
-         "<td class='num'>" + money(tmin * GROUP, tmax * GROUP) + "</td></tr></tfoot></table>";
+         rows + "</tbody><tfoot>" +
+         "<tr><td colspan='3'>" + esc(L("tripTotal")) + "</td>" +
+         "<td class='num'>" + nt(food) + "</td>" +
+         "<td class='num'>" + nt(food * GROUP) + "</td></tr>" +
+         "<tr><td colspan='3'>" + esc(L("cashLine")) + "</td>" +
+         "<td class='num'>" + nt(cash) + "</td>" +
+         "<td class='num'>" + nt(cash * GROUP) + "</td></tr>" +
+         "<tr><td colspan='3'>" + esc(L("sgdLine")) + "</td>" +
+         "<td class='num'>" + sgd(changePp) + "</td>" +
+         "<td class='num'>" + sgd(changePp * GROUP) + "</td></tr>" +
+         "</tfoot></table>";
 
     o += '<div class="cols">';
     o += "<div><h2 class='sec'>" + esc(L("included")) + "</h2><ul class='tight'>";

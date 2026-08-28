@@ -29,7 +29,8 @@ window.TRIP.days[4] = {
   ],
 
   timeline: [
-    { time: "08:00", dur: "1 hr", type: "meal", img: "food-soy-milk/food-soy-milk-shaobing-closeup.jpg", cost: 120,
+    { time: "08:00", dur: "1 hr", type: "meal", img: "food-soy-milk/food-soy-milk-shaobing-closeup.jpg", cost: 120, pay: "cash",
+      payNote: { en: "Fu Hang is a market stall. Hotel breakfast is already paid with the room.", zh: "阜杭是市场摊位。若改在饭店吃早餐，这笔就不用了。" },
       title: { en: "Breakfast — hotel, or Fu Hang Soy Milk", zh: "早餐 —— 饭店，或阜杭豆浆" },
       maps: "https://www.google.com/maps/search/?api=1&query=阜杭豆漿",
       note:  { en: "Fu Hang sits upstairs in the Huashan Market building by Shandao Temple, just minutes from the hotel — savoury soy milk, thick shaobing still warm from the griddle, youtiao fried to order. The queue is the stuff of legend: arrive at 08:00 or skip it entirely. <b>Closed Mondays</b>, so today you're in luck.",
@@ -73,7 +74,8 @@ window.TRIP.days[4] = {
       note:  { en: "Five to ten minutes. The driver can wait on the street or at the car park while you eat and linger.",
                zh: "五到十分钟。司机可以停老街或停车场，等你们吃完再逛。" } },
 
-    { time: "12:00", dur: "2 hr", type: "meal", img: "shifen-old-street/shifen-old-street-tracks-crowd-lantern.jpg", cost: 200,
+    { time: "12:00", dur: "2 hr", type: "meal", img: "shifen-old-street/shifen-old-street-tracks-crowd-lantern.jpg", cost: 200, pay: "cash",
+      payNote: { en: "Old-street stalls and the chicken-wing rice shop take notes.", zh: "老街摊位和鸡翅包饭店收现金。" },
       title: { en: "Lunch and the railway street", zh: "午餐与铁道老街" },
       placeRef: "Shifen Old Street and the sky lanterns",
       maps: "https://www.google.com/maps/search/?api=1&query=十分老街",
@@ -111,7 +113,8 @@ window.TRIP.days[4] = {
         asOf: "2026-08"
       } },
 
-    { time: "15:30", dur: "1.5 hr", type: "sight", img: "sky-lantern/sky-lantern-wish-closeup-sunset.jpg", cost: 250,
+    { time: "15:30", dur: "1.5 hr", type: "sight", img: "sky-lantern/sky-lantern-wish-closeup-sunset.jpg", cost: 250, pay: "cash",
+      payNote: { en: "Lantern shops on the tracks are cash on the spot.", zh: "铁道旁的天灯店当场收现金。" },
       title: { en: "Sky lantern release — golden hour", zh: "放天灯 —— 黄金时刻" },
       maps: "https://www.google.com/maps/search/?api=1&query=十分老街+天燈",
       note:  { en: "Write your wishes across all four sides with the brush, stand together on the tracks, and let go as one around 16:00–17:00 while the light turns gold. Roughly NT$200 a lantern, shared between two or three — and worth having one grown-up keep a hand on the three-year-old, well clear of the flame, while it lifts. <b>This is the moment the whole trip has been building to.</b>",
@@ -154,7 +157,7 @@ window.TRIP.days[4] = {
         asOf: "2026-08"
       } },
 
-    { time: "18:15", dur: "1.5 hr", type: "meal", img: "food-jiufen-taro-balls/food-jiufen-taro-balls-shopfront-v2.jpg", cost: 400,
+    { time: "18:15", dur: "1.5 hr", type: "meal", img: "food-jiufen-taro-balls/food-jiufen-taro-balls-shopfront-v2.jpg", cost: 400, pay: "card",
       title: { en: "Tea and dinner — Jiufen teahouse", zh: "茶与晚餐 —— 九份茶楼" },
       maps: "https://www.google.com/maps/search/?api=1&query=九份茶坊",
       note:  { en: "Jiufen Teahouse (4.8) does interactive brewing — they set the pot in front of you and teach you the whole ritual — while the mountainside drops away to the sea below. Snacks alongside: taro balls, fish ball soup.",

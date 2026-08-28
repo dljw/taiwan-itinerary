@@ -20,7 +20,7 @@ a Chinese link to family.
 | The restaurant table | `assets/data/food.js` |
 | Free time, bedtimes and wake-up alarms | `assets/data/freetime.js` |
 | Transport plan, fares and the Day 1 charter | `assets/data/transport.js` |
-| What the budget page says is / isn't included | `assets/data/food.js` (bottom, `budgetNotes`) |
+| What the budget page says is / isn't included, cash-only stops, SGD | `assets/data/food.js` (bottom, `budgetNotes`) |
 | Bookings checklist, phrasebook, taxi cards, emergency numbers | `assets/data/practical.js` |
 | Typhoon and rain plan | `assets/data/weather.js` |
 | Colours, fonts, spacing | `assets/css/styles.css` (tokens at the very top) |

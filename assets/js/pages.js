@@ -63,7 +63,7 @@
     out += '<div class="daycards">';
     [["food.html", { en: "Every restaurant, in one table", zh: "餐厅总表" }, { en: "All recommended spots with ratings, Maps links and rough cost.", zh: "所有推荐餐厅，含评价、地图连结与预估费用。" }],
      ["transport.html", { en: "How each day moves", zh: "每天怎么走" }, { en: "Public transport plan, fares, and the mid-buses on Days 1, 3 and 6.", zh: "大众运输规划、车资，以及第1、3、6天的中巴。" }],
-     ["budget.html", { en: "What it costs", zh: "费用估算" }, { en: "Per-day and per-person estimates for food, activities and fares, summed for the group.", zh: "每日与每人的餐饮、活动与车资估算，并合计全团。" }],
+     ["budget.html", { en: "What it costs", zh: "费用估算" }, { en: "Food and activities for the week, the cash a card will not cover, and how much to change in Singapore dollars.", zh: "全周餐饮与活动、刷不了卡要备的现金，以及出发前该换多少新币。" }],
      ["practical.html", { en: "Phrases, cards and bookings", zh: "会话、名片与订位清单" }, { en: "Survival Mandarin, taxi cards in traditional characters, the booking checklist and emergency numbers.", zh: "求生中文、繁体计程车名片、订位清单与紧急电话。" }],
      ["weather.html", { en: "If the weather turns", zh: "天气备案" }, { en: "September is typhoon season. Per-day swaps, indoor options and a prep checklist.", zh: "九月是台风季。每日备案、室内选项与准备清单。" }],
      ["booklet.html", { en: "Export the whole trip as PDF", zh: "导出完整 PDF 手册" }, { en: "One printable booklet — every day, food, transport, phrases. Save as PDF from the browser.", zh: "可列印的完整手册——每一天、餐饮、交通、会话。用浏览器另存为 PDF。" }]
@@ -78,66 +78,265 @@
 
   /* ---------- BUDGET ----------------------------------------- */
 
+  function nt(n) {
+    return "NT$" + Math.round(n).toLocaleString();
+  }
+  function sg(n) {
+    return "S$" + Math.round(n).toLocaleString();
+  }
+
   /* Sums each day's timeline so the table can never drift from the
-     itinerary. Rows tagged altGroup are alternatives (Day 3's three
-     split groups) and are excluded; a day may override with .budget. */
-  T.dayCost = function (d) {
-    var base = 0;
+     itinerary. Rows tagged altGroup are alternatives and are excluded.
+     Travel rows (MRT, gondola, taxis in the timeline) are split out so
+     the headline number can be food and activities only. */
+  T.daySpend = function (d) {
+    var food = 0, transit = 0, cash = 0, mixed = 0;
+    var cashRows = [], mixedRows = [];
     (d.timeline || []).forEach(function (r) {
-      if (typeof r.cost === "number" && !r.altGroup) base += r.cost;
+      if (typeof r.cost !== "number" || r.altGroup) return;
+      if (r.type === "travel") transit += r.cost;
+      else food += r.cost;
+      if (r.pay === "cash") {
+        cash += r.cost;
+        cashRows.push({ title: r.title, cost: r.cost, note: r.payNote });
+      } else if (r.pay === "mixed") {
+        mixed += r.cost;
+        mixedRows.push({ title: r.title, cost: r.cost, note: r.payNote });
+      }
     });
-    if (d.budget) return { min: d.budget.min, max: d.budget.max, note: d.budget.note };
-    return { min: base, max: base };
+    return {
+      food: food, transit: transit, cash: cash, mixed: mixed,
+      cashRows: cashRows, mixedRows: mixedRows,
+      note: d.budget && d.budget.note
+    };
   };
 
-  T.renderBudget = function () {
-    var m = T.meta, rows = "", tmin = 0, tmax = 0;
+  /* Kept for the pocket booklet, which still prints a single per-day
+     figure. Food + the small fares that sit in the timeline; mid-buses
+     stay outside. */
+  T.dayCost = function (d) {
+    var s = T.daySpend(d);
+    if (d.budget) return { min: d.budget.min, max: d.budget.max, note: d.budget.note };
+    var total = s.food + s.transit;
+    return { min: total, max: total };
+  };
 
-    m.days.forEach(function (info) {
+  T.tripBudget = function () {
+    var N = T.budgetNotes || {};
+    var fx = N.fx || { ntdPerSgd: 25, changer: 24.8 };
+    var extras = N.extras || [];
+    var buffer = (N.buffer && N.buffer.perPerson) || 300;
+    var days = [];
+    var food = 0, transit = 0, cash = 0, mixed = 0;
+    var cashRows = [];
+
+    (T.meta.days || []).forEach(function (info) {
       var d = T.days[info.n];
       if (!d) return;
-      var c = T.dayCost(d);
-      tmin += c.min; tmax += c.max;
-      var range = c.min === c.max ? "NT$" + c.min.toLocaleString()
-                : "NT$" + c.min.toLocaleString() + "–" + c.max.toLocaleString();
-      rows += "<tr><td><b>" + info.n + "</b></td><td>" + H.bi(info.date) + "</td><td>" +
-              H.bi(info.title) + (c.note ? '<br><span style="font-size:.85em;color:var(--ink-faint)">' +
-              H.bi(c.note) + "</span>" : "") + '</td><td class="num">' + range + '</td><td class="num">' +
-              (c.min === c.max ? "NT$" + (c.min * GROUP_SIZE).toLocaleString()
-                               : "NT$" + (c.min * GROUP_SIZE).toLocaleString() + "–" + (c.max * GROUP_SIZE).toLocaleString()) +
-              "</td></tr>";
+      var s = T.daySpend(d);
+      food += s.food;
+      transit += s.transit;
+      cash += s.cash;
+      mixed += s.mixed;
+      s.n = info.n;
+      s.date = info.date;
+      s.title = info.title;
+      days.push(s);
+      s.cashRows.forEach(function (r) {
+        cashRows.push({
+          day: info.n, date: info.date, title: r.title,
+          cost: r.cost, note: r.note, kind: "must"
+        });
+      });
+      s.mixedRows.forEach(function (r) {
+        cashRows.push({
+          day: info.n, date: info.date, title: r.title,
+          cost: r.cost, note: r.note, kind: "mixed"
+        });
+      });
+    });
+
+    extras.forEach(function (e) {
+      food += e.cost;
+      if (e.pay === "cash") {
+        cash += e.cost;
+        cashRows.push({
+          day: e.day, title: e.name, cost: e.cost,
+          note: e.why, kind: "must"
+        });
+      }
+    });
+
+    cashRows.sort(function (a, b) { return a.day - b.day; });
+
+    var changePp = Math.ceil((cash + mixed + buffer) / 100) * 100;
+    var sgdPp = Math.round(changePp / (fx.ntdPerSgd || 25));
+
+    return {
+      days: days,
+      extras: extras,
+      cashRows: cashRows,
+      food: food,
+      transit: transit,
+      cash: cash,
+      mixed: mixed,
+      buffer: buffer,
+      changePp: changePp,
+      sgdPp: sgdPp,
+      foodGroup: food * GROUP_SIZE,
+      cashGroup: cash * GROUP_SIZE,
+      changeGroup: changePp * GROUP_SIZE,
+      sgdGroup: sgdPp * GROUP_SIZE,
+      fx: fx
+    };
+  };
+
+  function fareCell(kicker, amount, sub, extraClass) {
+    return '<div class="farecell' + (extraClass ? " " + extraClass : "") + '">' +
+           '<div class="fare-kicker">' + H.bi(kicker) + "</div>" +
+           '<div class="fare-amt">' + amount + "</div>" +
+           (sub ? '<div class="fare-sub">' + sub + "</div>" : "") +
+           "</div>";
+  }
+
+  T.renderBudget = function () {
+    var B = T.tripBudget();
+    var N = T.budgetNotes;
+    var rows = "";
+
+    B.days.forEach(function (s) {
+      var extraBits = B.extras.filter(function (e) { return e.day === s.n; });
+      var extraSum = 0;
+      extraBits.forEach(function (e) { extraSum += e.cost; });
+      var dayFood = s.food + extraSum;
+      var extraNote = extraBits.map(function (e) {
+        return H.bi(e.name) + " " + nt(e.cost);
+      }).join(" · ");
+      var dayCash = s.cash + extraBits.reduce(function (n, e) {
+        return n + (e.pay === "cash" ? e.cost : 0);
+      }, 0);
+      rows += "<tr><td><b>" + s.n + "</b></td><td>" + H.bi(s.date) + "</td><td>" +
+              H.bi(s.title) +
+              (extraNote ? '<br><span class="budget-quiet">' +
+                H.bi({ en: "Also likely: ", zh: "另外可能：" }) + extraNote + "</span>" : "") +
+              (s.note ? '<br><span class="budget-quiet">' + H.bi(s.note) + "</span>" : "") +
+              '</td><td class="num">' + nt(dayFood) +
+              '</td><td class="num">' + nt(dayCash) +
+              '</td><td class="num">' + nt(dayFood * GROUP_SIZE) + "</td></tr>";
     });
 
     var out = pagehead("Budget · 费用",
       { en: "What the week costs", zh: "这一周的花费" },
-      { en: "Food, activities and fares, summed automatically from each day's timeline — so this table updates itself whenever a day changes.",
-        zh: "餐饮、活动与车资的估算，由每日行程自动加总——所以改了行程，这张表也会跟着变。" });
+      { en: "Food and activities in Taiwan dollars — no transport. Then the cash a card will not cover, and the Singapore dollars to change before you fly.",
+        zh: "餐饮与活动用新台币算——不含交通。接着是刷不了卡要备的现金，以及出发前该换的新币。" });
+
     out += '<section><div class="wrap">';
-    out += H.secHead("01", { en: "Food, activities and fares, per person", zh: "餐饮、活动与车资，每人" });
+    out += '<div class="fareboard">';
+    out += fareCell(
+      { en: "The week, no transport", zh: "全程，不含交通" },
+      nt(B.food) + '<span class="fare-pp">' + H.bi({ en: " / person", zh: " / 每人" }) + "</span>",
+      H.bi({ en: "About ", zh: "十二人约 " }) + "<b>" + nt(B.foodGroup) + "</b>" +
+        H.bi({ en: " for twelve. Meals, tickets and the likely extra lunches. Flights, hotel and every bus sit outside this.",
+               zh: "。含餐食、门票和几乎一定会吃的几顿。机票、住宿和所有车子都不在内。" })
+    );
+    out += fareCell(
+      { en: "Cash a card will not cover", zh: "刷不了卡的现金" },
+      nt(B.cash) + '<span class="fare-pp">' + H.bi({ en: " / person", zh: " / 每人" }) + "</span>",
+      H.bi({ en: "Night markets, old streets, lanterns, jar chicken. Change ", zh: "夜市、老街、天灯、甕缸鸡。出发前每人换 " }) +
+        '<b class="fare-sgd">' + sg(B.sgdPp) + "</b>" +
+        H.bi({ en: " each in Singapore — ", zh: " —— 十二人 " }) +
+        "<b>" + sg(B.sgdGroup) + "</b>" +
+        H.bi({ en: " for twelve.", zh: "。" }),
+      "cash"
+    );
+    out += "</div></div></section>";
+
+    out += '<section><div class="wrap">';
+    out += H.secHead("01", { en: "Food and activities, per person — no transport", zh: "餐饮与活动，每人 —— 不含交通" });
     out += '<div class="tablewrap"><table><thead><tr>' +
            "<th>#</th><th>" + H.bi({ en: "Date", zh: "日期" }) + "</th><th>" +
            H.bi({ en: "Day", zh: "行程" }) + '</th><th class="num">' +
-           H.bi({ en: "Per person", zh: "每人" }) + '</th><th class="num">' +
+           H.bi({ en: "Food & activities", zh: "餐饮与活动" }) + '</th><th class="num">' +
+           H.bi({ en: "Of which cash", zh: "其中现金" }) + '</th><th class="num">' +
            H.bi({ en: "×12 people", zh: "十二人合计" }) + "</th></tr></thead><tbody>";
     out += rows;
-    out += "</tbody><tfoot><tr><td colspan=3>" + H.bi({ en: "Trip total", zh: "全程合计" }) +
-           '</td><td class="num">' + (tmin === tmax ? "NT$" + tmin.toLocaleString()
-             : "NT$" + tmin.toLocaleString() + "–" + tmax.toLocaleString()) +
-           '</td><td class="num">' + (tmin === tmax ? "NT$" + (tmin * GROUP_SIZE).toLocaleString()
-             : "NT$" + (tmin * GROUP_SIZE).toLocaleString() + "–" + (tmax * GROUP_SIZE).toLocaleString()) +
+    out += "</tbody><tfoot><tr><td colspan=3>" +
+           H.bi({ en: "Trip total — no transport", zh: "全程合计 —— 不含交通" }) +
+           '</td><td class="num">' + nt(B.food) +
+           '</td><td class="num">' + nt(B.cash) +
+           '</td><td class="num">' + nt(B.foodGroup) +
            "</td></tr></tfoot></table></div>";
+    out += '<div class="note">' + H.bi({
+      en: "EasyCard hops and the Maokong gondola day pass (about " + nt(B.transit) +
+          " a head in the timelines) sit with transport, not here. Mid-buses are hired per vehicle — roughly NT$45,000–55,000 for the week.",
+      zh: "悠游卡短程和猫空缆车一日票（行程里约每人 " + nt(B.transit) +
+          "）算在交通，不在这里。中巴按车租，全周约 NT$45,000–55,000。"
+    }) + "</div>";
     out += "</div></section>";
 
-    /* what is and is not included */
     out += '<section><div class="wrap">';
-    out += H.secHead("02", { en: "What this does and does not cover", zh: "涵盖与未涵盖的项目" });
+    out += H.secHead("02", { en: "Where a card will not work", zh: "哪里刷不了卡" });
+    out += '<div class="tablewrap"><table><thead><tr>' +
+           "<th>" + H.bi({ en: "Day", zh: "日" }) + "</th><th>" +
+           H.bi({ en: "Place", zh: "地点" }) + "</th><th>" +
+           H.bi({ en: "Why cash", zh: "为何现金" }) + '</th><th class="num">' +
+           H.bi({ en: "Per person", zh: "每人" }) + "</th></tr></thead><tbody>";
+    B.cashRows.forEach(function (r) {
+      var tag = r.kind === "mixed"
+        ? '<span class="chip amber">' + H.bi({ en: "unless prepaid", zh: "没预付才要" }) + "</span> "
+        : "";
+      out += "<tr><td><b>" + r.day + "</b></td><td><b>" + H.bi(r.title) + "</b></td><td>" +
+             tag + (r.note ? H.bi(r.note) : "—") +
+             '</td><td class="num">' + nt(r.cost) + "</td></tr>";
+    });
+    out += "</tbody><tfoot><tr><td colspan=3>" +
+           H.bi({ en: "Must-have cash (places that will not take a card)", zh: "必备现金（刷不了卡的地方）" }) +
+           '</td><td class="num">' + nt(B.cash) + "</td></tr>";
+    out += "<tr><td colspan=3>" +
+           H.bi({ en: "Hold extra if you did not prepay tickets", zh: "门票没预付，再多备" }) +
+           '</td><td class="num">' + nt(B.mixed) + "</td></tr>";
+    out += "<tr><td colspan=3>" + H.bi(N.buffer.note) +
+           '</td><td class="num">' + nt(B.buffer) + "</td></tr>";
+    out += "<tr><td colspan=3>" +
+           H.bi({ en: "Change this much per person", zh: "每人请换这么多" }) +
+           '</td><td class="num">' + nt(B.changePp) + "</td></tr></tfoot></table></div>";
+    out += "</div></section>";
+
+    out += '<section><div class="wrap">';
+    out += H.secHead("03", { en: "Change this in Singapore before you fly", zh: "出发前在新加坡换这些" });
+    out += '<div class="sgdboard">';
+    out += '<div class="sgdboard-clock">';
+    out += '<div class="fare-kicker">' + H.bi({ en: "Per person", zh: "每人" }) + "</div>";
+    out += '<div class="sgd-amt">' + sg(B.sgdPp) + "</div>";
+    out += '<div class="fare-sub">' + nt(B.changePp) +
+           H.bi({ en: " at NT$25 = S$1", zh: "，按 NT$25 = S$1" }) + "</div>";
+    out += "</div>";
+    out += '<div class="sgdboard-clock group">';
+    out += '<div class="fare-kicker">' + H.bi({ en: "Twelve people", zh: "十二人" }) + "</div>";
+    out += '<div class="sgd-amt">' + sg(B.sgdGroup) + "</div>";
+    out += '<div class="fare-sub">' + nt(B.changeGroup) +
+           H.bi({ en: " for the whole family", zh: "，全家现金" }) + "</div>";
+    out += "</div>";
+    out += '<div class="sgdboard-copy">';
+    out += "<p>" + H.biRich(N.fx.note) + "</p>";
+    out += "<p>" + H.bi({
+      en: "Rate snapshot: " + (N.fx.asOf && N.fx.asOf.en ? N.fx.asOf.en : "") +
+          ". Do this at a Singapore money changer, not at the airport in Taipei — the spread is kinder, and you land at 06:55 with cash already in the bag.",
+      zh: "汇率快照：" + (N.fx.asOf && N.fx.asOf.zh ? N.fx.asOf.zh : "") +
+          "。请在新加坡兑换店换，不要到台北机场再换——价差比较好看，而且你们 06:55 落地时现金已经在包里。"
+    }) + "</p>";
+    out += "<p>" + H.biRich(N.cashAdvice) + "</p>";
+    out += "</div></div></div></section>";
+
+    out += '<section><div class="wrap">';
+    out += H.secHead("04", { en: "What this does and does not cover", zh: "涵盖与未涵盖的项目" });
     out += '<div class="box verify"><h4>' + H.bi({ en: "Read this before quoting a number to anyone", zh: "把数字告诉别人之前先看这里" }) +
-           "</h4><p>" + H.biRich(T.budgetNotes.warning) + "</p></div>";
+           "</h4><p>" + H.biRich(N.warning) + "</p></div>";
     out += '<div class="box"><h4>' + H.bi({ en: "Included above", zh: "已包含" }) + "</h4><ul>";
-    T.budgetNotes.included.forEach(function (i) { out += "<li>" + H.biRich(i) + "</li>"; });
+    N.included.forEach(function (i) { out += "<li>" + H.biRich(i) + "</li>"; });
     out += "</ul></div>";
     out += '<div class="box"><h4>' + H.bi({ en: "NOT included — budget separately", zh: "未包含 —— 请另行估算" }) + "</h4><ul>";
-    T.budgetNotes.excluded.forEach(function (i) { out += "<li>" + H.biRich(i) + "</li>"; });
+    N.excluded.forEach(function (i) { out += "<li>" + H.biRich(i) + "</li>"; });
     out += "</ul></div>";
     out += "</div></section>";
 
@@ -149,8 +348,8 @@
   T.renderFood = function () {
     var out = pagehead("Food · 餐厅",
       { en: "Every place we plan to eat", zh: "所有安排要吃的地方" },
-      { en: "Hsu's flowing noodles, Ximending, a Sanxing scallion table and the rest of the week, with ratings and what each is known for.",
-        zh: "许家流水麵、西门町、三星葱合菜，以及这一周其余的店，含评价与招牌。" });
+      { en: "Hsu's flowing noodles, Ximending, a Zhuangwei jar-chicken table and the rest of the week, with ratings and what each is known for.",
+        zh: "许家流水麵、西门町、壮围甕缸鸡，以及这一周其余的店，含评价与招牌。" });
     out += '<section><div class="wrap">';
     out += H.secHead("01", { en: "Every recommended place, by day", zh: "所有推荐餐厅（依日期）" });
     out += '<div class="tablewrap"><table><thead><tr>' +
@@ -668,28 +867,42 @@
 
     /* Budget summary */
     out += '<div class="day-break" id="booklet-budget">';
-    var rows = "", tmin = 0, tmax = 0;
-    m.days.forEach(function (info) {
-      var d = T.days[info.n];
-      if (!d) return;
-      var c = T.dayCost(d);
-      tmin += c.min; tmax += c.max;
-      var range = c.min === c.max ? "NT$" + c.min.toLocaleString()
-                : "NT$" + c.min.toLocaleString() + "–" + c.max.toLocaleString();
-      rows += "<tr><td><b>" + info.n + "</b></td><td>" + H.bi(info.date) + "</td><td>" +
-              H.bi(info.title) + '</td><td class="num">' + range + "</td></tr>";
+    var B = T.tripBudget();
+    var brows = "";
+    B.days.forEach(function (s) {
+      var extraSum = 0;
+      B.extras.forEach(function (e) { if (e.day === s.n) extraSum += e.cost; });
+      brows += "<tr><td><b>" + s.n + "</b></td><td>" + H.bi(s.date) + "</td><td>" +
+               H.bi(s.title) + '</td><td class="num">' + nt(s.food + extraSum) +
+               '</td><td class="num">' + nt(s.cash) + "</td></tr>";
     });
     out += pagehead("Budget · 费用",
-      { en: "What the week costs", zh: "这一周的花费" }, null);
-    out += '<section><div class="wrap"><div class="tablewrap"><table><thead><tr>' +
+      { en: "What the week costs", zh: "这一周的花费" },
+      { en: "Food and activities only — no transport.", zh: "只含餐饮与活动——不含交通。" });
+    out += '<section><div class="wrap">';
+    out += '<div class="fareboard booklet-fare">';
+    out += fareCell(
+      { en: "The week, no transport", zh: "全程，不含交通" },
+      nt(B.food) + '<span class="fare-pp">' + H.bi({ en: " / person", zh: " / 每人" }) + "</span>",
+      nt(B.foodGroup) + H.bi({ en: " for twelve", zh: " · 十二人" })
+    );
+    out += fareCell(
+      { en: "Change in Singapore", zh: "在新加坡兑换" },
+      sg(B.sgdPp) + '<span class="fare-pp">' + H.bi({ en: " / person", zh: " / 每人" }) + "</span>",
+      sg(B.sgdGroup) + H.bi({ en: " for twelve · ", zh: " · 十二人 · " }) + nt(B.changePp) +
+        H.bi({ en: " cash each", zh: " 现金每人" }),
+      "cash"
+    );
+    out += "</div>";
+    out += '<div class="tablewrap"><table><thead><tr>' +
            "<th>#</th><th>" + H.bi({ en: "Date", zh: "日期" }) + "</th><th>" +
            H.bi({ en: "Day", zh: "行程" }) + '</th><th class="num">' +
-           H.bi({ en: "Per person", zh: "每人" }) + "</th></tr></thead><tbody>" +
-           rows + "</tbody><tfoot><tr><td colspan=3>" +
-           H.bi({ en: "Trip total", zh: "全程合计" }) +
-           '</td><td class="num">' +
-           (tmin === tmax ? "NT$" + tmin.toLocaleString()
-             : "NT$" + tmin.toLocaleString() + "–" + tmax.toLocaleString()) +
+           H.bi({ en: "Food & activities", zh: "餐饮与活动" }) + '</th><th class="num">' +
+           H.bi({ en: "Cash", zh: "现金" }) + "</th></tr></thead><tbody>" +
+           brows + "</tbody><tfoot><tr><td colspan=3>" +
+           H.bi({ en: "Trip total — no transport", zh: "全程合计 —— 不含交通" }) +
+           '</td><td class="num">' + nt(B.food) +
+           '</td><td class="num">' + nt(B.cash) +
            "</td></tr></tfoot></table></div></div></section></div>";
 
     T.renderPage("booklet.html", out, { printBtn: true });

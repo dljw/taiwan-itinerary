@@ -61,7 +61,7 @@ window.TRIP.days[7] = {
       },
       dishes: ["pineapple-cake", "nougat", "dried-goods"] },
 
-    { time: "12:30", dur: "1.25 hr", type: "meal", cost: 450,
+    { time: "12:30", dur: "1.25 hr", type: "meal", cost: 450, pay: "card",
       title: { en: "Farewell lunch — Rice & Shine", zh: "告别午餐 —— 稻舍" },
       maps: "https://www.google.com/maps/search/?api=1&query=稻舍+迪化街",
       note:  { en: "Rated 4.3. Refined Taiwanese cooking in a beautifully restored shophouse — the rice is the star here, alongside braised duck and shrimp rolls. <b>Reserve for twelve.</b> Yongle Market's stalls make a good casual fallback.",

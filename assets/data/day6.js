@@ -45,7 +45,7 @@ window.TRIP.days[6] = {
       note:  { en: "A winding New Taipei mountain road, about an hour from Zhongzheng. <b>This has to be a 中巴, not a nine-seat van</b> — twelve of you still cannot legally fit in one. The driver waits through the session and then drops you in Ximending. Do not take bus 666; it will eat the morning.",
                zh: "新北山路，从中正出发大约一小时。<b>必须是中巴，不能是九人座</b>——十二个人还是坐不下一台。司机在体验时段等候，然后把人送到西门町。别搭666公车，一早上就没了。" } },
 
-    { time: "09:30", dur: "2 hr", type: "meal", img: "hsu-noodles/hsu-noodles-drying.jpg", cost: 550,
+    { time: "09:30", dur: "2 hr", type: "meal", img: "hsu-noodles/hsu-noodles-drying.jpg", cost: 550, pay: "card",
       title: { en: "Hsu's handmade noodles — DIY + flowing noodles", zh: "石碇许家手工麵线 —— DIY＋流水麵" },
       placeRef: "Hsu's handmade noodles",
       maps: "https://www.google.com/maps/search/?api=1&query=石碇許家手工麵線",
@@ -69,7 +69,8 @@ window.TRIP.days[6] = {
       note:  { en: "<b>Not the hotel.</b> Tell the driver 西門町 / 西門紅樓. Anyone who is actually full can skip the next snack stop; everyone else is two minutes from Ay-Chung.",
                zh: "<b>不是回饭店。</b>跟司机说「西门町」或「西门红楼」。吃饱的人可以跳过下一站点心；没饱的人，阿宗麵线走两分钟就到。" } },
 
-    { time: "12:30", dur: "45 min", type: "meal", img: "food-mee-sua/food-mee-sua-shopfront-queue.jpg", cost: 80,
+    { time: "12:30", dur: "45 min", type: "meal", img: "food-mee-sua/food-mee-sua-shopfront-queue.jpg", cost: 80, pay: "cash",
+      payNote: { en: "Ay-Chung and Lao Tian Lu are standing stalls.", zh: "阿宗麵线和老天禄是站着吃的摊，收现金。" },
       title: { en: "Extra bites if anyone is still hungry", zh: "还有肚子的人，再补一点" },
       maps: "https://www.google.com/maps/search/?api=1&query=阿宗麵線",
       note:  { en: "Ay-Chung mee sua and Lao Tian Lu braised meats are the two names worth knowing. Standing food, fast queues, no table of twelve required. Skip this entirely if Hsu's filled you up.",
@@ -92,7 +93,8 @@ window.TRIP.days[6] = {
         asOf: "2026-08"
       } },
 
-    { time: "16:00", dur: "1.5 hr", type: "sight", img: "longshan-temple/longshan-temple-entrance-facade.jpg", cost: 20,
+    { time: "16:00", dur: "1.5 hr", type: "sight", img: "longshan-temple/longshan-temple-entrance-facade.jpg", cost: 20, pay: "cash",
+      payNote: { en: "Incense and offering boxes at the temple.", zh: "庙里香火与随喜，现金。" },
       title: { en: "Longshan and Bopiliao — only if you still want a temple", zh: "龙山寺与剥皮寮 —— 想看庙再去" },
       placeRef: "Longshan Temple",
       maps: "https://www.google.com/maps/search/?api=1&query=艋舺龍山寺",
@@ -113,7 +115,7 @@ window.TRIP.days[6] = {
       note:  { en: "MRT from Ximen. Anyone who wants Longshan peels off at 15:00; the rest can keep shopping until 16:30. The farewell table is at 18:30 — do not still be in Ximen at 18:00.",
                zh: "从西门搭捷运。想看龙山寺的人15:00分头；其他人可以逛到16:30。告别火锅18:30——别18:00还在西门。" } },
 
-    { time: "18:30", dur: "1.5 hr", type: "meal", img: "hotpot/hotpot-taiwan-restaurant.jpg", cost: 600,
+    { time: "18:30", dur: "1.5 hr", type: "meal", img: "hotpot/hotpot-taiwan-restaurant.jpg", cost: 600, pay: "card",
       title: { en: "Farewell dinner — hotpot", zh: "告别晚餐 —— 火锅" },
       maps: "https://www.google.com/maps/search/?api=1&query=無老鍋+中山",
       note:  { en: "Wulao Hotpot in Zhongshan is polished and set up for groups; Lujiba Chengdu skewer hotpot (4.9) is the spicier, livelier option. <b>Book for twelve.</b>",

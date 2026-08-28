@@ -10,8 +10,8 @@ window.TRIP.meta = {
               zh: "七天六夜 · 2026年9月5–11日 · 一行十二人" },
 
   lede: {
-    en: "Nine adults, two kids and a toddler — 13, 11 and 3 — and one Taipei base. Mornings out while it's cool: a Sanxing farm and Qingshui geothermal on Monday, lanterns on Tuesday, glass over a waterfall on Wednesday, handmade noodles and the farewell hotpot on Thursday.",
-              zh: "九位大人、两个孩子加一个小小孩——13岁、11岁、3岁，一个台北据点。趁凉爽的早晨出门：周一三星农场和清水地热，周二放天灯，周三玻璃步道，周四手作麵线和告别火锅。"
+    en: "Nine adults, two kids and a toddler — 13, 11 and 3 — and one Taipei base. Mornings out while it's cool: Lanyang Kingdom and Qingshui geothermal on Monday, lanterns on Tuesday, glass over a waterfall on Wednesday, handmade noodles and the farewell hotpot on Thursday.",
+              zh: "九位大人、两个孩子加一个小小孩——13岁、11岁、3岁，一个台北据点。趁凉爽的早晨出门：周一兰阳动植物王国和清水地热，周二放天灯，周三玻璃步道，周四手作麵线和告别火锅。"
   },
 
   footer: { en: "Family itinerary · photos are reference images, not our own",
@@ -33,10 +33,10 @@ window.TRIP.meta = {
       transport: { en: "MRT + gondola", zh: "捷运＋缆车" } },
 
     { n: 3, date: { en: "Mon 7 Sep", zh: "9月7日 · 周一" },
-      title: { en: "Sanxing farm, then Qingshui geothermal", zh: "三星农场，再清水地热" },
-      blurb: { en: "A mid-bus through the tunnel: Zhang Mei Ama's Farm, a Sanxing scallion table, then Qingshui Geothermal Park — cook eggs in the wells, soak your feet. Home around 18:15.",
-               zh: "中巴钻隧道：张美阿嬷农场、三星葱合菜，再到清水地热煮蛋泡脚。约18:15回饭店。" },
-      hero: "sanxing/sanxing-scallion-fields.jpg",
+      title: { en: "Lanyang Kingdom, then Qingshui geothermal", zh: "兰阳动植物王国，再清水地热" },
+      blurb: { en: "A mid-bus through the tunnel: 蘭陽動植物王國 in Zhuangwei, a jar-chicken table or seafood, then Qingshui Geothermal Park — cook eggs in the wells, soak your feet. Home around 18:15.",
+               zh: "中巴钻隧道：壮围兰阳动植物王国、甕缸鸡或海鲜，再到清水地热煮蛋泡脚。约18:15回饭店。" },
+      hero: "zhuangwei/zhuangwei-dune-swing.jpg",
       transport: { en: "中巴", zh: "中巴" } },
 
     { n: 4, date: { en: "Tue 8 Sep", zh: "9月8日 · 周二" },
@@ -82,7 +82,7 @@ window.TRIP.meta = {
       v: { en: "An EasyCard, a folding umbrella (for sun as much as rain), and shoes you can walk all day in.",
            zh: "悠游卡、折叠伞（遮阳跟挡雨一样重要），以及一双能走一整天的鞋。" } },
     { k: { en: "Book before you fly", zh: "出发前先订" },
-      v: { en: "<b>Six mid-bus bookings</b> with one Taipei operator if you can — Days 1 and 7 as airport transfers, Day 6 a 4–5 hour half-day, Days 3–5 as full days. Also Hsu's Thursday 09:30, Zhang Mei Ama DIY, a Sanxing lunch table, the Wednesday skywalk, the Thursday hotpot, and the Day 7 farewell lunch.",
-           zh: "<b>六段中巴</b>，能同一家台北业者最好——第1、7天机场接送，第6天4至5小时半天，第3至5天全日。另外还有许家周四09:30、张美阿嬷手作、三星午餐桌、周三天空步道、周四火锅、第7天告别午餐。" } }
+      v: { en: "<b>Six mid-bus bookings</b> with one Taipei operator if you can — Days 1 and 7 as airport transfers, Day 6 a 4–5 hour half-day, Days 3–5 as full days. Also Hsu's Thursday 09:30, the Wednesday skywalk, the Thursday hotpot, and the Day 7 farewell lunch.",
+           zh: "<b>六段中巴</b>，能同一家台北业者最好——第1、7天机场接送，第6天4至5小时半天，第3至5天全日。另外还有许家周四09:30、周三天空步道、周四火锅、第7天告别午餐。" } }
   ]
 };

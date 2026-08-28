@@ -33,13 +33,13 @@ window.TRIP.days[2] = {
       note:  { en: "A slower start today, on purpose — let everyone's body clock catch up before the day begins.",
                zh: "今天特意晚一点开始——先让大家的生理时钟喘口气，再出发。" } },
 
-    { time: "09:15", dur: "45 min", type: "travel", cost: 50,
+    { time: "09:15", dur: "45 min", type: "travel", cost: 50, pay: "easycard",
       title: { en: "MRT to Taipei Zoo station", zh: "捷运到动物园站" },
       maps: "https://www.google.com/maps/search/?api=1&query=捷運動物園站",
       note:  { en: "Take the Brown Line all the way to the end of the line. The gondola entrance is a well-signposted three-minute walk from Exit 2.",
                zh: "搭文湖线（棕线）一路坐到底站。缆车站入口就在2号出口步行三分钟处，沿途指标清楚。" } },
 
-    { time: "10:00", dur: "30 min", type: "travel", img: "maokong-gondola/maokong-gondola-taipei101-view.jpg", cost: 300,
+    { time: "10:00", dur: "30 min", type: "travel", img: "maokong-gondola/maokong-gondola-taipei101-view.jpg", cost: 300, pay: "easycard",
       title: { en: "Ride the gondola up", zh: "搭缆车上山" },
       placeRef: "The Maokong Gondola",
       maps: "https://www.google.com/maps/search/?api=1&query=貓空纜車動物園站",
@@ -71,7 +71,7 @@ window.TRIP.days[2] = {
         asOf: "2026-08"
       } },
 
-    { time: "12:30", dur: "1.5 hr", type: "meal", img: "food-tea-dishes/food-tea-dishes-tea-oil-noodles.jpg", cost: 350,
+    { time: "12:30", dur: "1.5 hr", type: "meal", img: "food-tea-dishes/food-tea-dishes-tea-oil-noodles.jpg", cost: 350, pay: "card",
       title: { en: "Lunch — a Maokong tea house", zh: "午餐 —— 猫空茶馆" },
       placeRef: "Sitting in a Maokong tea house",
       maps: "https://www.google.com/maps/search/?api=1&query=貓空茶館",
@@ -104,7 +104,7 @@ window.TRIP.days[2] = {
       },
       dishes: ["tieguanyin"] },
 
-    { time: "15:30", type: "travel", cost: 50,
+    { time: "15:30", type: "travel", cost: 50, pay: "easycard",
       title: { en: "MRT back to the hotel", zh: "捷运回饭店" } },
 
     { time: "16:00", dur: "2 hr", type: "rest",
@@ -112,7 +112,8 @@ window.TRIP.days[2] = {
       note:  { en: "Non-negotiable in this heat, especially for the grandparents — shower, air-con, and horizontal for a while.",
                zh: "这种天气，这段休息绝不能省，长辈尤其需要——冲个澡、开冷气，躺平一下。" } },
 
-    { time: "18:30", dur: "2 hr", type: "meal", img: "food-pepper-bun/food-pepper-bun-raohe-stall.jpg", cost: 300,
+    { time: "18:30", dur: "2 hr", type: "meal", img: "food-pepper-bun/food-pepper-bun-raohe-stall.jpg", cost: 300, pay: "cash",
+      payNote: { en: "Pepper buns and the surrounding stalls are cash.", zh: "胡椒饼和周围摊位收现金。" },
       title: { en: "Dinner — Raohe Street Night Market", zh: "晚餐 —— 饶河街夜市" },
       placeRef: "Raohe Street Night Market",
       maps: "https://www.google.com/maps/search/?api=1&query=饒河街觀光夜市",

@@ -771,6 +771,107 @@ tfoot td { font-weight: 700; border-top: 2px solid var(--line); background: var(
   color: var(--ink-soft); font-size: .92rem; margin: 1.1rem 0;
 }
 
+/* ============================================================
+   Budget — TRA fare window
+   ============================================================ */
+.fareboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--board);
+  border: 2px solid var(--gold);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: .2rem;
+}
+.farecell {
+  padding: 1.45rem 1.5rem 1.5rem;
+  color: #fff;
+}
+.farecell + .farecell {
+  border-left: 1px solid rgba(224,184,58,.35);
+}
+.fare-kicker {
+  font-family: var(--mono);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .45rem;
+}
+.fare-amt {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3.4vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.15;
+  color: #fff;
+}
+.fare-pp {
+  font-family: var(--sans);
+  font-size: .42em;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: rgba(255,255,255,.62);
+}
+.fare-sub {
+  margin-top: .7rem;
+  font-size: .88rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,.72);
+}
+.fare-sgd {
+  color: var(--gold);
+  font-family: var(--mono);
+  font-weight: 700;
+}
+.budget-quiet {
+  font-size: .85em;
+  color: var(--ink-faint);
+}
+
+.sgdboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.35fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.sgdboard-clock {
+  background: var(--board);
+  color: #fff;
+  padding: 1.35rem 1.4rem;
+  text-align: center;
+}
+.sgd-amt {
+  font-family: var(--mono);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .04em;
+  line-height: 1.1;
+  margin: .15rem 0 .35rem;
+}
+.sgdboard-clock .fare-sub { color: rgba(255,255,255,.65); margin-top: .15rem; }
+.sgdboard-copy {
+  background: var(--card);
+  padding: 1.2rem 1.35rem;
+}
+.sgdboard-copy p {
+  margin: 0 0 .7rem;
+  font-size: .92rem;
+  color: var(--ink-soft);
+}
+.sgdboard-copy p:last-child { margin-bottom: 0; }
+
+@media (max-width: 720px) {
+  .fareboard { grid-template-columns: 1fr; }
+  .farecell + .farecell { border-left: 0; border-top: 1px solid rgba(224,184,58,.35); }
+  .sgdboard { grid-template-columns: 1fr; }
+}
+
 .img-missing {
   display: flex; align-items: center; justify-content: center; text-align: center;
   background: repeating-linear-gradient(45deg, var(--paper-2), var(--paper-2) 10px, var(--paper) 10px, var(--paper) 20px);
@@ -892,12 +993,12 @@ tfoot td { font-weight: 700; border-top: 2px solid var(--line); background: var(
   .hero.cover h1 { font-size: 24pt; }
   .hero .hero-sub { font-size: 10.5pt; }
 
-  .pagehead {
-    background: #fff; color: #111; border-bottom: 1.5pt solid #122033;
+  .fareboard, .sgdboard, .sgdboard-clock {
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
-  .pagehead .kicker { color: #122033; }
-  .pagehead p { color: #333; }
+  .fareboard, .sgdboard { break-inside: avoid; }
+  .sgdboard { display: block !important; }
+  .sgdboard-clock { margin-bottom: .4rem; }
 
   .tl-clock {
     background: #122033; color: #E0B83A;

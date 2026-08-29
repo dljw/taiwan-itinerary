@@ -89,25 +89,33 @@
 
   /* ---------- header / footer / more ------------------------- */
 
+  /* EN / 中文 / 双语. Rendered twice — in the header bar on wide screens,
+     and inside the menu sheet, which is the only copy phones ever see. */
+  function langToggle(cls) {
+    return '<div class="langtoggle' + (cls ? " " + cls : "") +
+           '" role="group" aria-label="Language">' +
+             '<button type="button" data-setlang="en">EN</button>' +
+             '<button type="button" data-setlang="zh">中文</button>' +
+             '<button type="button" data-setlang="both">双语</button>' +
+           "</div>";
+  }
+
   function header(active, opts) {
     opts = opts || {};
     var m = T.meta, out = "";
     out += '<header class="site-header"><div class="wrap">';
     out += '<a class="brand" href="index.html">Taiwan <span>·</span> 台湾</a>';
-    out += '<nav class="daynav" aria-label="Days">';
+    /* Wraps onto its own full-width row below 720px — see the header
+       block in styles.css. Keep it before .header-actions in source so
+       the tab order stays brand → days → menu on wide screens. */
+    out += '<nav class="daynav" aria-label="Days" data-daynav>';
     out += navLink("index.html", bi({ en: "Home", zh: "首页" }), active, "home-link");
     m.days.forEach(function (d) {
       out += navLink("day" + d.n + ".html", "D" + d.n, active);
     });
     out += "</nav>";
     out += '<div class="header-actions">';
-    out += '<button type="button" class="nav-more-btn" data-more-open>' +
-           bi({ en: "More", zh: "更多" }) + "</button>";
-    out += '<div class="langtoggle" role="group" aria-label="Language">' +
-             '<button type="button" data-setlang="en">EN</button>' +
-             '<button type="button" data-setlang="zh">中文</button>' +
-             '<button type="button" data-setlang="both">双语</button>' +
-           "</div>";
+    out += langToggle();
     if (opts.printBtn) {
       out += '<button type="button" class="btn-pdf" data-print>' +
              bi({ en: "Save PDF", zh: "存成 PDF" }) + "</button>";
@@ -115,21 +123,42 @@
       out += '<a class="btn-pdf" href="booklet.html">' +
              bi({ en: "PDF", zh: "PDF" }) + "</a>";
     }
+    out += '<button type="button" class="nav-more-btn" data-more-open' +
+           ' aria-expanded="false" aria-controls="more-sheet">' +
+           '<span class="burger" aria-hidden="true"></span>' +
+           '<span class="nav-more-label">' + bi({ en: "More", zh: "更多" }) + "</span>" +
+           "</button>";
     out += "</div></div></header>";
-    out += moreSheet(active);
+    out += moreSheet(active, opts);
     return out;
   }
 
-  function moreSheet(active) {
-    var out = '<div class="more-sheet" data-more-sheet hidden>';
-    out += '<div class="more-panel" role="dialog" aria-label="More pages">';
-    out += '<button type="button" class="more-close" data-more-close>' +
-           bi({ en: "← Close", zh: "← 关闭" }) + "</button>";
+  function moreSheet(active, opts) {
+    opts = opts || {};
+    var out = '<div class="more-sheet" id="more-sheet" data-more-sheet hidden>';
+    out += '<div class="more-panel" role="dialog" aria-modal="true" aria-label="Menu">';
+    out += '<div class="more-head">';
+    out += '<span class="more-title">' + bi({ en: "Menu", zh: "目录" }) + "</span>";
+    out += '<button type="button" class="more-close" data-more-close aria-label="Close">' +
+           '<span aria-hidden="true">×</span></button>';
+    out += "</div>";
+
+    out += "<h2>" + bi({ en: "Language", zh: "语言" }) + "</h2>";
+    out += langToggle("langtoggle-sheet");
+
     out += "<h2>" + bi({ en: "Also in this guide", zh: "手册其他页面" }) + "</h2>";
+    out += '<div class="more-links">';
     MORE_PAGES.forEach(function (p) {
       out += '<a href="' + p[0] + '"' + (p[0] === active ? ' aria-current="page"' : "") +
              ">" + bi(p[1]) + "</a>";
     });
+    out += "</div>";
+
+    if (opts.printBtn) {
+      out += '<button type="button" class="more-action" data-print>' +
+             bi({ en: "Save PDF", zh: "存成 PDF" }) + "</button>";
+    }
+
     out += "</div></div>";
     return out;
   }

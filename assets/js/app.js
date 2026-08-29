@@ -55,24 +55,91 @@
     var sheet = document.querySelector("[data-more-sheet]");
     if (!sheet) return;
     sheet.removeAttribute("hidden");
+    var opener = null;
 
-    function open() {
+    function setExpanded(v) {
+      document.querySelectorAll("[data-more-open]").forEach(function (b) {
+        b.setAttribute("aria-expanded", String(v));
+      });
+    }
+    function open(btn) {
+      opener = btn || null;
       sheet.classList.add("open");
+      setExpanded(true);
       document.body.style.overflow = "hidden";
+      var first = sheet.querySelector("[data-more-close]");
+      if (first) first.focus();
     }
     function close() {
+      if (!sheet.classList.contains("open")) return;
       sheet.classList.remove("open");
+      setExpanded(false);
       document.body.style.overflow = "";
+      if (opener) { opener.focus(); opener = null; }
     }
 
     document.addEventListener("click", function (e) {
-      if (e.target.closest("[data-more-open]")) { open(); return; }
+      var b = e.target.closest("[data-more-open]");
+      if (b) { open(b); return; }
       if (e.target.closest("[data-more-close]")) { close(); return; }
       if (sheet.classList.contains("open") && e.target === sheet) close();
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && sheet.classList.contains("open")) close();
+      if (e.key === "Escape") { close(); return; }
+      /* Keep Tab inside the panel — the sheet claims aria-modal. */
+      if (e.key !== "Tab" || !sheet.classList.contains("open")) return;
+      var f = sheet.querySelectorAll("a[href], button:not([disabled])");
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
     });
+  }
+
+  /* The header stacks into two rows on phones, so its height is not a
+     constant. Feed the real value back into --header-h, which the
+     jump-time bar sticks below and scroll-padding-top is derived from. */
+  function initHeaderMetrics() {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+
+    var last = 0;
+    function sync() {
+      var h = Math.round(header.getBoundingClientRect().height);
+      if (!h || h === last) return;   /* also stops ResizeObserver churn */
+      last = h;
+      document.documentElement.style.setProperty("--header-h", h + "px");
+    }
+    sync();
+    window.addEventListener("resize", sync);
+    window.addEventListener("orientationchange", sync);
+    if (window.ResizeObserver) new ResizeObserver(sync).observe(header);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
+  }
+
+  /* Day strip: bring the current day into view, and flag when there is
+     more to scroll so the CSS can fade the right edge. */
+  function initDayNav() {
+    var nav = document.querySelector("[data-daynav]");
+    if (!nav) return;
+
+    function mark() {
+      var more = nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 4;
+      nav.setAttribute("data-scroll", more ? "more" : "end");
+    }
+    var active = nav.querySelector("a.active");
+    if (active) {
+      /* Centre it, then clamp — clamping last keeps Home fully visible
+         on Day 1 and the last day flush at the far end. */
+      var left = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+      nav.scrollLeft = Math.max(0, Math.min(left, nav.scrollWidth - nav.clientWidth));
+    }
+    mark();
+    nav.addEventListener("scroll", mark, { passive: true });
+    window.addEventListener("resize", mark);
   }
 
   function initPrint() {
@@ -93,6 +160,8 @@
     });
     initLightbox();
     initMoreSheet();
+    initHeaderMetrics();
+    initDayNav();
     initPrint();
   };
 })();

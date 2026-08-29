@@ -48,7 +48,13 @@
   --wrap: 1040px;
   --gap: 1.5rem;
   --radius: 8px;
+  /* --header-bar-h is an input (the bar's own min-height); --header-h is
+     an output, measured from the rendered header by app.js and consumed
+     by the sticky jump bar and scroll-padding. Never let the header's own
+     size depend on --header-h — that feeds the measurement back in. */
+  --header-bar-h: 56px;
   --header-h: 56px;
+  --header-row-h: 46px;  /* one row of the stacked mobile header */
   --jumptime-h: 44px;
   --shadow: none;
 }
@@ -58,7 +64,11 @@
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 7.5rem; }
+html {
+  -webkit-text-size-adjust: 100%; scroll-behavior: smooth;
+  /* Clears both sticky bars so an anchored stop is never hidden behind them. */
+  scroll-padding-top: calc(var(--header-h) + var(--jumptime-h) + 12px);
+}
 
 body {
   margin: 0;
@@ -124,7 +134,7 @@ html[data-lang="zh"] body { line-height: 1.75; }
 }
 .site-header .wrap {
   display: flex; align-items: center; gap: .65rem;
-  min-height: var(--header-h); padding-top: .35rem; padding-bottom: .35rem;
+  min-height: var(--header-bar-h); padding-top: .35rem; padding-bottom: .35rem;
 }
 .brand {
   font-family: var(--serif); font-size: .98rem; font-weight: 600;
@@ -135,17 +145,16 @@ html[data-lang="zh"] body { line-height: 1.75; }
 .daynav {
   display: flex; gap: .3rem; flex: 1; overflow-x: auto;
   scrollbar-width: none; align-items: center;
+  -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
 }
 .daynav::-webkit-scrollbar { display: none; }
-.daynav a, .daynav .nav-more-btn {
+.daynav a {
   flex: none; padding: .32rem .55rem; border-radius: 4px;
   font-family: var(--mono); font-size: .78rem; font-weight: 700;
   color: rgba(255,255,255,.72); text-decoration: none; letter-spacing: .02em;
   background: transparent; border: 1px solid transparent; cursor: pointer;
 }
-.daynav a:hover, .daynav .nav-more-btn:hover {
-  color: #fff; background: rgba(255,255,255,.08);
-}
+.daynav a:hover { color: #fff; background: rgba(255,255,255,.08); }
 .daynav a.active {
   background: var(--gold); color: var(--gold-ink); border-color: var(--gold);
 }
@@ -157,6 +166,10 @@ html[data-lang="zh"] body { line-height: 1.75; }
 .header-actions {
   display: flex; align-items: center; gap: .4rem; flex: none; margin-left: auto;
 }
+
+/* Hamburger — the label shows instead on wide screens. */
+.burger { display: none; }
+.nav-more-btn .nav-more-label { display: inline; }
 
 .langtoggle {
   display: flex; border: 1px solid rgba(255,255,255,.22);
@@ -191,30 +204,60 @@ html[data-lang="zh"] body { line-height: 1.75; }
 }
 .more-sheet.open { display: block; }
 .more-panel {
-  position: absolute; top: 0; right: 0; bottom: 0; width: min(340px, 92vw);
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(340px, 88vw);
   background: var(--board); color: #fff;
-  padding: 1.4rem 1.2rem 2rem;
+  padding: .6rem 1.2rem calc(2rem + env(safe-area-inset-bottom));
+  padding-right: calc(1.2rem + env(safe-area-inset-right));
   border-left: 2px solid var(--gold);
-  overflow-y: auto;
-  transform: translateX(0);
+  overflow-y: auto; overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  animation: more-in .18s ease-out;
+}
+@keyframes more-in { from { transform: translateX(6%); opacity: .4; } }
+@media (prefers-reduced-motion: reduce) { .more-panel { animation: none; } }
+
+.more-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; margin-bottom: .9rem;
+  padding-top: env(safe-area-inset-top);
+}
+.more-title {
+  font-family: var(--sans); font-size: .72rem; font-weight: 800;
+  letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.55);
 }
 .more-panel h2 {
   font-family: var(--sans); font-size: .72rem; font-weight: 800;
   letter-spacing: .14em; text-transform: uppercase; color: var(--gold);
-  margin-bottom: 1rem;
+  margin: 1.4rem 0 .7rem;
 }
+.more-head + h2 { margin-top: .2rem; }
 .more-panel a {
-  display: block; padding: .75rem .2rem;
+  display: flex; align-items: center; min-height: 48px; padding: .5rem .2rem;
   border-bottom: 1px solid rgba(255,255,255,.12);
   color: #fff; text-decoration: none; font-weight: 600; font-size: .98rem;
 }
 .more-panel a:hover { color: var(--gold); }
+.more-panel a[aria-current="page"] { color: var(--gold); }
 .more-close {
   appearance: none; border: 0; background: transparent; color: rgba(255,255,255,.7);
-  font-size: .85rem; font-weight: 700; cursor: pointer; margin-bottom: 1rem;
-  padding: 0;
+  font-size: 1.6rem; line-height: 1; cursor: pointer; padding: 0;
+  width: 44px; height: 44px; margin-right: -.6rem;
+  display: flex; align-items: center; justify-content: center;
 }
 .more-close:hover { color: #fff; }
+
+/* Language toggle inside the sheet — three equal, full-width buttons. */
+.langtoggle-sheet { display: grid; grid-template-columns: repeat(3, 1fr); }
+.langtoggle-sheet button { padding: .8rem .5rem; font-size: .85rem; text-align: center; }
+
+.more-action {
+  appearance: none; display: flex; align-items: center; justify-content: center;
+  width: 100%; min-height: 48px; margin-top: 1.4rem; cursor: pointer;
+  font-family: var(--sans); font-size: .78rem; font-weight: 800;
+  letter-spacing: .06em; text-transform: uppercase;
+  border-radius: 4px; border: 1px solid var(--gold);
+  background: rgba(224,184,58,.12); color: var(--gold);
+}
 
 /* Jump-to-time strip */
 .jumptime {
@@ -344,7 +387,7 @@ section + section { padding-top: 0; }
   position: relative; display: grid;
   grid-template-columns: 5.4rem 1fr; gap: 0 1.35rem;
   padding: .5rem 0;
-  scroll-margin-top: 7.2rem;
+  scroll-margin-top: calc(var(--header-h) + var(--jumptime-h) + 12px);
 }
 .tl-time {
   text-align: center; padding-top: .55rem;
@@ -936,11 +979,70 @@ tfoot td { font-weight: 700; border-top: 2px solid var(--line); background: var(
   .hero { min-height: 360px; }
   .hero.cover { min-height: 62vh; }
 
-  .site-header .wrap { gap: .45rem; }
-  .brand { font-size: .9rem; }
-  .daynav { order: 3; width: 100%; padding-bottom: .2rem; }
-  .header-actions { margin-left: auto; }
-  .btn-pdf { padding: .3rem .5rem; font-size: .68rem; }
+  /* Header: two rows. Brand + hamburger on top, the day strip below.
+     .wrap must wrap — without flex-wrap the full-width .daynav below
+     stays on the first row and gets crushed to a few pixels. */
+  .site-header .wrap {
+    flex-wrap: wrap; gap: 0 .5rem;
+    padding: 0 1rem; min-height: 0;
+    padding-left: calc(1rem + env(safe-area-inset-left));
+    padding-right: calc(1rem + env(safe-area-inset-right));
+  }
+  .brand {
+    font-size: .95rem; display: flex; align-items: center;
+    min-height: var(--header-row-h);
+  }
+
+  /* Language and PDF move into the menu sheet — the bar has no room. */
+  .site-header .header-actions > .langtoggle,
+  .site-header .btn-pdf { display: none; }
+
+  .header-actions { margin-left: auto; min-height: var(--header-row-h); }
+  .nav-more-btn {
+    width: 44px; height: 44px; padding: 0; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    border-color: rgba(255,255,255,.28);
+  }
+  .nav-more-btn .nav-more-label {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .burger {
+    display: block; position: relative;
+    width: 18px; height: 2px; background: currentColor; border-radius: 2px;
+  }
+  .burger::before, .burger::after {
+    content: ""; position: absolute; left: 0;
+    width: 18px; height: 2px; background: currentColor; border-radius: 2px;
+  }
+  .burger::before { top: -6px; }
+  .burger::after { top: 6px; }
+
+  /* Own row, full width, horizontally scrollable with 44px targets. */
+  .daynav {
+    order: 3; flex: 0 0 100%; width: 100%;
+    min-height: var(--header-row-h); gap: .25rem;
+    border-top: 1px solid rgba(255,255,255,.12);
+    scroll-padding-inline: 1rem;
+  }
+  .daynav a {
+    display: inline-flex; align-items: center;
+    min-height: 34px; padding: .45rem .7rem; font-size: .82rem;
+  }
+  .daynav a:first-child { margin-left: -.2rem; }
+  .daynav a:last-child { margin-right: .75rem; }
+
+  /* Fade at the right edge so it reads as scrollable. */
+  .daynav[data-scroll="more"] {
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+  }
+
+  .jumptime .wrap {
+    padding-left: calc(1rem + env(safe-area-inset-left));
+    padding-right: calc(1rem + env(safe-area-inset-right));
+  }
+  .jumptime a { min-height: 34px; display: inline-flex; align-items: center; padding: .3rem .6rem; }
 
   .timeline::before { display: none; }
   .tl-row { grid-template-columns: 1fr; gap: .35rem; padding: .45rem 0; }
@@ -961,6 +1063,15 @@ tfoot td { font-weight: 700; border-top: 2px solid var(--line); background: var(
   .taxi .tw { font-size: 1.45rem; }
   .ft-block { flex-direction: column; gap: .35rem; }
   .ft-span { width: auto; }
+}
+
+/* Touch devices wider than the phone breakpoint (tablets) keep the
+   desktop header layout but still need thumb-sized targets. */
+@media (hover: none) and (pointer: coarse) and (min-width: 721px) {
+  .daynav a { min-height: 40px; display: inline-flex; align-items: center; padding: .45rem .7rem; }
+  .langtoggle button { padding: .6rem .7rem; }
+  .btn-pdf, .nav-more-btn { padding: .6rem .8rem; }
+  .jumptime a { min-height: 36px; display: inline-flex; align-items: center; }
 }
 
 /* ============================================================

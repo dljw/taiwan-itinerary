@@ -115,8 +115,8 @@ window.TRIP.days[3] = {
 
     { time: "18:15", type: "rest",
       title: { en: "Back to the hotel", zh: "回饭店" },
-      note:  { en: "Home at a civilised hour, on purpose. Nearest food, lights out by 22:00 — lanterns tomorrow, and it's the longest day.",
-               zh: "早回来，是刻意的。就近吃一点，22:00熄灯——明天放天灯，全程最长的一天。" } }
+      note:  { en: "Home at a civilised hour, on purpose. Nearest food, lights out by 22:00 — lanterns tomorrow, bus at 10:00.",
+               zh: "早回来，是刻意的。就近吃一点，22:00熄灯——明天放天灯，中巴10:00。" } }
   ],
 
   places: [

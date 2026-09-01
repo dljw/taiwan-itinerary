@@ -8,12 +8,12 @@ window.TRIP.days[4] = {
   date:  { en: "Tuesday 8 September", zh: "9月8日 · 周二" },
   title: { en: "Sky lanterns, then Jiufen at dusk", zh: "放天灯，黄昏上九份" },
   intro: {
-    en: "This is the day everything else in the trip leans toward. A waterfall while the morning is still cool, an unhurried afternoon in a railway town where the trains still run down the middle of the street, and then — at golden hour, when it will actually glow against the sky instead of washing out in daylight — your own lantern lifting off. You'll walk into Jiufen just as its red lanterns are being lit. It's a long day, but every hour of it is built to lead here.",
-    zh: "这一天，是整趟旅程的重心所在。清晨先趁凉去看瀑布，接着在铁道小镇里从容地耗过一个下午——火车仍旧从街道正中间开过来——再于黄金时刻放出自己的天灯，让它在天色里发亮，而不是消失在白日光里。抵达九份时，红灯笼正好一盏盏亮起。这天很长，但每一个小时都是为了这一刻铺路。"
+    en: "This is the day everything else in the trip leans toward. A waterfall in the late morning, an unhurried stretch in a railway town where the trains still run down the middle of the street, and then — at golden hour, when it will actually glow against the sky instead of washing out in daylight — your own lantern lifting off. You'll walk into Jiufen just as its red lanterns are being lit. The charter is a hard ten hours: the bus comes at 10:00 and has to have you back at the Airbnb by 20:00.",
+    zh: "这一天，是整趟旅程的重心所在。上午偏晚去看瀑布，接着在铁道小镇里从容地耗一段——火车仍旧从街道正中间开过来——再于黄金时刻放出自己的天灯，让它在天色里发亮，而不是消失在白日光里。抵达九份时，红灯笼正好一盏盏亮起。包车是硬十小时：10:00上车，必须20:00回到民宿。"
   },
   hero: "sky-lantern/sky-lantern-daytime-release-wishes.jpg",
   chips: [
-    { en: "中巴, waterfall gate to Jiufen", zh: "中巴，瀑布门口到九份" },
+    { en: "中巴 10:00–20:00, hard stop", zh: "中巴 10:00–20:00，准时收车" },
     { en: "The big one", zh: "全程重头戏" },
     { en: "Golden-hour lantern release", zh: "黄金时刻放天灯" },
     { en: "Golden Waterfall on the way", zh: "路上停黄金瀑布" },
@@ -21,7 +21,7 @@ window.TRIP.days[4] = {
   ],
 
   glance: [
-    { k: { en: "Leave hotel", zh: "出发" },    v: { en: "09:15 by mid-bus", zh: "9:15 中巴" } },
+    { k: { en: "Leave hotel", zh: "出发" },    v: { en: "10:00 by mid-bus — home 20:00", zh: "10:00 中巴 —— 20:00 回民宿" } },
     { k: { en: "Meals", zh: "三餐" },          v: { en: "Fu Hang · Shifen · Jiufen teahouse", zh: "阜杭 · 十分 · 九份茶楼" } },
     { k: { en: "Cost pp", zh: "每人预估" },    v: { en: "≈ NT$970 + bus share", zh: "约 NT$970＋中巴分摊" } },
     { k: { en: "Walking", zh: "步行强度" },    v: { en: "Moderate — Jiufen steps; waterfall is a drop-off", zh: "中等——九份有阶梯；瀑布门口下车" } },
@@ -33,8 +33,8 @@ window.TRIP.days[4] = {
       payNote: { en: "Fu Hang is a market stall. Hotel breakfast is already paid with the room.", zh: "阜杭是市场摊位。若改在饭店吃早餐，这笔就不用了。" },
       title: { en: "Breakfast — hotel, or Fu Hang Soy Milk", zh: "早餐 —— 饭店，或阜杭豆浆" },
       maps: "https://www.google.com/maps/search/?api=1&query=阜杭豆漿",
-      note:  { en: "Fu Hang sits upstairs in the Huashan Market building by Shandao Temple, just minutes from the hotel — savoury soy milk, thick shaobing still warm from the griddle, youtiao fried to order. The queue is the stuff of legend: arrive at 08:00 or skip it entirely. <b>Closed Mondays</b>, so today you're in luck.",
-               zh: "阜杭豆浆在善导寺旁华山市场二楼，离饭店只有几分钟路程——咸豆浆、烧饼烤得厚实温热、油条现炸现捞。排队排出了名：八点到，不然就别去了。<b>周一公休</b>，今天正好没问题。" },
+      note:  { en: "Fu Hang sits upstairs in the Huashan Market building by Shandao Temple, just minutes from the Airbnb — savoury soy milk, thick shaobing still warm from the griddle, youtiao fried to order. The queue is the stuff of legend: arrive at 08:00 or skip it entirely. The bus isn't until 10:00, so you can eat without watching the clock. <b>Closed Mondays</b>, so today you're in luck.",
+               zh: "阜杭豆浆在善导寺旁华山市场二楼，离民宿只有几分钟路程——咸豆浆、烧饼烤得厚实温热、油条现炸现捞。排队排出了名：八点到，不然就别去了。中巴要到10:00才来，吃完不必赶。<b>周一公休</b>，今天正好没问题。" },
       place: {
         address: { en: "2F, Huashan Market, near Shandao Temple", zh: "台北市中正區忠孝東路一段108號2樓（華山市場）" },
         hours: { en: "~05:30–12:30 · closed Mondays", zh: "约 05:30–12:30 · 周一公休" },
@@ -46,13 +46,13 @@ window.TRIP.days[4] = {
       },
       dishes: ["soy-milk"] },
 
-    { time: "09:15", dur: "75 min", type: "travel",
-      title: { en: "Mid-bus: hotel → Shifen Waterfall gate", zh: "中巴：饭店 → 十分瀑布门口" },
+    { time: "10:00", dur: "75 min", type: "travel",
+      title: { en: "Mid-bus: Airbnb → Shifen Waterfall gate", zh: "中巴：民宿 → 十分瀑布门口" },
       maps: "https://www.google.com/maps/search/?api=1&query=十分瀑布",
-      note:  { en: "Tell the driver <b>十分瀑布</b>, the park gate, not the station. About seventy-five minutes. The 25-minute walk from the station is the bit you just bought out of the day.",
-               zh: "跟司机说<b>十分瀑布</b>，停园区门口，不要停车站。大约七十五分钟。从车站走25分钟那一段，今天不用走了。" } },
+      note:  { en: "Tell the driver <b>十分瀑布</b>, the park gate, not the station. Door to door is often 50–65 minutes after the morning rush; we keep seventy-five so a 中巴 on mountain roads still lands you before lunch. The 25-minute walk from the station is the bit you just bought out of the day.",
+               zh: "跟司机说<b>十分瀑布</b>，停园区门口，不要停车站。过了早高峰，门到门常是50至65分钟；我们仍留七十五分钟，中巴走山路也不会误了午餐。从车站走25分钟那一段，今天不用走了。" } },
 
-    { time: "10:30", dur: "1.25 hr", type: "sight", img: "shifen-waterfall/shifen-waterfall-panorama.jpg",
+    { time: "11:15", dur: "1 hr", type: "sight", img: "shifen-waterfall/shifen-waterfall-panorama.jpg",
       title: { en: "Shifen Waterfall", zh: "十分瀑布" },
       placeRef: "Shifen Waterfall",
       maps: "https://www.google.com/maps/search/?api=1&query=十分瀑布",
@@ -68,13 +68,13 @@ window.TRIP.days[4] = {
         asOf: "2026-08"
       } },
 
-    { time: "11:45", dur: "10 min", type: "travel",
+    { time: "12:15", dur: "10 min", type: "travel",
       title: { en: "Short hop to Shifen Old Street", zh: "短程开到十分老街" },
       maps: "https://www.google.com/maps/search/?api=1&query=十分老街",
       note:  { en: "Five to ten minutes. The driver can wait on the street or at the car park while you eat and linger.",
                zh: "五到十分钟。司机可以停老街或停车场，等你们吃完再逛。" } },
 
-    { time: "12:00", dur: "2 hr", type: "meal", img: "shifen-old-street/shifen-old-street-tracks-crowd-lantern.jpg", cost: 200, pay: "cash",
+    { time: "12:25", dur: "1.5 hr", type: "meal", img: "shifen-old-street/shifen-old-street-tracks-crowd-lantern.jpg", cost: 200, pay: "cash",
       payNote: { en: "Old-street stalls and the chicken-wing rice shop take notes.", zh: "老街摊位和鸡翅包饭店收现金。" },
       title: { en: "Lunch and the railway street", zh: "午餐与铁道老街" },
       placeRef: "Shifen Old Street and the sky lanterns",
@@ -92,26 +92,10 @@ window.TRIP.days[4] = {
       },
       dishes: ["chicken-wing-rice"] },
 
-    { time: "14:15", dur: "1.25 hr", type: "rest",
+    { time: "14:00", dur: "1.5 hr", type: "rest",
       title: { en: "Deliberate slow block — tea, shade, sitting", zh: "刻意放空 —— 喝茶、乘凉、坐着" },
-      note:  { en: "This gap isn't filler — it's the whole point of a slow afternoon. Air-conditioned cafés line the street, and there's plenty for the kids to browse. <b>Anyone who'd rather sit the whole afternoon out should simply sit.</b>",
-               zh: "这段空档不是用来填时间的——它就是悠闲午后的重点。街上有冷气咖啡馆，小朋友也有得逛。<b>想整个下午都坐着的人，就安心坐着吧。</b>" } },
-
-    { time: "14:30", dur: "1 hr", type: "sight", img: "jingtong/jingtong-bamboo-wish-tubes.jpg",
-      title: { en: "Optional — a short hop to Jingtong", zh: "可选 —— 短程开到菁桐" },
-      placeRef: "Jingtong — the optional hop",
-      maps: "https://www.google.com/maps/search/?api=1&query=菁桐車站",
-      note:  { en: "If anyone's restless, the bus can run fifteen minutes to the end of the valley. A wooden station from 1929 and thousands of bamboo wish tubes. <b>Be back on the old street by 15:30</b> — the lantern release will not wait.",
-               zh: "有人坐不住的话，中巴十五分钟就能开到山谷尽头。1929年的木造车站，铁道旁挂满许愿竹筒。<b>15:30前要回到老街</b>——放天灯不会等人。" },
-      place: {
-        address: { en: "Jingtong Station, Pingxi", zh: "新北市平溪區菁桐車站" },
-        hours: { en: "Daylight; a short mid-bus hop", zh: "白天；中巴短跳" },
-        rating: "4.3",
-        count: { en: "~4k Google reviews (approx.)", zh: "Google 约四千则" },
-        review: { en: "Quieter end-of-line wooden station with bamboo wish tubes — lovely if anyone is restless after lunch.",
-                  zh: "支线终点的木造车站与许愿竹筒——午饭后有人坐不住，值得一去。" },
-        asOf: "2026-08"
-      } },
+      note:  { en: "This gap isn't filler — it's how the lantern still goes up at golden hour on a ten-hour clock. Air-conditioned cafés line the street, and there's plenty for the kids to browse. <b>Anyone who'd rather sit the whole afternoon out should simply sit.</b> The optional hop to Jingtong is off the plan — leaving Jiufen at 18:45 will not wait for a side trip.",
+               zh: "这段空档不是用来填时间的——十小时的钟点里，它就是为了让天灯仍能在黄昏升空。街上有冷气咖啡馆，小朋友也有得逛。<b>想整个下午都坐着的人，就安心坐着吧。</b>菁桐那一站今天不去了——18:45必须离开九份，没有时间绕路。" } },
 
     { time: "15:30", dur: "1.5 hr", type: "sight", img: "sky-lantern/sky-lantern-wish-closeup-sunset.jpg", cost: 250, pay: "cash",
       payNote: { en: "Lantern shops on the tracks are cash on the spot.", zh: "铁道旁的天灯店当场收现金。" },
@@ -135,18 +119,18 @@ window.TRIP.days[4] = {
       note:  { en: "The stop the train plan dropped. Photograph from the roadside, do not wade. Then on to Jiufen while the light is still going gold.",
                zh: "火车行程拿掉的那一站。路边拍一张，不要下水。接着趁天色还金，上九份。" } },
 
-    { time: "17:20", dur: "20 min", type: "travel",
+    { time: "17:15", dur: "20 min", type: "travel",
       title: { en: "Mid-bus up to Jiufen", zh: "中巴上九份" },
       maps: "https://www.google.com/maps/search/?api=1&query=九份老街",
       note:  { en: "Tell the driver <b>九份老街</b>. About fifteen to twenty minutes. He can wait at the coach park while you climb.",
                zh: "跟司机说<b>九份老街</b>。大约十五到二十分钟。人去爬阶，车可以停游览车停车场。" } },
 
-    { time: "17:40", dur: "2 hr", type: "sight", img: "jiufen/jiufen-amei-teahouse-night.jpg",
+    { time: "17:35", dur: "1 hr 10 min", type: "sight", img: "jiufen/jiufen-amei-teahouse-night.jpg",
       title: { en: "Jiufen Old Street at dusk", zh: "九份老街的黄昏" },
       placeRef: "Jiufen",
       maps: "https://www.google.com/maps/search/?api=1&query=九份老街",
-      note:  { en: "You arrive just as the red lanterns are being lit — the one hour this town turns genuinely magical instead of merely crowded. <b>Steep steps everywhere.</b> Settle the grandparents at a view teahouse and let everyone else climb and explore.",
-               zh: "抵达时红灯笼正一盏盏亮起——这一小时的九份是真正迷人的时刻，而不只是人多而已。<b>到处都是陡阶梯。</b>让长辈在有景观的茶楼安坐下来，其他人再去爬阶探索。" },
+      note:  { en: "You arrive just as the red lanterns are being lit — the one hour this town turns genuinely magical instead of merely crowded. <b>Steep steps everywhere.</b> Settle the grandparents at a view teahouse and let everyone else climb and explore. <b>Be back at the coach park by 18:45</b> — the bus contract ends at 20:00.",
+               zh: "抵达时红灯笼正一盏盏亮起——这一小时的九份是真正迷人的时刻，而不只是人多而已。<b>到处都是陡阶梯。</b>让长辈在有景观的茶楼安坐下来，其他人再去爬阶探索。<b>18:45前要回到游览车停车场</b>——包车合约20:00结束。" },
       place: {
         address: { en: "Jiufen Old Street, Ruifang", zh: "新北市瑞芳區九份老街" },
         hours: { en: "Shops ~10:00–20:00; lanes always open", zh: "店家约 10:00–20:00；巷弄随时可走" },
@@ -157,11 +141,11 @@ window.TRIP.days[4] = {
         asOf: "2026-08"
       } },
 
-    { time: "18:15", dur: "1.5 hr", type: "meal", img: "food-jiufen-taro-balls/food-jiufen-taro-balls-shopfront-v2.jpg", cost: 400, pay: "card",
+    { time: "17:45", dur: "1 hr", type: "meal", img: "food-jiufen-taro-balls/food-jiufen-taro-balls-shopfront-v2.jpg", cost: 400, pay: "card",
       title: { en: "Tea and dinner — Jiufen teahouse", zh: "茶与晚餐 —— 九份茶楼" },
       maps: "https://www.google.com/maps/search/?api=1&query=九份茶坊",
-      note:  { en: "Jiufen Teahouse (4.8) does interactive brewing — they set the pot in front of you and teach you the whole ritual — while the mountainside drops away to the sea below. Snacks alongside: taro balls, fish ball soup.",
-               zh: "九份茶坊（4.8）提供互动式泡茶——师傅摆好茶具，手把手教你整套仪式——窗外山势一路落到海面。搭配小食：芋圆、鱼丸汤。" },
+      note:  { en: "Jiufen Teahouse (4.8) does interactive brewing — they set the pot in front of you and teach you the whole ritual — while the mountainside drops away to the sea below. Snacks alongside: taro balls, fish ball soup. Sit down by 17:45 and leave the table by 18:35 so you are on the bus at 18:45.",
+               zh: "九份茶坊（4.8）提供互动式泡茶——师傅摆好茶具，手把手教你整套仪式——窗外山势一路落到海面。搭配小食：芋圆、鱼丸汤。17:45入座，18:35离桌，赶上18:45的车。" },
       place: {
         address: { en: "Jiufen Teahouse (九份茶坊)", zh: "新北市瑞芳區九份茶坊" },
         hours: { en: "Roughly 10:00–20:00 · book balcony", zh: "约 10:00–20:00 · 请订阳台" },
@@ -173,15 +157,15 @@ window.TRIP.days[4] = {
       },
       dishes: ["tea-brewing", "jiufen-taro-balls", "fishball-soup"] },
 
-    { time: "19:45", dur: "75 min", type: "travel",
-      title: { en: "Mid-bus home to the hotel", zh: "中巴回饭店" },
-      note:  { en: "About seventy-five minutes. This is the overtime window — confirm the rate when you book. Everyone sits, bags stay in the hold, no Ruifang transfer.",
-               zh: "大约七十五分钟。这段可能算超时——订的时候问清楚。人人有位，包放行李厢，不必在瑞芳换车。" } },
+    { time: "18:45", dur: "75 min", type: "travel",
+      title: { en: "Mid-bus home to the Airbnb", zh: "中巴回民宿" },
+      note:  { en: "About seventy-five minutes on a weekday evening — uncongested driving is closer to 40, but the Taipei rush still bites at 18:45. <b>Leave Jiufen at 18:45, not later.</b> If the driver says traffic looks heavy, leave at 18:30. Everyone sits, bags stay in the hold, no Ruifang transfer. The contract ends at 20:00.",
+               zh: "平日傍晚大约七十五分钟——路空时四十分钟就够，但18:45仍会碰到台北下班车潮。<b>18:45离开九份，不要再晚。</b>司机说车况不好就18:30走。人人有位，包放行李厢，不必在瑞芳换车。合约20:00结束。" } },
 
-    { time: "21:00", type: "rest",
-      title: { en: "Back to the hotel", zh: "回饭店" },
-      note:  { en: "Tired legs, full hearts, and a phone full of photos of a lantern drifting up into the dark. The big day is done.",
-               zh: "腿是酸的，心是满的，手机里存满了天灯升入夜空的照片。最精彩的一天，画下句点。" } }
+    { time: "20:00", type: "rest",
+      title: { en: "Back to the Airbnb", zh: "回民宿" },
+      note:  { en: "Tired legs, full hearts, and a phone full of photos of a lantern drifting up into the dark. The big day is done — and you are home before the bus turns into a pumpkin.",
+               zh: "腿是酸的，心是满的，手机里存满了天灯升入夜空的照片。最精彩的一天画下句点——而且赶在收车之前回到家。" } }
   ],
 
   places: [
@@ -242,33 +226,8 @@ window.TRIP.days[4] = {
         zh: "两三个人合放一盏，这样每个人都写得到。让小朋友一人写一面，也请一位大人全程牵好三岁孩子的手，离火苗远一点。安排一个人录影，也安排一个人<i>不</i>录影——总该有人只用自己的眼睛看着它升空。"
       },
       tip: {
-        en: "Releasing at 16:00–17:00 rather than after dark is deliberate: the lantern still glows against a dimming sky, the crowds are thinner, and nobody is walking mountain roads at 22:00 with tired grandparents in tow. The street here is flat and easy, with plenty of seats.",
-        zh: "特意选在16:00至17:00而不是天黑后放天灯：这样它还能在渐暗的天色里发亮，人潮也比较少，也不必让疲惫的长辈在晚上十点还走山路。这里的街道平坦好走，座位也多。"
-      }
-    },
-    {
-      name: { en: "Jingtong — the optional hop", zh: "菁桐 —— 可选的一站" },
-      tw: "菁桐車站 · 平溪線",
-      maps: "https://www.google.com/maps/search/?api=1&query=菁桐車站",
-      images: [
-        "jingtong/jingtong-station-front.jpg",
-        "jingtong/jingtong-bamboo-wish-tubes.jpg"
-      ],
-      history: {
-        en: "The end of the Pingxi Line, and the quietest place on it. The wooden station dates from 1929 and is one of the few original timber stations left in Taiwan; the coal mine it was built to serve shut decades ago, and the village never quite found a replacement. What it has instead is thousands of bamboo tubes strung along the track fences, each one carrying a wish written in marker.",
-        zh: "平溪线的终点，也是全线最安静的一站。木造车站建于1929年，是台湾少数留存至今的原始木造站房之一；当年为它而建的煤矿早已停采数十年，村子也始终没找到替代的产业。取而代之的，是沿着铁道栅栏挂满的成千上万个竹筒，每一个都用签字笔写着一个心愿。"
-      },
-      famous: {
-        en: "<b>The wish tubes (許願竹筒)</b> and the sheer quiet — after Shifen's crowds, Jingtong is a village with a station café and little else, which is exactly its charm.",
-        zh: "<b>许愿竹筒</b>，还有那份彻底的安静——离开十分的人潮后，菁桐就是一个只有车站咖啡馆、其余什么都没有的小村，而这正是它迷人的地方。"
-      },
-      doThis: {
-        en: "A fifteen-minute hop in the mid-bus if anyone is restless. Write a tube, walk the platform, come back. Half an hour is plenty.",
-        zh: "有人坐不住，中巴十五分钟就到。写个竹筒、逛逛月台、回来。半小时绰绰有余。"
-      },
-      tip: {
-        en: "Purely optional and easy to skip — the afternoon at Shifen is deliberately slow so nobody has to do this. Good for anyone (usually the kids) who can't sit still for ninety minutes.",
-        zh: "纯属可选，跳过也完全没问题——十分的下午本来就故意排得悠闲，就是为了不必勉强任何人。适合坐不住九十分钟的人，通常是小朋友。"
+        en: "Releasing at 16:00–17:00 rather than after dark is deliberate: the lantern still glows against a dimming sky, the crowds are thinner, and you still have to be on the Jiufen bus at 18:45. The street here is flat and easy, with plenty of seats.",
+        zh: "特意选在16:00至17:00而不是天黑后放天灯：这样它还能在渐暗的天色里发亮，人潮也比较少，而且18:45还得赶上九份的车。这里的街道平坦好走，座位也多。"
       }
     },
     {
@@ -290,8 +249,8 @@ window.TRIP.days[4] = {
         zh: "<b>黄昏时分的红灯笼</b>沿着阶梯巷道一路点亮，脚下是展开的东海。许多人相信九份是《神隐少女》的灵感来源；宫崎骏本人否认过，但小镇至今依然开心地卖着这个说法。"
       },
       locals: {
-        en: "Taipei people are blunt about it: come at dusk or don't come. Midday Jiufen is a slow, hot crush of day-trippers in a narrow alley. The hour you have — arriving 17:45, lanterns lighting, most coach tours already pulling out — is the one everyone actually wants.",
-        zh: "台北人讲得很直白：要嘛黄昏来，要嘛别来。中午的九份是闷热巷子里挪不动的人潮。你们抓到的这一小时——17:45抵达、灯笼刚亮起、游览车大多已经开走——正是所有人真正想要的那一小时。"
+        en: "Taipei people are blunt about it: come at dusk or don't come. Midday Jiufen is a slow, hot crush of day-trippers in a narrow alley. The hour you have — arriving 17:35, lanterns lighting, most coach tours already pulling out — is the one everyone actually wants. Be on the bus at 18:45.",
+        zh: "台北人讲得很直白：要嘛黄昏来，要嘛别来。中午的九份是闷热巷子里挪不动的人潮。你们抓到的这一小时——17:35抵达、灯笼刚亮起、游览车大多已经开走——正是所有人真正想要的那一小时。18:45必须上车。"
       },
       doThis: {
         en: "Get to a teahouse balcony before the light goes; that view down to the sea with the lanterns coming on is the whole reason to come up here. Shop on the way back down, not on the way up.",
@@ -346,8 +305,8 @@ window.TRIP.days[4] = {
 
     { id: "tea-brewing", name: { en: "Brewed by hand, at the table", zh: "茶楼现泡" }, pinyin: "pào chá",
       img: "food-tea-brewing/food-tea-brewing-maokong-tray-v2.jpg", price: 400,
-      taste: { en: "At a Jiufen teahouse you pay for the leaves and the seat, and after that the table is yours for as long as you like — hot water keeps coming, and someone will walk you through the rinse, the timing, the pour. With the sea slowly going dark below, it's the single most civilised hour of the week.",
-               zh: "在九份的茶楼，付的是茶叶费与座位费，之后这张桌子就完全是你的——热水一直续，还有人手把手教你温壶、计时、分茶。窗外海面缓缓转暗，这是一整周里最从容优雅的一小时。" },
+      taste: { en: "At a Jiufen teahouse you pay for the leaves and the seat, and someone will walk you through the rinse, the timing, the pour. You have about an hour — sit down at 17:45, leave by 18:35 — with the sea slowly going dark below. That is still the most civilised hour of the week.",
+               zh: "在九份的茶楼，付的是茶叶费与座位费，还有人手把手教你温壶、计时、分茶。大约一小时——17:45入座，18:35离桌——窗外海面缓缓转暗。这仍是一整周里最从容优雅的一小时。" },
       order: { en: "Ask for a lighter <b>baozhong</b> if the group isn't used to strong tea, or the roasted local <b>tieguanyin</b> if Sunday at Maokong won anyone over.",
                zh: "大家不习惯浓茶，就点清爽的<b>包种</b>；如果周日在猫空让谁喝出兴趣，就点焙火的<b>铁观音</b>。" } },
 
@@ -363,9 +322,9 @@ window.TRIP.days[4] = {
     { title: { en: "Lanterns will not fly in heavy rain — this is the day most likely to move", zh: "大雨天灯放不了——这天最可能改期" },
       body: { en: "A wet lantern won't lift, and operators stop selling the moment it pours. Check the forecast the night before. <b>If Tuesday looks like rain, swap this whole day with Day 6</b>, which is built in as your buffer. Don't push it to the last day — there's no room left after that.",
               zh: "淋湿的天灯飞不起来，一下大雨业者也会立刻停售。前一晚先看看预报。<b>如果周二天气看起来不妙，就把这一整天和第6天对调</b>，那天本来就是留给你们的备案日。千万别拖到最后一天，之后就再也没有空间调整了。" } },
-    { title: { en: "Confirm overtime if Jiufen runs past ten hours", zh: "九份若超过十小时，请确认超时" },
-      body: { en: "Hotel 09:15 to hotel ~21:00 is about eleven and a half hours. Ask for the published Jiufen + Shifen + Golden Waterfall package, and how overtime is charged after ten hours. Leaving Jiufen at 19:45 keeps the dusk and still gets you home around 21:00.",
-              zh: "饭店09:15到饭店约21:00，大约十一小时半。请问九份＋十分＋黄金瀑布套装，以及超过十小时怎么算超时。19:45离开九份，黄昏还在，大约21:00到家。" } },
+    { title: { en: "The bus ends at 20:00 — leave Jiufen at 18:45", zh: "包车20:00收车——18:45离开九份" },
+      body: { en: "The charter is a hard ten hours: pickup 10:00, back at the Airbnb by 20:00. Uncongested Jiufen-to-Zhongzheng is about 40 minutes; a weekday evening is closer to 75. <b>Leave the teahouse at 18:35, coach park at 18:45.</b> If the driver warns of traffic, leave at 18:30. Do not ask for overtime — they have already said the bus will not run past 20:00.",
+              zh: "包车是硬十小时：10:00上车，20:00必须回到民宿。九份到中正路空约40分钟，平日傍晚较接近75分钟。<b>18:35离开茶楼，18:45到游览车停车场。</b>司机说车况不好就18:30走。不要再谈超时——业者已经说了，车过不了20:00。" } },
     { title: { en: "Jiufen is still the steep bit — park the grandparents at the teahouse", zh: "九份仍是陡的那一段——长辈先坐茶楼" },
       body: { en: "The waterfall walk is gone. What remains is Shuqi Road. Take the grandparents straight to a seated teahouse with a view and let everyone else climb.",
               zh: "瀑布那一段不用走了。剩下的是竖崎路。长辈直接进有景观的茶楼坐下，其他人再去爬阶。" } }
@@ -373,10 +332,10 @@ window.TRIP.days[4] = {
 
   logistics: {
     book: [
-      { en: "<b>Jiufen + Shifen + Golden Waterfall mid-bus package.</b> Hotel 09:15, waterfall gate, old street, lanterns, Golden Waterfall, Jiufen, hotel ~21:00. Ask for the published package, not a generic 10-hour clock. Confirm overtime. Enquiry on the Transport page.",
-        zh: "<b>九份＋十分＋黄金瀑布中巴套装。</b>饭店09:15，瀑布门口、老街、天灯、黄金瀑布、九份，约21:00回饭店。请问套装价，不要开通用10小时。确认超时。询价见交通页。" },
-      { en: "<b>Jiufen teahouse, 18:15.</b> Jiufen Teahouse is rated 4.8 and the balcony tables go first — call ahead for twelve. Tell them you're coming by private bus.",
-        zh: "<b>九份茶楼，18:15。</b>九份茶坊评价4.8，阳台桌最抢手——请先打电话订十二人的位子。订位时说明是包车前往。" },
+      { en: "<b>Jiufen + Shifen + Golden Waterfall mid-bus, 10 hours.</b> Airbnb 10:00, waterfall gate, old street, lanterns, Golden Waterfall, Jiufen, Airbnb 20:00. Fit the published package into the 10-hour clock — do not book overtime. Enquiry on the Transport page.",
+        zh: "<b>九份＋十分＋黄金瀑布中巴，10小时。</b>民宿10:00，瀑布门口、老街、天灯、黄金瀑布、九份，20:00回民宿。套装行程要装进10小时——不要订超时。询价见交通页。" },
+      { en: "<b>Jiufen teahouse, 17:45.</b> Jiufen Teahouse is rated 4.8 and the balcony tables go first — call ahead for twelve, and tell them you must leave by 18:35. Tell them you're coming by private bus.",
+        zh: "<b>九份茶楼，17:45。</b>九份茶坊评价4.8，阳台桌最抢手——请先打电话订十二人的位子，并说明18:35必须离桌。订位时说明是包车前往。" },
       { en: "Make the <b>wet-weather call the night before</b>. A washout still means swapping with Day 6 — and cancelling or moving the mid-bus.",
         zh: "<b>雨天的决定请在前一晚就定案。</b>天气不好仍是跟第6天对调——中巴也要一起改或取消。" }
     ],

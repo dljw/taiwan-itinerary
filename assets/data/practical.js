@@ -29,10 +29,10 @@ window.TRIP.practical = {
       note: { en: "Hotel → Lanyang Kingdom (Zhuangwei) → jar chicken or seafood lunch → Qingshui Geothermal Park (Datong) → hotel. Driver waits. A 10-hour 中巴, not Kamalan plus taxis. Ask whether the vehicle can enter 501巷; if not, wait at 長埤湖. Same operator as the other mid-bus days.",
               zh: "饭店 → 兰阳动植物王国（壮围）→ 甕缸鸡或海鲜午餐 → 清水地热公园（大同）→ 饭店。司机等候。10小时中巴，不是葛玛兰再加计程车。问501巷进不进得去；进不去就停長埤湖。可与其他中巴同一家。" } },
 
-    { what: { en: "Mid-bus — Day 4, Shifen + Jiufen package", zh: "包中巴 · 第4天十分九份套装" },
-      when: { en: "Tue 8 Sep, 09:15–21:00", zh: "9/8 周二，09:15–21:00" },
-      note: { en: "Hotel → Shifen Waterfall gate → old street and lanterns → Golden Waterfall → Jiufen dusk → hotel. Ask for the published package, about NT$8,500–10,000, not a generic 10-hour clock. Confirm overtime past ten hours.",
-              zh: "饭店 → 十分瀑布门口 → 老街与天灯 → 黄金瀑布 → 黄昏九份 → 饭店。请问套装价，约NT$8,500–10,000，不要开通用10小时。超过十小时请确认超时。" } },
+    { what: { en: "Mid-bus — Day 4, Shifen + Jiufen, 10 hours", zh: "包中巴 · 第4天十分九份，10小时" },
+      when: { en: "Tue 8 Sep, 10:00–20:00", zh: "9/8 周二，10:00–20:00" },
+      note: { en: "Airbnb 10:00 → Shifen Waterfall gate → old street and lanterns → Golden Waterfall → Jiufen dusk → Airbnb 20:00. Hard 10-hour clock — leave Jiufen at 18:45. No overtime; the operator will not run past 8pm.",
+              zh: "民宿10:00 → 十分瀑布门口 → 老街与天灯 → 黄金瀑布 → 黄昏九份 → 民宿20:00。硬十小时——18:45离开九份。不超时；业者过不了晚上8点。" } },
 
     { what: { en: "Xiao Wulai skywalk slots ×12", zh: "小乌来天空步道 ×12" },
       when: { en: "Wed 9 Sep, around 10:00", zh: "9/9 周三，约10:00" },
@@ -75,9 +75,9 @@ window.TRIP.practical = {
               zh: "免费入园。现场买蛋、玉米和竹篓。最后501巷中巴可能进不去——进不去就停長埤湖。泡脚带毛巾。三岁别靠95°C的井。有人还想整身泡，才加木造汤屋。" } },
 
     { what: { en: "Jiufen Teahouse", zh: "九份茶坊" },
-      when: { en: "Tue 8 Sep, 18:15 ×12", zh: "9/8 周二 18:15 ×12" },
-      note: { en: "Rated 4.8. Balcony tables go first, and the balcony is the whole point of coming.",
-              zh: "评价4.8。阳台桌最抢手，而阳台正是这里最迷人之处。" } },
+      when: { en: "Tue 8 Sep, 17:45 ×12", zh: "9/8 周二 17:45 ×12" },
+      note: { en: "Rated 4.8. Balcony tables go first, and the balcony is the whole point of coming. Tell them you must leave by 18:35 — the bus is 18:45.",
+              zh: "评价4.8。阳台桌最抢手，而阳台正是这里最迷人之处。请说明18:35必须离桌——车子18:45走。" } },
 
     { what: { en: "Farewell hotpot", zh: "告别火锅" },
       when: { en: "Thu 10 Sep, 18:30 ×12", zh: "9/10 周四 18:30 ×12" },

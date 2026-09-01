@@ -20,8 +20,8 @@ window.TRIP.freetime = {
 
   /* The two numbers everything else hangs off. */
   rule: {
-    en: "<b>Lights out between 22:00 and 23:00.</b> Monday night is 22:00 — Tuesday is the longest day. Wednesday's Xiao Wulai start will not wait either. Every other night has a little more give.",
-    zh: "<b>熄灯时间落在22:00到23:00之间。</b>周一晚上必须22:00——周二是全程最长的一天。周三小乌来也不等人。其余几晚则宽松一些。"
+    en: "<b>Lights out between 22:00 and 23:00.</b> Monday night is 22:00 — Tuesday is still a full ten-hour day, bus at 10:00. Wednesday's Xiao Wulai start will not wait either. Every other night has a little more give.",
+    zh: "<b>熄灯时间落在22:00到23:00之间。</b>周一晚上必须22:00——周二仍是满满十小时，中巴10:00。周三小乌来也不等人。其余几晚则宽松一些。"
   },
 
   days: [
@@ -83,28 +83,28 @@ window.TRIP.freetime = {
                    zh: "衣服上还带着蒸汽、冷气、什么都不用决定。周一傍晚钻隧道，比周末客气。" } },
         { from: "18:15", to: "22:00", dur: { en: "3 hr 45", zh: "3小时45分" }, kind: "evening",
           what: { en: "Home in time to shower and eat nearby", zh: "赶得及洗澡，就近吃" },
-          ideas: { en: "Shower, nearest food, bed — Tuesday is the lantern day. Breakfast at 08:00, bus at 09:15.",
-                   zh: "洗澡、就近吃、睡觉——明天放天灯。8:00早餐，9:15中巴。" } }
+          ideas: { en: "Shower, nearest food, bed — Tuesday is the lantern day. Breakfast at 08:00, bus at 10:00.",
+                   zh: "洗澡、就近吃、睡觉——明天放天灯。8:00早餐，10:00中巴。" } }
       ],
       tomorrow: { time: "07:15", sleep: { en: "9 hr 15", zh: "9小时15分" }, alarm: true,
-                  why: { en: "Breakfast at 08:00, mid-bus at 09:15 for Shifen, lanterns and Jiufen.",
-                         zh: "8:00早餐，9:15中巴去十分、放天灯、九份。" } }
+                  why: { en: "Breakfast at 08:00, mid-bus at 10:00 for Shifen, lanterns and Jiufen. Home by 20:00.",
+                         zh: "8:00早餐，10:00中巴去十分、放天灯、九份。20:00前回民宿。" } }
     },
 
     {
       n: 4, date: { en: "Tue 8 Sep", zh: "9月8日 · 周二" },
       wake: { time: { en: "07:15", zh: "07:15" },
-              why: { en: "Breakfast at 08:00, mid-bus at 09:15. Longest day of the trip — the waterfall drop is at the gate, but Jiufen is still stairs.",
-                     zh: "8:00早餐，9:15中巴。全程最长的一天——瀑布停在门口，但九份仍是阶梯。" } },
-      home: "21:00",
+              why: { en: "Breakfast at 08:00 if you want Fu Hang; mid-bus at 10:00. A full ten-hour day — the waterfall drop is at the gate, but Jiufen is still stairs, and you must be home by 20:00.",
+                     zh: "想去阜杭就8:00早餐；中巴10:00。满满十小时——瀑布停在门口，但九份仍是阶梯，而且20:00必须回到民宿。" } },
+      home: "20:00",
       bed: "22:00",
       hard: true,
       blocks: [
-        { from: "14:15", to: "15:30", dur: { en: "1 hr 15", zh: "1小时15分" }, kind: "rest",
+        { from: "14:00", to: "15:30", dur: { en: "1 hr 30", zh: "1小时30分" }, kind: "rest",
           what: { en: "The deliberate slow block at Shifen", zh: "十分刻意留下的慢时段" },
-          ideas: { en: "Built into the day on purpose, so the lantern goes up at golden hour instead of in flat daylight. Sit in a teahouse, watch other people's lanterns rise, let the kids wander the tracks. Resist the urge to fill it — these ninety minutes are why the evening works.",
-                   zh: "这段时间是刻意排进去的，为了让天灯在黄昏时分升空，而不是大白天。找间茶馆坐下，看别人的天灯升起，让小孩在铁道上走走。别急着把它填满——晚上之所以精彩，正是因为这九十分钟。" } },
-        { from: "21:00", to: "22:00", dur: { en: "1 hour", zh: "1小时" }, kind: "evening",
+          ideas: { en: "Built into the day on purpose, so the lantern goes up at golden hour instead of in flat daylight. Sit in a teahouse, watch other people's lanterns rise, let the kids wander the tracks. Resist the urge to fill it — Jingtong is off the clock so you can still leave Jiufen at 18:45.",
+                   zh: "这段时间是刻意排进去的，为了让天灯在黄昏时分升空，而不是大白天。找间茶馆坐下，看别人的天灯升起，让小孩在铁道上走走。别急着把它填满——菁桐今天不去，就是为了18:45还能离开九份。" } },
+        { from: "20:00", to: "22:00", dur: { en: "2 hours", zh: "2小时" }, kind: "evening",
           what: { en: "Back from Jiufen", zh: "从九份回来" } ,
           ideas: { en: "The best night of the trip is behind you, and Wednesday's Xiao Wulai start will not wait. Back up the lantern photos before anyone's phone fills up — this is the one day nobody can afford to lose pictures from.",
                    zh: "全程最精彩的一晚已经结束，周三小乌来不等人。趁现在把天灯照片备份好，别等手机存满——这是最不能弄丢照片的一天。" } }

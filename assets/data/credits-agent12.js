@@ -1,0 +1,7 @@
+window.TRIP = window.TRIP || {}; window.TRIP.credits = window.TRIP.credits || {};
+Object.assign(window.TRIP.credits, {
+  "taiwan-hairwash/taiwan-hairwash-klook-salon.webp": { source: "https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/jnemmb2g2bris2egyw9q.webp", author: "Klook (activity listing photo)", license: "Rights unclear — Klook product image, used here for a private, unpublished document only", subject: "Hair-wash/salon scalp-massage experience, picked directly by Darren" },
+  "taiwan-hairwash/taiwan-hairwash-salon-sinks.jpg": { source: "https://commons.wikimedia.org/wiki/File:Washing_hair_at_salon_(51213255408).jpg", author: "Hair Spies", license: "CC BY 2.0", subject: "Client reclined in a salon shampoo chair with head in a black basin, stylist washing hair" },
+  "taiwan-hairwash/taiwan-hairwash-salon-basins.jpg": { source: "https://commons.wikimedia.org/wiki/File:Inside_the_Hair_Salon_(5577833869).jpg", author: "johnrosman", license: "CC BY 2.0", subject: "Row of black reclined shampoo basins/sinks inside a hair salon" },
+  "taiwan-hairwash/taiwan-hairwash-navy-shampoo.jpg": { source: "https://commons.wikimedia.org/wiki/File:Flickr_-_Official_U.S._Navy_Imagery_-_An_officer_shampoos_the_hair_of_a_Sailor_in_the_new_beauty_salon_aboard_USS_Iwo_Jima._(cropped).jpg", author: "Official Navy Page / Mass Communication Specialist Seaman (U.S. Navy)", license: "Public domain", subject: "Close-up of hands shampooing and massaging soapy hair at a salon basin" },
+});

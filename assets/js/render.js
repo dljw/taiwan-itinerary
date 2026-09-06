@@ -112,6 +112,10 @@
     out += navLink("index.html", bi({ en: "Home", zh: "首页" }), active, "home-link");
     m.days.forEach(function (d) {
       out += navLink("day" + d.n + ".html", "D" + d.n, active);
+      /* Day 2-A is a rain-day alternate, not one of the seven real days —
+         kept out of meta.days so it never skews the homepage day count or
+         the day1..7 prev/next pager math. Spliced into the nav here instead. */
+      if (d.n === 2) out += navLink("day2a.html", "D2a", active, "alt-day-link");
     });
     out += "</nav>";
     out += '<div class="header-actions">';

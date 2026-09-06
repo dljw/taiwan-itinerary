@@ -61,7 +61,8 @@
     out += '<section><div class="wrap">';
     out += H.secHead("03", { en: "Also in here", zh: "其他页面" });
     out += '<div class="daycards">';
-    [["food.html", { en: "Every restaurant, in one table", zh: "餐厅总表" }, { en: "All recommended spots with ratings, Maps links and rough cost.", zh: "所有推荐餐厅，含评价、地图连结与预估费用。" }],
+    [["day2a.html", { en: "Day 2-A — rain-day alternate", zh: "第2天替代方案（雨天用）" }, { en: "Zhongshan, CKS Memorial at dusk, Longshan Temple, dinner and a massage/hair wash in Ximending — all by public transport, in case Maokong gets rained out.", zh: "中山、黄昏中正纪念堂、龙山寺、西门町晚餐与按摩／洗头——全程大众运输，猫空若遇雨可替换成这天。" }],
+     ["food.html", { en: "Every restaurant, in one table", zh: "餐厅总表" }, { en: "All recommended spots with ratings, Maps links and rough cost.", zh: "所有推荐餐厅，含评价、地图连结与预估费用。" }],
      ["transport.html", { en: "How each day moves", zh: "每天怎么走" }, { en: "Public transport plan, fares, and the mid-buses on Days 1, 3 and 6.", zh: "大众运输规划、车资，以及第1、3、6天的中巴。" }],
      ["budget.html", { en: "What it costs", zh: "费用估算" }, { en: "Food and activities for the week, the cash a card will not cover, and how much to change in Singapore dollars.", zh: "全周餐饮与活动、刷不了卡要备的现金，以及出发前该换多少新币。" }],
      ["practical.html", { en: "Phrases, cards and bookings", zh: "会话、名片与订位清单" }, { en: "Survival Mandarin, taxi cards in traditional characters, the booking checklist and emergency numbers.", zh: "求生中文、繁体计程车名片、订位清单与紧急电话。" }],

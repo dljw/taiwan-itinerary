@@ -32,8 +32,8 @@ window.TRIP.weather = {
 
     { day: 2, date: { en: "Sun 6 Sep", zh: "9/6 周日" }, level: "HIGH",
       risk: { en: "The gondola pauses in high wind, and the view is really the whole reason for the day", zh: "强风时缆车会暂停，而观景本来就是这天的重头戏" },
-      swap: { en: "Trade it for a <b>Taiwanese cooking class</b> instead (indoor, about three hours, and honestly a treat) — and keep Raohe for the evening, since its roofed stalls carry on happily in the rain. Do not move Maokong to Monday — the gondola is closed then.",
-              zh: "改成<b>台菜烹饪课</b>（室内，约三小时，其实颇有乐趣），晚上照常去饶河街——摊位有顶棚遮蔽，下雨照常营业。别把猫空改到周一——那天缆车公休。" } },
+      swap: { en: "Trade it for a <b>Taiwanese cooking class</b> instead (indoor, about three hours, and honestly a treat) — and keep Raohe for the evening, since its roofed stalls carry on happily in the rain. Do not move Maokong to Monday — the gondola is closed then. Or use the fuller <a href=\"day2a.html\"><b>Day 2-A plan</b></a> — Zhongshan, CKS Memorial Hall at dusk, Longshan Temple, dinner and a massage/hair wash in Ximending, all by public transport.",
+              zh: "改成<b>台菜烹饪课</b>（室内，约三小时，其实颇有乐趣），晚上照常去饶河街——摊位有顶棚遮蔽，下雨照常营业。别把猫空改到周一——那天缆车公休。也可以改用更完整的<a href=\"day2a.html\"><b>第2-A天方案</b></a>——中山、黄昏中正纪念堂、龙山寺、西门町晚餐与按摩／洗头，全程大众运输。" } },
 
     { day: 3, date: { en: "Mon 7 Sep", zh: "9/7 周一" }, level: "MED",
       risk: { en: "A highway tunnel, a mostly indoor animal park, and an outdoor geothermal park with shelters", zh: "高速公路隧道、多半室内的动物园，再加有遮棚的户外地热公园" },

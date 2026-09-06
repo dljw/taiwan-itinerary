@@ -82,7 +82,7 @@ window.TRIP.transport = {
 
     { n: 6, date: { en: "Thu 10 Sep", zh: "9月10日 周四" }, mode: { en: "Mid-bus, then MRT", zh: "中巴，再捷运" },
       fare: { en: "≈ NT$600–800 pp incl. bus share", zh: "每人约NT$600–800（含中巴分摊）" }, charter: true,
-      route: { en: "Hotel 08:15 → Hsu's in Shiding → drop at Ximending ~12:15 → MRT to Zhongshan for 18:30 hotpot", zh: "饭店08:15 → 石碇许家 → 约12:15西门町下车 → 捷运去中山 18:30 火锅" },
+      route: { en: "Hotel 09:15 → Hsu's in Shiding (10:30 session) → drop at Ximending ~13:15 → MRT to Zhongshan Junior High (中山國中站) for 18:30 hotpot", zh: "饭店09:15 → 石碇许家（10:30场）→ 约13:15西门町下车 → 捷运去中山國中站 18:30 火锅" },
       note: { en: "<b>A 4–5 hour half-day, not a 10-hour clock, and not three taxis.</b> The driver waits through the noodle session and drops you in Ximending. Afternoon is MRT. Be on a train toward Zhongshan by 17:00 — hotpot is 18:30.",
               zh: "<b>4至5小时半天，不是10小时，也不是三台计程车。</b>司机在麵线时段等候，人在西门町下。下午捷运。17:00前要往中山——火锅18:30。" } },
 
@@ -144,8 +144,8 @@ window.TRIP.transport = {
         enquiryTw: "另外想詢問 2026年9月9日（三）8–10 小時中巴。\n\n同樣 12 位，無大件行李。\n\n08:00 台北市中正區飯店出發\n→ 桃園市復興區小烏來天空步道（不是新北烏來），約 09:30 抵達，停留至約 11:30，司機等候\n→ 大溪老街／和平路，停留至約 16:00\n→ 送回台北市中正區飯店，約 17:15\n\n請報 8 或 10 小時價，確認是復興小烏來，以及是否可與 9月5日那台車一起訂。謝謝！",
         enquiryEn: "We would also like an 8–10 hour mid-bus on Wednesday 9 September 2026.\n\nSame party of 12, no large luggage.\n\n08:00 hotel in Zhongzheng, Taipei\n→ Xiao Wulai Skywalk, Fuxing, Taoyuan (not Wulai in New Taipei) — arrive ~09:30, stay until ~11:30, driver waits\n→ Daxi Old Street / Heping Road until ~16:00\n→ return to the Zhongzheng hotel ~17:15\n\nPlease quote an 8- or 10-hour rate, confirm this is Xiao Wulai in Fuxing, and whether this can be booked with the 5 September vehicle. Thank you." },
       { title: { en: "Day 6 — Shiding half-day", zh: "第6天 —— 石碇半天" },
-        enquiryTw: "另外想詢問 2026年9月10日（四）4–5 小時半天中巴。\n\n同樣 12 位，無大件行李。\n\n08:15 台北市中正區飯店出發\n→ 石碇許家手工麵線（烏塗里四分子3號），約 09:20 抵達，停留至 11:30，司機等候\n→ 西門町／西門紅樓下車，約 12:15\n\n請報半日價，不要開 10 小時。等候是否已含，以及是否可與 9月5日那台車一起訂。謝謝！",
-        enquiryEn: "We would also like a 4–5 hour half-day mid-bus on Thursday 10 September 2026.\n\nSame party of 12, no large luggage.\n\n08:15 hotel in Zhongzheng, Taipei\n→ Hsu's handmade noodles, No. 3 Sifenzi, Wutu, Shiding — arrive ~09:20, stay until 11:30, driver waits\n→ drop at Ximending / the Red House ~12:15\n\nPlease quote a half-day rate, not a 10-hour day. Confirm waiting is included, and whether this can be booked with the 5 September vehicle. Thank you." },
+        enquiryTw: "另外想詢問 2026年9月10日（四）4–5 小時半天中巴——時間已更新，因為許家的預約場次改成10:30。\n\n同樣 12 位，無大件行李。\n\n09:15 台北市中正區飯店出發\n→ 石碇許家手工麵線（烏塗里四分子3號），約 10:20 抵達，停留至 12:30，司機等候\n→ 西門町／西門紅樓下車，約 13:15\n\n請報半日價，不要開 10 小時。等候是否已含，以及是否可與 9月5日那台車一起訂。謝謝！",
+        enquiryEn: "We would also like a 4–5 hour half-day mid-bus on Thursday 10 September 2026 — timing updated since Hsu's booked session moved to 10:30.\n\nSame party of 12, no large luggage.\n\n09:15 hotel in Zhongzheng, Taipei\n→ Hsu's handmade noodles, No. 3 Sifenzi, Wutu, Shiding — arrive ~10:20, stay until 12:30, driver waits\n→ drop at Ximending / the Red House ~13:15\n\nPlease quote a half-day rate, not a 10-hour day. Confirm waiting is included, and whether this can be booked with the 5 September vehicle. Thank you." },
       { title: { en: "Day 7 — hotel to airport", zh: "第7天 —— 饭店送机" },
         enquiryTw: "另外想詢問 2026年9月11日（五）點對點送機。\n\n同樣 12 位，約 12 件行李。\n\n14:45 台北市中正區飯店出發\n→ 桃園國際機場（航廈另告），約 15:45 抵達\n\n請報點對點送機價，不要開鐘點。是否可與 9月5日接機一起訂。謝謝！",
         enquiryEn: "We would also like a point-to-point airport transfer on Friday 11 September 2026.\n\nSame party of 12, about 12 suitcases.\n\n14:45 hotel in Zhongzheng, Taipei\n→ Taoyuan International Airport (terminal to follow), arriving about 15:45\n\nPlease quote a point-to-point send-off, not an hourly charter, and whether this can be booked with the 5 September pickup. Thank you." }

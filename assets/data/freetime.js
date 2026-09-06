@@ -127,22 +127,22 @@ window.TRIP.freetime = {
           ideas: { en: "The farewell hotpot is Thursday. Tonight is Huashan, a noodle shop, or a 7-Eleven run. A civilised evening after two long days — lights out by 22:30 is enough.",
                    zh: "告别火锅在周四。今晚华山、麵店、或便利商店。连着两天长行程之后，今晚从容一点——22:30熄灯就够。" } }
       ],
-      tomorrow: { time: "07:15", sleep: { en: "8 hr 45", zh: "8小时45分" },
-                  why: { en: "Breakfast at 07:30, mid-bus at 08:15 for Hsu's in Shiding. Tablets in the bag. Hotpot is 18:30.", zh: "7:30早餐，8:15中巴去石碇许家。晕车药放进包。火锅18:30。" } }
+      tomorrow: { time: "08:00", sleep: { en: "7 hr 45", zh: "7小时45分" },
+                  why: { en: "Breakfast at 08:15, mid-bus at 09:15 for Hsu's in Shiding — an hour later than originally planned, since the 10:30 session was the one still available. Tablets in the bag. Hotpot is 18:30.", zh: "8:15早餐，9:15中巴去石碇许家——比原计划晚一小时，因为只剩10:30那场。晕车药放进包。火锅18:30。" } }
     },
 
     {
       n: 6, date: { en: "Thu 10 Sep", zh: "9月10日 · 周四" },
-      wake: { time: { en: "07:15", zh: "07:15" },
-              why: { en: "Breakfast at 07:30, mid-bus at 08:15. Hsu's 09:30 session will not wait. Pack tonight — tomorrow is Dihua and the flight.",
-                     zh: "7:30早餐，8:15中巴。许家09:30那场不等人。今晚收行李——明天迪化街，然后登机。" } },
+      wake: { time: { en: "08:00", zh: "08:00" },
+              why: { en: "Breakfast at 08:15, mid-bus at 09:15. Hsu's 10:30 session will not wait. Pack tonight — tomorrow is Dihua and the flight.",
+                     zh: "8:15早餐，9:15中巴。许家10:30那场不等人。今晚收行李——明天迪化街，然后登机。" } },
       home: "20:30",
       bed: "23:00",
       blocks: [
-        { from: "13:30", to: "16:30", dur: { en: "3 hours", zh: "3小时" }, kind: "choose",
-          what: { en: "Ximending — the afternoon is the plan, not a gap", zh: "西门町 —— 下午就是行程，不是空档" },
-          ideas: { en: "Red House, pedestrian streets, Longshan only if you still want a temple. Split up. Be on a train toward Zhongshan by 17:00 — hotpot is 18:30.",
-                   zh: "红楼、徒步区，想看庙再去龙山寺。可以分头。17:00前要往中山方向走——火锅18:30。" } },
+        { from: "14:30", to: "17:00", dur: { en: "2.5 hours", zh: "2.5小时" }, kind: "choose",
+          what: { en: "Ximending — the afternoon is the plan, but it's an hour shorter now", zh: "西门町 —— 下午就是行程，但比原本少了一小时" },
+          ideas: { en: "Red House, pedestrian streets. Longshan is realistically a skip this time — the later Hsu's slot ate the slack, and the new hotpot venue (中山國中站, not the old Zhongshan pick) needs a longer MRT ride. Leave Ximen by 17:30 at the latest — hotpot is 18:30.",
+                   zh: "红楼、徒步区。龙山寺这次现实上建议跳过——许家改晚了，缓冲时间没了，而且新订的火锅店在中山國中站，比原本那家要搭更久的捷运。最晚17:30要离开西门——火锅18:30。" } },
         { from: "20:30", to: "23:00", dur: { en: "2 hr 30", zh: "2小时30分" }, kind: "evening",
           what: { en: "Last real night in Taipei — pack after hotpot", zh: "在台北最后一个完整的晚上 —— 火锅后再收行李" },
           ideas: { en: "The latest bedtime of the week, because tomorrow doesn't start until 08:30. Do the bulk of the packing now — weigh the suitcases after Ximending, you've probably bought more than you think. Then Huashan next door if anyone still wants a last drink.",

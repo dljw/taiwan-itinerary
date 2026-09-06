@@ -44,10 +44,10 @@ window.TRIP.practical = {
       note: { en: "These are small family-run spots with only a handful of big tables, and Sunday is the busiest day of the week to find one free.",
               zh: "这里多是家庭经营的小店，大桌数量有限，而周日又是一周中最忙碌的一天。" } },
 
-    { what: { en: "Hsu's handmade noodles ×12", zh: "石碇许家手工麵线 ×12" },
-      when: { en: "Thu 10 Sep, 09:30", zh: "9/10 周四，09:30" },
-      note: { en: "DIY + 流水麵, about NT$550. <b>handmadenoodlesbyhsu.com.tw</b>, LINE <b>@a26633004</b>, phone <b>02-2663-3004</b>. Closed Tuesdays — Monday is Yilan, so this is Thursday. Under-sixes free.",
-              zh: "DIY＋流水麵，约 NT$550。<b>handmadenoodlesbyhsu.com.tw</b>、LINE <b>@a26633004</b>、电话 <b>02-2663-3004</b>。周二公休——周一是宜兰，所以排周四。六岁以下免费。" } },
+    { what: { en: "Hsu's handmade noodles ×12 — booked", zh: "石碇许家手工麵线 ×12 —— 已订" },
+      when: { en: "Thu 10 Sep, 10:30", zh: "9/10 周四，10:30" },
+      note: { en: "DIY + 流水麵, about NT$550. Deposit paid via their shop2000 storefront (LINE <b>@a26633004</b> for follow-up, phone <b>02-2663-3004</b>). Closed Tuesdays — Monday is Yilan, so this is Thursday. Under-sixes free. Moved from the original 09:30 slot to 10:30 — the Day 6 mid-bus timing was updated to match.",
+              zh: "DIY＋流水麵，约 NT$550。已透过 shop2000 官方商城付订金（后续联络 LINE <b>@a26633004</b>，电话 <b>02-2663-3004</b>）。周二公休——周一是宜兰，所以排周四。六岁以下免费。原本09:30场已改到10:30，第6天中巴时间也已同步更新。" } },
 
     { what: { en: "Mid-bus — Day 5, Xiao Wulai + Daxi", zh: "包中巴 · 第5天小乌来加大溪" },
       when: { en: "Wed 9 Sep, 08:00–17:15", zh: "9/9 周三，08:00–17:15" },
@@ -55,9 +55,9 @@ window.TRIP.practical = {
               zh: "饭店 → 小乌来天空步道 → 大溪老街 → 饭店。8至10小时。请订<b>桃园复兴小乌来</b>——不是乌来。可与其他中巴同一家。" } },
 
     { what: { en: "Mid-bus — Day 6, Shiding half-day", zh: "包中巴 · 第6天石碇半天" },
-      when: { en: "Thu 10 Sep, 08:15–12:15", zh: "9/10 周四，08:15–12:15" },
-      note: { en: "Hotel → Hsu's → <b>drop at Ximending</b>, driver waiting. A 4–5 hour half-day, not a 10-hour clock, not three taxis. Same operator as the other mid-bus days.",
-              zh: "饭店 → 许家 → <b>西门町下车</b>，司机等候。4至5小时半天，不是10小时，也不是三台计程车。可与其他中巴同一家。" } },
+      when: { en: "Thu 10 Sep, 09:15–13:15", zh: "9/10 周四，09:15–13:15" },
+      note: { en: "Hotel → Hsu's → <b>drop at Ximending</b>, driver waiting. A 4–5 hour half-day, not a 10-hour clock, not three taxis. Timing shifted an hour later (was 08:15–12:15) to match Hsu's moving from 09:30 to 10:30 — update sent to the operator. Same operator as the other mid-bus days.",
+              zh: "饭店 → 许家 → <b>西门町下车</b>，司机等候。4至5小时半天，不是10小时，也不是三台计程车。时间已往后调一小时（原08:15–12:15），配合许家从09:30改到10:30——已通知车行。可与其他中巴同一家。" } },
 
     { what: { en: "Lanyang Kingdom tickets ×12", zh: "兰阳动植物王国门票 ×12" },
       when: { en: "Mon 7 Sep, 10:00", zh: "9/7 周一，10:00" },
@@ -79,10 +79,10 @@ window.TRIP.practical = {
       note: { en: "Rated 4.8. Balcony tables go first, and the balcony is the whole point of coming. Tell them you must leave by 18:35 — the bus is 18:45.",
               zh: "评价4.8。阳台桌最抢手，而阳台正是这里最迷人之处。请说明18:35必须离桌——车子18:45走。" } },
 
-    { what: { en: "Farewell hotpot", zh: "告别火锅" },
+    { what: { en: "Farewell hotpot — 如嬌花膠雞．鍋物", zh: "告别火锅 —— 如嬌花膠雞．鍋物" },
       when: { en: "Thu 10 Sep, 18:30 ×12", zh: "9/10 周四 18:30 ×12" },
-      note: { en: "Confirm one table for twelve rather than splitting into two, and ask about a divided pot for the kids.",
-              zh: "确认是十二人同坐一桌而非拆成两桌，并问问是否能用鸳鸯锅照顾小朋友的口味。" } },
+      note: { en: "民權東路三段60巷9號1樓, 02-2509-4588, online: https://mpea.me/Fgobm. A premium fish-maw chicken hotpot (~NT$3,200/pot) — book 3+ days ahead since the broth takes ~2 days to prepare. Confirm one table for twelve rather than splitting into two, get a per-head cost estimate, and ask about a divided pot for the kids.",
+              zh: "民權東路三段60巷9號1樓，电话02-2509-4588，线上订位：https://mpea.me/Fgobm。顶级花膠鸡火锅（单锅约NT$3,200）——请提前三天以上订位，因为汤底要炖约两天。请确认十二人同坐一桌而非拆成两桌，问清楚每人大约花费，并问问是否能用鸳鸯锅照顾小朋友的口味。" } },
 
     { what: { en: "Rice & Shine, Dihua St", zh: "稻舍（迪化街）" },
       when: { en: "Fri 11 Sep, 12:30 ×12", zh: "9/11 周五 12:30 ×12" },

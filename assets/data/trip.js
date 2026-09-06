@@ -82,7 +82,7 @@ window.TRIP.meta = {
       v: { en: "An EasyCard, a folding umbrella (for sun as much as rain), and shoes you can walk all day in.",
            zh: "悠游卡、折叠伞（遮阳跟挡雨一样重要），以及一双能走一整天的鞋。" } },
     { k: { en: "Book before you fly", zh: "出发前先订" },
-      v: { en: "<b>Six mid-bus bookings</b> with one Taipei operator if you can — Days 1 and 7 as airport transfers, Day 6 a 4–5 hour half-day, Days 3–5 as full days. Also Hsu's Thursday 09:30, the Wednesday skywalk, the Thursday hotpot, and the Day 7 farewell lunch.",
-           zh: "<b>六段中巴</b>，能同一家台北业者最好——第1、7天机场接送，第6天4至5小时半天，第3至5天全日。另外还有许家周四09:30、周三天空步道、周四火锅、第7天告别午餐。" } }
+      v: { en: "<b>Six mid-bus bookings</b> with one Taipei operator if you can — Days 1 and 7 as airport transfers, Day 6 a 4–5 hour half-day (now 09:15–13:15, shifted an hour later), Days 3–5 as full days. Also Hsu's — booked, Thursday 10:30 — the Thursday hotpot (now 如嬌花膠雞．鍋物, book 3+ days ahead), and the Day 7 farewell lunch.",
+           zh: "<b>六段中巴</b>，能同一家台北业者最好——第1、7天机场接送，第6天4至5小时半天（现为09:15–13:15，往后调一小时），第3至5天全日。另外还有许家——已订，周四10:30——周四火锅（现改订如嬌花膠雞．鍋物，请提前三天以上）、第7天告别午餐。" } }
   ]
 };

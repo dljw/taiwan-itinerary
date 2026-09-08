@@ -1,5 +1,5 @@
 /* ============================================================
-   DAY 5 · Wed 9 Sep 2026 · Xiao Wulai skywalk + Daxi
+   DAY 5 · Wed 9 Sep 2026 · Xiao Wulai skywalk + Daxi + Cihu
    Weather buffer for the lanterns sits on Thursday (Hsu's + hotpot).
    ============================================================ */
 window.TRIP = window.TRIP || {}; window.TRIP.days = window.TRIP.days || {};
@@ -9,38 +9,38 @@ window.TRIP.days[5] = {
   date:  { en: "Wednesday 9 September", zh: "9月9日 · 周三" },
   title: { en: "Standing on glass above a waterfall", zh: "站在瀑布上方的玻璃步道" },
   intro: {
-    en: "A glass walkway juts out over the lip of Xiao Wulai waterfall, and you can look straight down through your own feet into fifty metres of falling water. Back down in Daxi, the whole afternoon is yours — tofu, woodwork, baroque facades, no clock. Home in time for a quiet dinner in Taipei. Thursday is Hsu's and the farewell hotpot, so tonight is an earlier night.",
-    zh: "一段玻璃步道从小乌来瀑布的崖口悬挑出去，你可以从自己脚下直直看进五十公尺的落水里。下山回到大溪后，一整个下午都是你们的——豆干、木工、巴洛克立面，不必看表。赶回台北安静吃晚饭。明天许家和告别火锅，今晚早睡。"
+    en: "A glass walkway juts out over the lip of Xiao Wulai waterfall, and you can look straight down through your own feet into fifty metres of falling water. Back down in Daxi for a Hakka lunch and a stroll through the baroque arcades, then on to Cihu — Chiang Kai-shek's mausoleum lake and the extraordinary sculpture park of hundreds of his statues, collected from all over Taiwan. Home around six for a quiet dinner. Thursday is Hsu's and the farewell hotpot, so tonight is an earlier night.",
+    zh: "一段玻璃步道从小乌来瀑布的崖口悬挑出去，你可以从自己脚下直直看进五十公尺的落水里。下山回到大溪吃顿客家菜、在巴洛克骑楼里走走，接着前往慈湖——蒋介石的陵寝湖畔与那座非凡的雕塑公园，上百尊从全台各地收集来的蒋公铜像。约六点回台北安静吃晚饭。明天许家和告别火锅，今晚早睡。"
   },
   hero: "xiaowulai/xiaowulai-skywalk-glass.jpg",
   chips: [
-    { en: "中巴, hotel to hotel", zh: "中巴，饭店到饭店" },
+    { en: "10-hr 中巴, hotel to hotel", zh: "10小时中巴，饭店到饭店" },
     { en: "Mountain road — take tablets", zh: "山路，先吃晕车药" },
     { en: "Closed Tuesdays — today is Wednesday", zh: "周二公休，今天周三" },
     { en: "Home before Hsu's", zh: "许家前早回" }
   ],
 
   glance: [
-    { k: { en: "Leave hotel", zh: "出发" },   v: { en: "08:00 by mid-bus", zh: "8:00 中巴" } },
+    { k: { en: "Leave hotel", zh: "出发" },   v: { en: "09:00 by mid-bus", zh: "9:00 中巴" } },
     { k: { en: "Meals", zh: "三餐" },         v: { en: "Hotel · Daxi Hakka lunch · Taipei casual", zh: "饭店 · 大溪客家菜 · 台北随便吃" } },
     { k: { en: "Cost pp", zh: "每人预估" },   v: { en: "≈ NT$350 + bus share", zh: "约 NT$350＋中巴分摊" } },
     { k: { en: "Walking", zh: "步行强度" },   v: { en: "Moderate — some steps", zh: "中等，有些阶梯" } },
-    { k: { en: "Book ahead", zh: "需预订" },  v: { en: "Skywalk slot + 8–10 hr 中巴", zh: "天空步道预约＋8至10小时中巴" } }
+    { k: { en: "Book ahead", zh: "需预订" },  v: { en: "Skywalk slot + 10 hr 中巴", zh: "天空步道预约＋10小时中巴" } }
   ],
 
   timeline: [
-    { time: "07:00", dur: "1 hr", type: "rest",
+    { time: "07:30", dur: "1 hr", type: "rest",
       title: { en: "Breakfast, and pack the day bag", zh: "早餐，整理随身包" },
-      note:  { en: "Umbrella, water, and motion sickness tablets — the road up to Fuxing winds through a long series of bends. The bus comes to the hotel at 08:00.",
-               zh: "雨伞、水、晕车药——上复兴的路是一连串的弯道。中巴08:00到饭店门口。" } },
+      note:  { en: "Umbrella, water, and motion sickness tablets — the road up to Fuxing winds through a long series of bends. The bus comes to the hotel at 09:00.",
+               zh: "雨伞、水、晕车药——上复兴的路是一连串的弯道。中巴09:00到饭店门口。" } },
 
-    { time: "08:00", dur: "90 min", type: "travel",
+    { time: "09:00", dur: "90 min", type: "travel",
       title: { en: "Mid-bus: hotel → Xiao Wulai", zh: "中巴：饭店 → 小乌来" },
       maps: "https://www.google.com/maps/search/?api=1&query=小烏來天空步道",
       note:  { en: "Tell the driver <b>小烏來天空步道，桃園市復興區</b> — not 乌来 in New Taipei. About ninety minutes, freeway then the mountain road. Tablets before you board.",
                zh: "跟司机说<b>小烏來天空步道，桃園市復興區</b>——不是新北乌来。大约九十分钟，先高速公路再上山。上车前吃晕车药。" } },
 
-    { time: "09:30", dur: "2 hr", type: "sight", img: "xiaowulai/xiaowulai-waterfall-tourists.jpg", cost: 50, pay: "mixed",
+    { time: "10:30", dur: "2 hr", type: "sight", img: "xiaowulai/xiaowulai-waterfall-tourists.jpg", cost: 50, pay: "mixed",
       payNote: { en: "Book the skywalk online and this is prepaid. Walk-up is usually cash.", zh: "线上预约天空步道就已预付。现场买票多半要现金。" },
       title: { en: "Xiao Wulai Skywalk and waterfall", zh: "小乌来天空步道与瀑布" },
       placeRef: "Xiao Wulai Skywalk",
@@ -57,51 +57,57 @@ window.TRIP.days[5] = {
         asOf: "2026-08"
       } },
 
-    { time: "11:30", dur: "30 min", type: "travel",
+    { time: "12:30", dur: "30 min", type: "travel",
       title: { en: "Mid-bus down to Daxi Old Street", zh: "中巴下山到大溪老街" },
       maps: "https://www.google.com/maps/search/?api=1&query=大溪老街",
       note:  { en: "Same bus, same driver. Ask to be dropped on Heping Old Street, right where lunch is waiting.",
                zh: "同一台车、同一个司机。请停在和平老街，午餐就在那里等着你们。" } },
 
-    { time: "12:00", dur: "1.5 hr", type: "meal", img: "food-hakka/food-hakka-stir-fry.jpg", cost: 300, pay: "card",
-      title: { en: "Lunch — Hakka food on Daxi Old Street", zh: "午餐 —— 大溪老街的客家菜" },
+    { time: "13:00", dur: "2 hr", type: "meal", img: "food-hakka/food-hakka-stir-fry.jpg", cost: 300, pay: "card",
+      title: { en: "Lunch & short stroll — Daxi Old Street", zh: "午餐与短暂闲逛 —— 大溪老街" },
       placeRef: "Daxi Old Street",
       maps: "https://www.google.com/maps/search/?api=1&query=大溪老街",
-      note:  { en: "This is Hakka country, and the local restaurants cook accordingly — salty, savoury, a little fatty, and exactly right after a morning outdoors.",
-               zh: "这一带是客家庄，餐厅做的就是客家味——咸香带油，正好犒赏走了一早上户外的胃口。" },
+      note:  { en: "This is Hakka country, and the local restaurants cook accordingly — salty, savoury, a little fatty, and exactly right after a morning outdoors. After lunch, a shorter afternoon than usual: walk Heping Road for the best-preserved baroque facades, duck into a woodwork shop, graze a stall or two — dried tofu, douhua, or a peanut roll if anyone's still hungry. Cihu waits at 15:00.",
+               zh: "这一带是客家庄，餐厅做的就是客家味——咸香带油，正好犒赏走了一早上户外的胃口。午餐后的下午比往常短一些：走和平路看保存最完整的巴洛克立面，钻进木工店瞧瞧，逛一两个摊子——豆干、豆花，或是谁还饿的话来支花生卷。15:00要去慈湖。" },
       place: {
         address: { en: "Heping Old Street, Daxi", zh: "桃園市大溪區和平路老街" },
         hours: { en: "Shops roughly 10:00–18:00", zh: "店家约 10:00–18:00" },
         rating: "4.2",
         count: { en: "~10k Google reviews (approx.)", zh: "Google 约一万则" },
-        review: { en: "Baroque arcades, dried tofu, and Hakka cooking — flat enough for a full afternoon graze after Xiao Wulai.",
-                  zh: "巴洛克骑楼、豆干与客家菜——小乌来之后还能走一下午。" },
+        review: { en: "Baroque arcades, dried tofu, and Hakka cooking — today a shorter stop before Cihu.",
+                  zh: "巴洛克骑楼、豆干与客家菜——今天缩短停留，之后去慈湖。" },
         asOf: "2026-08"
       },
-      dishes: ["hakka-stirfry", "mountain-greens"] },
+      dishes: ["hakka-stirfry", "mountain-greens", "daxi-tofu", "douhua", "peanut-roll"] },
 
-    { time: "13:30", dur: "2.5 hr", type: "sight", img: "daxi-old-street/daxi-old-street-arcade.jpg",
-      title: { en: "The rest of the afternoon in Daxi Old Street", zh: "大溪老街 —— 一整个下午" },
-      maps: "https://www.google.com/maps/search/?api=1&query=大溪老街",
-      note:  { en: "With the whole afternoon open, there's no reason to rush — and no need to sit down for another full meal after lunch. Walk Heping Road for the best-preserved baroque facades, duck into a woodwork shop or two, and graze a few of the stalls below instead of ordering big. Anyone who's had enough can settle into the arcades with a cold drink while the rest keep browsing.",
-               zh: "整个下午都是你们的，完全不用赶——刚吃完午餐，也不必再坐下来吃一顿正餐。走和平路看保存最完整的巴洛克立面，钻进一两间木工店看看，下面几摊边走边吃就好，别点太多。逛累的人可以在骑楼下喝杯冷饮坐着，其他人继续逛。" },
+    { time: "15:00", dur: "15 min", type: "travel",
+      title: { en: "Mid-bus to Cihu", zh: "中巴前往慈湖" },
+      maps: "https://www.google.com/maps/search/?api=1&query=慈湖陵寢+桃園市大溪區復興路一段1097號",
+      note:  { en: "Same bus. About fifteen minutes from Daxi Old Street to the mausoleum lake.",
+               zh: "同一台车。从大溪老街到陵寝湖边约十五分钟。" } },
+
+    { time: "15:15", dur: "1 hr 15 min", type: "sight", img: "daxi-old-street/daxi-old-street-arcade.jpg", cost: 0, pay: "free",
+      title: { en: "Cihu Mausoleum & Sculpture Park", zh: "慈湖陵寢與雕塑公園" },
+      placeRef: "Cihu",
+      maps: "https://www.google.com/maps/search/?api=1&query=慈湖陵寢+桃園市大溪區復興路一段1097號",
+      note:  { en: "Chiang Kai-shek's lakeside mausoleum sits at one end; at the other, an extraordinary sculpture park holds hundreds of his bronze statues, collected from all over Taiwan after the democratic transition — some heroic, some domestic, all now gathered in one grove. The lake path is flat and shaded. <b>The mausoleum closes at 17:00 and is closed Tuesdays</b> — today is Wednesday, so you're fine. If you time it right, the honor guard changes on the hour; the last useful window is 16:00. Leave by 16:30 to be home by six.",
+               zh: "蒋介石的湖畔陵寝在一端；另一端是座非凡的雕塑公园，收藏了数百尊他的铜像——民主化之后从全台各地收集而来——有的英武、有的居家，如今全聚在一片树林里。湖边步道平坦有荫。<b>陵寝17:00关门，周二公休</b>——今天周三，没问题。如果时间抓得准，整点有仪队交接；16:00是关门前最后一个有用的时段。16:30离开，六点前到家。" },
       place: {
-        address: { en: "Heping Old Street, Daxi", zh: "桃園市大溪區和平路老街" },
-        hours: { en: "Stalls roughly 10:00–18:00", zh: "摊位约 10:00–18:00" },
-        rating: "4.2",
-        count: { en: "~10k Google reviews (approx.)", zh: "Google 约一万则" },
-        review: { en: "Grazing afternoon — dried tofu, douhua, peanut rolls. Flat arcades make it easy to sit whenever legs need a break.",
-                  zh: "边走边吃的下午——豆干、豆花、花生卷。骑楼平坦，腿累随时能坐。" },
+        address: { en: "No. 1097, Sec. 1, Fuxing Rd., Daxi, Taoyuan", zh: "桃園市大溪區復興路一段1097號" },
+        hours: { en: "09:00–17:00 · closed Tuesdays · free entry", zh: "09:00–17:00 · 周二公休 · 免费" },
+        rating: "4.3",
+        count: { en: "Google reviews", zh: "Google 评价" },
+        review: { en: "The sculpture park is surreal and oddly moving — hundreds of identical bronze Chiangs lined up in the forest. The lake walk is gentle.",
+                  zh: "雕塑公园既超现实又莫名动人——几百尊一模一样的蒋公铜像在林间排成行列。湖畔步道轻松好走。" },
         asOf: "2026-08"
-      },
-      dishes: ["daxi-tofu", "douhua", "peanut-roll", "hakka-tangyuan", "popped-rice-icecream", "dry-noodles"] },
+      } },
 
-    { time: "16:00", dur: "75 min", type: "travel",
+    { time: "16:30", dur: "90 min", type: "travel",
       title: { en: "Mid-bus home to the hotel", zh: "中巴回饭店" },
-      note:  { en: "About seventy-five minutes. Home in time for a quiet dinner; the farewell hotpot waits until Thursday.",
-               zh: "大约七十五分钟。赶回吃顿安静的晚饭；告别火锅留到周四。" } },
+      note:  { en: "About ninety minutes from Cihu back to Taipei. Home around six for a quiet dinner; the farewell hotpot waits until Thursday.",
+               zh: "从慈湖回台北约九十分钟。六点左右到家，安静吃顿晚饭；告别火锅留到周四。" } },
 
-    { time: "17:15", dur: "1 hr", type: "meal",
+    { time: "18:00", dur: "1 hr", type: "meal",
       title: { en: "Quiet dinner near the hotel", zh: "饭店附近随便吃" },
       note:  { en: "Not the farewell hotpot — that is Thursday, after Hsu's. Tonight is whatever is nearest: Huashan, a convenience store, a noodle shop. Lights out by 22:00; Hsu's tomorrow.",
                zh: "不是告别火锅——那是周四，许家之后。今晚就近吃：华山、便利商店、麵店。22:00熄灯；明天许家。" } },
@@ -173,6 +179,34 @@ window.TRIP.days[5] = {
       tip: {
         en: "There are steps and slopes down to the pool — the platform itself is easy, the lower path less so. Height-shy members of the group lose nothing by staying on the side path. Tickets are cheap, parking is free, and the toilets are perfectly decent.",
         zh: "往水潭的路有阶梯和坡道——平台本身好走，下面那段就没那么轻松。怕高的人走旁边的步道并不吃亏。门票便宜、停车免费，厕所也很正常。"
+      }
+    },
+    {
+      name: { en: "Cihu Mausoleum & Sculpture Park", zh: "慈湖陵寢與雕塑公園" },
+      tw: "慈湖 · 桃園市大溪區",
+      maps: "https://www.google.com/maps/search/?api=1&query=慈湖陵寢+桃園市大溪區復興路一段1097號",
+      images: [
+        "daxi-old-street/daxi-old-street-facades.jpg"
+      ],
+      history: {
+        en: "Cihu — 'Benevolent Lake' — was Chiang Kai-shek's favoured retreat in his final years, chosen because the landscape reminded him of his birthplace in Zhejiang. When he died in 1975, his body was interred here in a black marble sarcophagus, waiting for a return to the mainland that never came. After Taiwan's democratic transition in the 1990s, local governments quietly removed thousands of Chiang statues from schools, parks and public squares. Rather than destroy them, the collection was gathered here — hundreds of bronze Chiangs now stand in neat rows beneath the trees, an accidentally powerful monument to both reverence and its end.",
+        zh: "慈湖是蒋介石晚年最爱的行馆，选址因为景色让他想起故乡浙江。1975年他过世后，遗体安放在这里的黑色大理石棺里，等着一场始终未能实现的返乡。1990年代台湾民主化之后，地方政府悄悄从学校、公园和广场移除了数千座蒋公铜像。这些铜像没有被销毁，而是收集到这里——如今数百尊蒋公铜像整齐排列在树下，意外地成为一座既关乎崇敬、也关乎崇敬之终结的有力纪念地。"
+      },
+      famous: {
+        en: "<b>The sculpture park</b> above all else — seeing so many identical bronze figures gathered in one place is both surreal and oddly moving. Some statues are heroic and martial, others show him in civilian clothes or reading. All were once focal points of public squares; now they're footnotes in a forest.",
+        zh: "首推<b>雕塑公园</b>——这么多一模一样的铜像聚在一处，既超现实又莫名动人。有些铜像英武挺拔，有些则穿着便服或正在读书。每一尊曾经都是广场的焦点；如今都成了林间的注脚。"
+      },
+      locals: {
+        en: "Taiwanese visitors treat it less as a pilgrimage and more as a curious historical artifact — somewhere to bring visiting relatives or out-of-town friends who want to understand the island's complicated twentieth century. The advice you'll hear is to walk the full loop: mausoleum first, then the sculpture park, then the lake path back.",
+        zh: "台湾游客把它当成一件好奇的历史文物，而不是朝圣地——适合带来访的亲戚或外地朋友了解这座岛屿复杂的二十世纪。在地建议是走完整圈：先陵寝、再雕塑公园、最后沿湖走回来。"
+      },
+      doThis: {
+        en: "Arrive by 15:15, see the mausoleum and the honor guard if you time it for the 16:00 change, then walk through the sculpture park — it's the stronger half. The lake loop is flat and takes about twenty minutes at a stroll. Leave by 16:30 to be home by six.",
+        zh: "15:15到，先看陵寝，如果时间抓得准可以看16:00的仪队交接，再穿过雕塑公园——那是更精彩的一半。绕湖一圈平坦好走，慢慢走约二十分钟。16:30离开，六点前到家。"
+      },
+      tip: {
+        en: "Free entry, free parking, decent toilets. Entirely flat. The sculpture park is outdoors and unshaded, so hats help. Some of the statues have plaques noting where they originally stood — reading them turns a surreal art installation back into a history lesson.",
+        zh: "免费入场、免费停车、厕所正常。全程平坦。雕塑公园在户外且无遮荫，戴帽子比较好。部分铜像附有铭牌注明原本立在哪里——读了之后，超现实的艺术装置又变回一堂历史课。"
       }
     }
   ],
@@ -247,20 +281,20 @@ window.TRIP.days[5] = {
 
   verify: [
     { title: { en: "Closed every Tuesday — that is why this is Wednesday", zh: "每周二公休——所以排在周三" },
-      body: { en: "The skywalk's published hours are 08:00–17:00, <b>closed Tuesdays</b>. It used to sit on Tuesday only because the other days were already locked: Maokong closed Mondays, Hsu's closed Tuesdays, Monday is Yilan, Thursday is Hsu's plus the farewell hotpot. Wednesday is the open day. Do not move it back.",
-              zh: "天空步道公布时段是 08:00–17:00，<b>周二公休</b>。之前会排到周二，只因为其他日子已经钉死：猫空周一公休、许家周二公休、周一是宜兰、周四是许家加告别火锅。周三才开门。不要改回去。" } },
+      body: { en: "The skywalk's published hours are 08:00–17:00, <b>closed Tuesdays</b>; Cihu mausoleum is also 09:00–17:00, <b>closed Tuesdays</b>. Wednesday works for both. It used to sit on Tuesday only because the other days were already locked: Maokong closed Mondays, Hsu's closed Tuesdays, Monday is Yilan, Thursday is Hsu's plus the farewell hotpot. Wednesday is the open day. Do not move it back.",
+              zh: "天空步道公布时段是 08:00–17:00，<b>周二公休</b>；慈湖陵寝也是 09:00–17:00，<b>周二公休</b>。周三两处都开。之前会排到周二，只因为其他日子已经钉死：猫空周一公休、许家周二公休、周一是宜兰、周四是许家加告别火锅。周三才开门。不要改回去。" } },
     { title: { en: "Reserve the skywalk slot online, and check whether it is still required", zh: "上网预约天空步道时段，并确认是否仍需预约" },
       body: { en: "Xiao Wulai's glass walkway limits how many people stand on it, and normally takes <b>advance online reservations for a timed slot</b>. You are arriving by private bus on a Wednesday, so <b>assume you must book</b>. Reserve twelve places for around 10:00 as soon as the booking window opens, and confirm the current rule before you travel; it has changed more than once. With a three-year-old in the group, it's also worth asking about a minimum age when you book.",
               zh: "小乌来的玻璃步道限制同时站上去的人数，通常需要<b>事先上网预约时段</b>。你们是周三包车到，所以<b>请当作一定要预约</b>。订位一开放就先订十二个名额、时段约10:00，出发前再确认最新规定——这条规则改过不止一次。家里有个三岁的孩子，预约时也可以顺便问一下有没有最低年龄限制。" } },
-    { title: { en: "If Wednesday is wet, skip the glass and keep Daxi", zh: "若周三下雨，跳过玻璃，留下大溪" },
-      body: { en: "Light rain: Daxi's arcades still work; the skywalk is miserable. A named typhoon cancels the mountain road — stay in Taipei, use the indoor list, and do not try to move Xiao Wulai to Thursday (that morning is Hsu's) or back to Tuesday (the skywalk is closed). The farewell hotpot stays Thursday regardless.",
-              zh: "小雨：大溪骑楼还逛得；玻璃步道很难受。有命名的台风就取消山路——留在台北走室内清单，也别把小乌来改到周四（那天上午是许家），更别改回周二（天空步道公休）。告别火锅仍在周四。" } }
+    { title: { en: "If Wednesday is wet, skip the glass and keep Daxi + Cihu", zh: "若周三下雨，跳过玻璃，留下大溪与慈湖" },
+      body: { en: "Light rain: Daxi's arcades still work; Cihu's sculpture park is walkable with umbrellas; the skywalk is miserable. A named typhoon cancels the mountain road — stay in Taipei, use the indoor list, and do not try to move Xiao Wulai to Thursday (that morning is Hsu's) or back to Tuesday (both the skywalk and Cihu mausoleum are closed). The farewell hotpot stays Thursday regardless.",
+              zh: "小雨：大溪骑楼还逛得；慈湖雕塑公园撑伞能走；玻璃步道很难受。有命名的台风就取消山路——留在台北走室内清单，也别把小乌来改到周四（那天上午是许家），更别改回周二（天空步道和慈湖陵寝都公休）。告别火锅仍在周四。" } }
   ],
 
   logistics: {
     book: [
-      { en: "<b>8–10 hour mid-bus, hotel 08:00 → Xiao Wulai → Daxi → hotel ~17:15.</b> Ask for 小乌来 in Fuxing, Taoyuan — not 乌来. Same operator as Days 1, 3, 4, 6 and 7. Enquiry on the Transport page.",
-        zh: "<b>8至10小时中巴，饭店08:00 → 小乌来 → 大溪 → 饭店约17:15。</b>请订桃园复兴小乌来——不是乌来。可与第1、3、4、6、7天同一家。询价见交通页。" },
+      { en: "<b>10 hour mid-bus, hotel 09:00 → Xiao Wulai → Daxi → Cihu → hotel ~18:00.</b> Ask for 小乌来 in Fuxing, Taoyuan — not 乌来 — then Daxi Old Street, then 慈湖 (Cihu). Same operator as Days 1, 3, 4, 6 and 7. Enquiry on the Transport page.",
+        zh: "<b>10小时中巴，饭店09:00 → 小乌来 → 大溪 → 慈湖 → 饭店约18:00。</b>请订桃园复兴小乌来——不是乌来——再大溪老街、再慈湖。可与第1、3、4、6、7天同一家。询价见交通页。" },
       { en: "<b>Skywalk slots ×12</b>, booked online in advance — see the note above.",
         zh: "<b>天空步道12个名额</b>，请事先上网预约——详见上方说明。" }
     ],
@@ -272,12 +306,15 @@ window.TRIP.days[5] = {
       { en: "Mountain weather turns fast. Take the umbrella even if Taipei is clear.",
         zh: "山区天气说变就变。台北晴朗也要带伞。" },
       { en: "Thursday is Hsu's. The bus comes to the hotel at 08:15.",
-        zh: "明天许家。中巴08:15到饭店门口。" }
+        zh: "明天许家。中巴08:15到饭店门口。" },
+      { en: "Cihu mausoleum closes at 17:00. Leave by 16:30 to be back for dinner.",
+        zh: "慈湖陵寝17:00关门。16:30离开才赶得回来吃晚饭。" }
     ]
   },
 
   taxi: [
     { tw: "小烏來天空步道，桃園市復興區", say: "Xiao Wulai Skywalk, Fuxing, Taoyuan" },
-    { tw: "大溪和平老街", say: "Daxi Heping Old Street" }
+    { tw: "大溪和平老街", say: "Daxi Heping Old Street" },
+    { tw: "慈湖陵寢，桃園市大溪區復興路一段1097號", say: "Cihu Mausoleum, Daxi, Taoyuan" }
   ]
 };

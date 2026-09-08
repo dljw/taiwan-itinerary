@@ -49,10 +49,10 @@ window.TRIP.practical = {
       note: { en: "DIY + 流水麵, about NT$550. Deposit paid via their shop2000 storefront (LINE <b>@a26633004</b> for follow-up, phone <b>02-2663-3004</b>). Closed Tuesdays — Monday is Yilan, so this is Thursday. Under-sixes free. Moved from the original 09:30 slot to 10:30 — the Day 6 mid-bus timing was updated to match.",
               zh: "DIY＋流水麵，约 NT$550。已透过 shop2000 官方商城付订金（后续联络 LINE <b>@a26633004</b>，电话 <b>02-2663-3004</b>）。周二公休——周一是宜兰，所以排周四。六岁以下免费。原本09:30场已改到10:30，第6天中巴时间也已同步更新。" } },
 
-    { what: { en: "Mid-bus — Day 5, Xiao Wulai + Daxi", zh: "包中巴 · 第5天小乌来加大溪" },
-      when: { en: "Wed 9 Sep, 08:00–17:15", zh: "9/9 周三，08:00–17:15" },
-      note: { en: "Hotel → Xiao Wulai skywalk → Daxi Old Street → hotel. 8–10 hours. Ask for <b>小乌来 in Fuxing, Taoyuan</b> — not 乌来. Same operator as the other mid-bus days.",
-              zh: "饭店 → 小乌来天空步道 → 大溪老街 → 饭店。8至10小时。请订<b>桃园复兴小乌来</b>——不是乌来。可与其他中巴同一家。" } },
+    { what: { en: "Mid-bus — Day 5, Xiao Wulai + Daxi + Cihu", zh: "包中巴 · 第5天小乌来、大溪与慈湖" },
+      when: { en: "Wed 9 Sep, 09:00–18:00", zh: "9/9 周三，09:00–18:00" },
+      note: { en: "Hotel → Xiao Wulai skywalk → Daxi Old Street → Cihu Mausoleum & Sculpture Park → hotel. 10 hours. Ask for <b>小乌来 in Fuxing, Taoyuan</b> (not 乌来), then Daxi, then 慈湖. Same operator as the other mid-bus days.",
+              zh: "饭店 → 小乌来天空步道 → 大溪老街 → 慈湖陵寝与雕塑公园 → 饭店。10小时。请订<b>桃园复兴小乌来</b>（不是乌来），再大溪，再慈湖。可与其他中巴同一家。" } },
 
     { what: { en: "Mid-bus — Day 6, Shiding half-day", zh: "包中巴 · 第6天石碇半天" },
       when: { en: "Thu 10 Sep, 09:15–13:15", zh: "9/10 周四，09:15–13:15" },

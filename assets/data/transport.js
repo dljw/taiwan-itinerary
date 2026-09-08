@@ -36,8 +36,8 @@ window.TRIP.transport = {
 
     { name: { en: "Chartered mid-bus (中巴)", zh: "包中巴" }, tw: "中巴（19–20人座）",
       cost: { en: "Per vehicle, in hour blocks", zh: "以车计费，按钟点块" },
-      what: { en: "The workhorse of this trip. A 19–20 seater, never a nine-seat van. <b>Day 1</b> airport + Linkou, release at the hotel. <b>Day 3</b> Yilan, 10 hours. <b>Day 4</b> Shifen, Golden Waterfall and Jiufen — 10 hours, 10:00–20:00, no overtime. <b>Day 5</b> Xiao Wulai and Daxi, 8–10 hours. <b>Day 6</b> Shiding half-day, 4–5 hours. <b>Day 7</b> hotel to the airport, point-to-point.",
-              zh: "这趟行程的主力。19至20人座，绝不是九人座。<b>第1天</b>机场加林口，饭店解散。<b>第3天</b>宜兰，10小时。<b>第4天</b>十分、黄金瀑布、九份——10小时，10:00–20:00，不超时。<b>第5天</b>小乌来加大溪，8至10小时。<b>第6天</b>石碇半天，4至5小时。<b>第7天</b>饭店到机场，点对点。" },
+      what: { en: "The workhorse of this trip. A 19–20 seater, never a nine-seat van. <b>Day 1</b> airport + Linkou, release at the hotel. <b>Day 3</b> Yilan, 10 hours. <b>Day 4</b> Shifen, Golden Waterfall and Jiufen — 10 hours, 10:00–20:00, no overtime. <b>Day 5</b> Xiao Wulai, Daxi & Cihu, 10 hours. <b>Day 6</b> Shiding half-day, 4–5 hours. <b>Day 7</b> hotel to the airport, point-to-point.",
+              zh: "这趟行程的主力。19至20人座，绝不是九人座。<b>第1天</b>机场加林口，饭店解散。<b>第3天</b>宜兰，10小时。<b>第4天</b>十分、黄金瀑布、九份——10小时，10:00–20:00，不超时。<b>第5天</b>小乌来、大溪与慈湖，10小时。<b>第6天</b>石碇半天，4至5小时。<b>第7天</b>饭店到机场，点对点。" },
       note: { en: "Operators sell 4–5 hour and 8–10 hour blocks, then overtime. A naive NT$13,000 ÷ 10 is not a rate you can buy for three hours. Same Taipei operator for all six if they will do it.",
               zh: "业者卖的是4至5小时和8至10小时，再算超时。NT$13,000除以10，不是你能买三小时的单价。六段能同一家最好。" } },
 
@@ -75,10 +75,10 @@ window.TRIP.transport = {
               zh: "<b>10小时，10:00–20:00，不超时。</b>九份＋十分＋黄金瀑布套装要装进这个钟点。18:45离开九份，20:00到家——业者已说车过不了晚上8点。司机停瀑布门口——不必走25分钟。" } },
 
     { n: 5, date: { en: "Wed 9 Sep", zh: "9月9日 周三" }, mode: { en: "Taipei mid-bus", zh: "台北中巴" },
-      fare: { en: "bus share ≈ NT$750–1,100 pp", zh: "中巴分摊约NT$750–1,100" }, charter: true,
-      route: { en: "Hotel 08:00 → Xiao Wulai skywalk → Daxi Old Street → hotel ~17:15", zh: "饭店08:00 → 小乌来天空步道 → 大溪老街 → 饭店约17:15" },
-      note: { en: "<b>The cost-optimal extra day.</b> Public was already about NT$9,600 for the group — HSR, a tourist shuttle, and six mountain taxi seats — and weekdays have no Xiao Wulai bus. An 8–10 hour 中巴 is about the same money. Ask for Fuxing 小乌来, not 乌来. The skywalk is closed Tuesdays; Wednesday is the open day.",
-              zh: "<b>最划算的加开日。</b>大众运输全团已约NT$9,600——高铁、台湾好行、六段山路计程车——而且平日没有小乌来公车。8至10小时中巴差不多同一个价。请订复兴<b>小乌来</b>，不是乌来。天空步道周二公休；周三才开门。" } },
+      fare: { en: "bus share ≈ NT$900–1,100 pp", zh: "中巴分摊约NT$900–1,100" }, charter: true,
+      route: { en: "Hotel 09:00 → Xiao Wulai skywalk → Daxi Old Street → Cihu → hotel ~18:00", zh: "饭店09:00 → 小乌来天空步道 → 大溪老街 → 慈湖 → 饭店约18:00" },
+      note: { en: "<b>The cost-optimal extra day.</b> Public was already about NT$9,600 for the group — HSR, a tourist shuttle, and six mountain taxi seats — and weekdays have no Xiao Wulai bus. A 10 hour 中巴 is about the same money. Ask for Fuxing 小乌来, not 乌来, then Daxi, then 慈湖 (Cihu). The skywalk and Cihu mausoleum are both closed Tuesdays; Wednesday is the open day.",
+              zh: "<b>最划算的加开日。</b>大众运输全团已约NT$9,600——高铁、台湾好行、六段山路计程车——而且平日没有小乌来公车。10小时中巴差不多同一个价。请订复兴<b>小乌来</b>，不是乌来，再大溪，再慈湖。天空步道与慈湖陵寝都周二公休；周三才开门。" } },
 
     { n: 6, date: { en: "Thu 10 Sep", zh: "9月10日 周四" }, mode: { en: "Mid-bus, then MRT", zh: "中巴，再捷运" },
       fare: { en: "≈ NT$600–800 pp incl. bus share", zh: "每人约NT$600–800（含中巴分摊）" }, charter: true,
@@ -97,8 +97,8 @@ window.TRIP.transport = {
   charter: {
     title: { en: "The six bookings — one operator if they will do it", zh: "六段订车 —— 能同一家最好" },
     body: {
-      en: "All of them a 中巴 (19–20 seat), none of them a nine-seat van. <b>Day 1</b> is an airport transfer with two Linkou stops, released at the hotel ~11:40. <b>Day 3</b> is the 10-hour Yilan day. <b>Day 4</b> is Shifen, Golden Waterfall and Jiufen, 10:00–20:00 with no overtime. <b>Day 5</b> is Xiao Wulai and Daxi, 8–10 hours — ask for 小乌来 in Fuxing, not 乌来. <b>Day 6</b> is a 4–5 hour half-day to Hsu's, drop at Ximending. <b>Day 7</b> is hotel 14:45 to Taoyuan Airport. Operators below are the enquiry list — paste Day 1 first, then the extras.",
-      zh: "都是19至20人座中巴，都不是九人座。<b>第1天</b>接机加林口两站，约11:40饭店解散。<b>第3天</b>宜兰10小时。<b>第4天</b>十分、黄金瀑布、九份，10:00–20:00，不超时。<b>第5天</b>小乌来加大溪，8至10小时——请订复兴小乌来，不是乌来。<b>第6天</b>许家4至5小时半天，西门町下车。<b>第7天</b>饭店14:45到桃园机场。下面是询价名单——先贴第1天，其余接在后面。"
+      en: "All of them a 中巴 (19–20 seat), none of them a nine-seat van. <b>Day 1</b> is an airport transfer with two Linkou stops, released at the hotel ~11:40. <b>Day 3</b> is the 10-hour Yilan day. <b>Day 4</b> is Shifen, Golden Waterfall and Jiufen, 10:00–20:00 with no overtime. <b>Day 5</b> is Xiao Wulai, Daxi & Cihu, 10 hours — ask for 小乌来 in Fuxing (not 乌来), then Daxi, then 慈湖. <b>Day 6</b> is a 4–5 hour half-day to Hsu's, drop at Ximending. <b>Day 7</b> is hotel 14:45 to Taoyuan Airport. Operators below are the enquiry list — paste Day 1 first, then the extras.",
+      zh: "都是19至20人座中巴，都不是九人座。<b>第1天</b>接机加林口两站，约11:40饭店解散。<b>第3天</b>宜兰10小时。<b>第4天</b>十分、黄金瀑布、九份，10:00–20:00，不超时。<b>第5天</b>小乌来、大溪与慈湖，10小时——请订复兴小乌来（不是乌来），再大溪，再慈湖。<b>第6天</b>许家4至5小时半天，西门町下车。<b>第7天</b>饭店14:45到桃园机场。下面是询价名单——先贴第1天，其余接在后面。"
     },
     operators: [
       {
@@ -140,9 +140,9 @@ window.TRIP.transport = {
       { title: { en: "Day 4 — Shifen, Golden Waterfall, Jiufen", zh: "第4天 —— 十分、黄金瀑布、九份" },
         enquiryTw: "另外想詢問 2026年9月8日（二）九份＋十分＋黃金瀑布中巴，請報 10 小時全日。\n\n同樣 12 位，無大件行李。\n\n10:00 台北市中正區民宿出發（忠孝東路二段27號）\n→ 十分瀑布門口下車（不要停車站），停留至約 12:15\n→ 十分老街，停留至約 17:00（含放天燈）\n→ 黃金瀑布，停留約 10 分鐘\n→ 九份老街，約 17:35 抵達，停留至 18:45\n→ 送回台北市中正區民宿，20:00 必須抵達\n\n請報 10 小時價。我們必須 20:00 回到民宿，不超時。是否可與 9月5日那台車一起訂。謝謝！",
         enquiryEn: "We would also like a 10-hour mid-bus on Tuesday 8 September 2026 for Jiufen + Shifen + Golden Waterfall.\n\nSame party of 12, no large luggage.\n\n10:00 pickup at the Airbnb in Zhongzheng, Taipei (No. 27, Sec. 2, Zhongxiao East Road)\n→ drop at the Shifen Waterfall gate (not the station) until ~12:15\n→ Shifen Old Street until ~17:00, including a lantern release\n→ Golden Waterfall, about 10 minutes\n→ Jiufen Old Street ~17:35 until 18:45\n→ return to the Zhongzheng Airbnb by 20:00, hard stop\n\nPlease quote a 10-hour day. We must be back at the Airbnb by 20:00 — no overtime. Can this be booked with the 5 September vehicle? Thank you." },
-      { title: { en: "Day 5 — Xiao Wulai and Daxi", zh: "第5天 —— 小乌来加大溪" },
-        enquiryTw: "另外想詢問 2026年9月9日（三）8–10 小時中巴。\n\n同樣 12 位，無大件行李。\n\n08:00 台北市中正區飯店出發\n→ 桃園市復興區小烏來天空步道（不是新北烏來），約 09:30 抵達，停留至約 11:30，司機等候\n→ 大溪老街／和平路，停留至約 16:00\n→ 送回台北市中正區飯店，約 17:15\n\n請報 8 或 10 小時價，確認是復興小烏來，以及是否可與 9月5日那台車一起訂。謝謝！",
-        enquiryEn: "We would also like an 8–10 hour mid-bus on Wednesday 9 September 2026.\n\nSame party of 12, no large luggage.\n\n08:00 hotel in Zhongzheng, Taipei\n→ Xiao Wulai Skywalk, Fuxing, Taoyuan (not Wulai in New Taipei) — arrive ~09:30, stay until ~11:30, driver waits\n→ Daxi Old Street / Heping Road until ~16:00\n→ return to the Zhongzheng hotel ~17:15\n\nPlease quote an 8- or 10-hour rate, confirm this is Xiao Wulai in Fuxing, and whether this can be booked with the 5 September vehicle. Thank you." },
+      { title: { en: "Day 5 — Xiao Wulai, Daxi & Cihu", zh: "第5天 —— 小乌来、大溪与慈湖" },
+        enquiryTw: "另外想詢問 2026年9月9日（三）10 小時中巴。\n\n同樣 12 位，無大件行李。\n\n09:00 台北市中正區飯店出發\n→ 桃園市復興區小烏來天空步道（不是新北烏來），約 10:30 抵達，停留至約 12:30，司機等候\n→ 大溪老街／和平路，停留至約 15:00\n→ 慈湖陵寢／雕塑公園（桃園市大溪區復興路一段1097號），停留至約 16:30\n→ 送回台北市中正區飯店，約 18:00\n\n請報 10 小時價，確認是復興小烏來（不是烏來），以及是否可與 9月5日那台車一起訂。謝謝！",
+        enquiryEn: "We would also like a 10-hour mid-bus on Wednesday 9 September 2026.\n\nSame party of 12, no large luggage.\n\n09:00 hotel in Zhongzheng, Taipei\n→ Xiao Wulai Skywalk, Fuxing, Taoyuan (not Wulai in New Taipei) — arrive ~10:30, stay until ~12:30, driver waits\n→ Daxi Old Street / Heping Road until ~15:00\n→ Cihu Mausoleum & Sculpture Park (No. 1097, Sec. 1, Fuxing Rd., Daxi, Taoyuan) until ~16:30\n→ return to the Zhongzheng hotel ~18:00\n\nPlease quote a 10-hour rate, confirm this is Xiao Wulai in Fuxing (not Wulai), and whether this can be booked with the 5 September vehicle. Thank you." },
       { title: { en: "Day 6 — Shiding half-day", zh: "第6天 —— 石碇半天" },
         enquiryTw: "另外想詢問 2026年9月10日（四）4–5 小時半天中巴——時間已更新，因為許家的預約場次改成10:30。\n\n同樣 12 位，無大件行李。\n\n09:15 台北市中正區飯店出發\n→ 石碇許家手工麵線（烏塗里四分子3號），約 10:20 抵達，停留至 12:30，司機等候\n→ 西門町／西門紅樓下車，約 13:15\n\n請報半日價，不要開 10 小時。等候是否已含，以及是否可與 9月5日那台車一起訂。謝謝！",
         enquiryEn: "We would also like a 4–5 hour half-day mid-bus on Thursday 10 September 2026 — timing updated since Hsu's booked session moved to 10:30.\n\nSame party of 12, no large luggage.\n\n09:15 hotel in Zhongzheng, Taipei\n→ Hsu's handmade noodles, No. 3 Sifenzi, Wutu, Shiding — arrive ~10:20, stay until 12:30, driver waits\n→ drop at Ximending / the Red House ~13:15\n\nPlease quote a half-day rate, not a 10-hour day. Confirm waiting is included, and whether this can be booked with the 5 September vehicle. Thank you." },

@@ -48,8 +48,8 @@ window.TRIP.meta = {
 
     { n: 5, date: { en: "Wed 9 Sep", zh: "9月9日 · 周三" },
       title: { en: "Standing on glass above a waterfall", zh: "站在瀑布上方的玻璃步道" },
-      blurb: { en: "Xiao Wulai's skywalk juts straight out over the falls. Then a full afternoon graze through Daxi Old Street. Quiet dinner — the farewell hotpot is Thursday.",
-               zh: "小乌来天空步道悬挑在瀑布正上方。接着一整个下午在大溪老街边走边吃。晚饭随便——告别火锅在周四。" },
+      blurb: { en: "Xiao Wulai's skywalk juts straight out over the falls. Daxi Old Street for lunch and a stroll, then Cihu — the mausoleum lake and sculpture park of hundreds of Chiang statues. Home by six. Quiet dinner — the farewell hotpot is Thursday.",
+               zh: "小乌来天空步道悬挑在瀑布正上方。大溪老街吃午饭走走，接着去慈湖——陵寝湖畔与上百尊蒋公铜像的雕塑公园。六点前到家。晚饭随便——告别火锅在周四。" },
       hero: "xiaowulai/xiaowulai-skywalk-glass.jpg",
       transport: { en: "中巴", zh: "中巴" } },
 
